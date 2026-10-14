@@ -1,23 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { X, ShieldCheck, Copy, Check, Smartphone, Globe, LogOut, KeyRound } from 'lucide-react';
-import { getStoredToken, clearStoredToken, getNetworkInfo, type NetworkInfo } from '../auth/authManager';
+import { X, ShieldCheck, Copy, Check, Smartphone, Globe, Link2 } from 'lucide-react';
+import { getNetworkInfo, type NetworkInfo } from '../auth/authManager';
 
 interface TailscaleInfoModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onLogout: () => void;
 }
 
 export const TailscaleInfoModal: React.FC<TailscaleInfoModalProps> = ({
   isOpen,
   onClose,
-  onLogout,
 }) => {
   const [networkInfo, setNetworkInfo] = useState<NetworkInfo | null>(null);
   const [copiedPublic, setCopiedPublic] = useState(false);
   const [copiedVpn, setCopiedVpn] = useState(false);
-  const [copiedToken, setCopiedToken] = useState(false);
-  const token = getStoredToken();
+  const [copiedCurrent, setCopiedCurrent] = useState(false);
 
   useEffect(() => {
     if (isOpen) {
@@ -32,10 +29,9 @@ export const TailscaleInfoModal: React.FC<TailscaleInfoModalProps> = ({
   const tsIp = networkInfo?.tailscaleIp || (currentHost.startsWith('100.') ? currentHost : '100.82.53.11');
 
   const funnelHost = networkInfo?.funnelHost || 'alovingpc.tail0f092f.ts.net';
-  const publicUrl = token ? `https://${funnelHost}/?token=${token}` : `https://${funnelHost}`;
-  const vpnUrl = token
-    ? `http://${tsIp}:${networkInfo?.port || currentPort}/?token=${token}`
-    : `http://${tsIp}:${networkInfo?.port || currentPort}`;
+  const publicUrl = `https://${funnelHost}`;
+  const vpnUrl = `http://${tsIp}:${networkInfo?.port || currentPort}`;
+  const currentUrl = typeof window !== 'undefined' ? window.location.href : publicUrl;
 
   const copyToClipboard = async (text: string, setSuccess: (val: boolean) => void) => {
     try {
@@ -45,12 +41,6 @@ export const TailscaleInfoModal: React.FC<TailscaleInfoModalProps> = ({
     } catch (err) {
       console.warn('Copy failed', err);
     }
-  };
-
-  const handleDisconnect = () => {
-    clearStoredToken();
-    onClose();
-    onLogout();
   };
 
   return (
@@ -63,8 +53,8 @@ export const TailscaleInfoModal: React.FC<TailscaleInfoModalProps> = ({
               <ShieldCheck className="w-4 h-4 text-[#00E5FF]" />
             </div>
             <div>
-              <h3 className="text-base font-bold text-[#F3F4F6]">Подключение & Сеть</h3>
-              <p className="text-[11px] text-[#8E95A5]">Tailscale Funnel & VPN</p>
+              <h3 className="text-base font-bold text-[#F3F4F6]">Подключение & Доступ</h3>
+              <p className="text-[11px] text-[#8E95A5]">Доступ по уникальным URL (без токенов)</p>
             </div>
           </div>
           <button
@@ -75,20 +65,63 @@ export const TailscaleInfoModal: React.FC<TailscaleInfoModalProps> = ({
           </button>
         </div>
 
-        {/* 1. Public HTTPS URL (Funnel) - RECOMMENDED */}
-        <div className="p-3.5 bg-gradient-to-r from-[#00E5FF]/10 to-transparent border border-[#00E5FF]/30 rounded-xl space-y-2">
+        {/* Current Active Library Link */}
+        <div className="p-3.5 bg-gradient-to-r from-[#00E5FF]/15 to-transparent border border-[#00E5FF]/40 rounded-xl space-y-2">
           <div className="flex items-center justify-between">
             <label className="text-xs font-bold text-[#00E5FF] flex items-center space-x-1.5">
-              <Globe className="w-4 h-4 text-[#00E5FF]" />
-              <span>Публичный HTTPS URL (Tailscale Funnel)</span>
+              <Link2 className="w-4 h-4 text-[#00E5FF]" />
+              <span>Ссылка на текущую библиотеку</span>
             </label>
-            <span className="text-[10px] bg-emerald-400/20 text-emerald-300 font-semibold px-2 py-0.5 rounded-full border border-emerald-400/30">
-              Работает везде
+            <span className="text-[10px] bg-[#00E5FF]/20 text-[#00E5FF] font-semibold px-2 py-0.5 rounded-full border border-[#00E5FF]/30">
+              Поделиться
             </span>
           </div>
 
           <p className="text-[11px] text-[#B2B9C8]">
-            Работает через интернет с любого телефона без включения Tailscale в фоновом режиме:
+            Отправьте эту ссылку друзьям, чтобы они открыли именно этот плейлист:
+          </p>
+
+          <div className="flex items-center space-x-2">
+            <input
+              type="text"
+              readOnly
+              value={currentUrl}
+              className="flex-1 px-3 py-2 bg-[#0D0E15] border border-[#2B2F42] rounded-xl text-xs font-mono text-[#00E5FF] outline-none select-all"
+            />
+            <button
+              onClick={() => copyToClipboard(currentUrl, setCopiedCurrent)}
+              className="px-3 py-2 bg-[#00E5FF] hover:bg-[#00E5FF]/90 text-[#0D0E15] font-bold text-xs rounded-xl flex items-center space-x-1 transition-all active:scale-95 cursor-pointer shrink-0"
+              title="Скопировать ссылку на библиотеку"
+            >
+              {copiedCurrent ? (
+                <>
+                  <Check className="w-3.5 h-3.5 stroke-[2.5]" />
+                  <span>Скопировано</span>
+                </>
+              ) : (
+                <>
+                  <Copy className="w-3.5 h-3.5" />
+                  <span>Копировать</span>
+                </>
+              )}
+            </button>
+          </div>
+        </div>
+
+        {/* 1. Public HTTPS URL (Funnel) */}
+        <div className="p-3.5 bg-[#0D0E15] border border-[#2B2F42] rounded-xl space-y-2">
+          <div className="flex items-center justify-between">
+            <label className="text-xs font-semibold text-[#F3F4F6] flex items-center space-x-1.5">
+              <Globe className="w-4 h-4 text-[#00E5FF]" />
+              <span>Публичный HTTPS URL (Tailscale Funnel)</span>
+            </label>
+            <span className="text-[10px] bg-emerald-400/20 text-emerald-300 font-semibold px-2 py-0.5 rounded-full">
+              Интернет
+            </span>
+          </div>
+
+          <p className="text-[11px] text-[#B2B9C8]">
+            Главная страница SpotDrop для загрузки новых архивов экспорта:
           </p>
 
           <div className="flex items-center space-x-2">
@@ -96,16 +129,16 @@ export const TailscaleInfoModal: React.FC<TailscaleInfoModalProps> = ({
               type="text"
               readOnly
               value={publicUrl}
-              className="flex-1 px-3 py-2 bg-[#0D0E15] border border-[#2B2F42] rounded-xl text-xs font-mono text-[#00E5FF] outline-none select-all"
+              className="flex-1 px-3 py-2 bg-[#161822] border border-[#2B2F42] rounded-xl text-xs font-mono text-[#F3F4F6] outline-none select-all"
             />
             <button
               onClick={() => copyToClipboard(publicUrl, setCopiedPublic)}
-              className="px-3 py-2 bg-[#00E5FF] hover:bg-[#00E5FF]/90 text-[#0D0E15] font-bold text-xs rounded-xl flex items-center space-x-1 transition-all active:scale-95 cursor-pointer shrink-0"
-              title="Скопировать публичную ссылку"
+              className="px-3 py-2 bg-[#212433] hover:bg-[#2B2F42] text-[#F3F4F6] font-semibold text-xs rounded-xl flex items-center space-x-1 transition-all active:scale-95 cursor-pointer shrink-0"
+              title="Скопировать публичный URL"
             >
               {copiedPublic ? (
                 <>
-                  <Check className="w-3.5 h-3.5 stroke-[2.5]" />
+                  <Check className="w-3.5 h-3.5 stroke-[2.5] text-emerald-400" />
                   <span>Скопировано</span>
                 </>
               ) : (
@@ -123,10 +156,10 @@ export const TailscaleInfoModal: React.FC<TailscaleInfoModalProps> = ({
           <div className="flex items-center justify-between">
             <label className="text-xs font-semibold text-[#F3F4F6] flex items-center space-x-1.5">
               <Smartphone className="w-4 h-4 text-[#B2B9C8]" />
-              <span>Прямой Tailscale IP (внутри VPN сети)</span>
+              <span>Прямой Tailscale IP (VPN)</span>
             </label>
             <span className="text-[10px] bg-[#212433] text-[#8E95A5] font-semibold px-2 py-0.5 rounded-full">
-              Только с Tailscale
+              Локальная сеть
             </span>
           </div>
 
@@ -157,44 +190,13 @@ export const TailscaleInfoModal: React.FC<TailscaleInfoModalProps> = ({
           </div>
         </div>
 
-        {/* Token Section */}
-        <div className="space-y-1.5">
-          <label className="text-xs font-semibold text-[#F3F4F6] flex items-center space-x-1.5">
-            <KeyRound className="w-3.5 h-3.5 text-[#FF2E93]" />
-            <span>Активный токен доступа:</span>
-          </label>
-          <div className="flex items-center space-x-2">
-            <input
-              type="text"
-              readOnly
-              value={token}
-              className="flex-1 px-3 py-1.5 bg-[#0D0E15] border border-[#2B2F42] rounded-xl text-xs font-mono text-[#F3F4F6] outline-none select-all"
-            />
-            <button
-              onClick={() => copyToClipboard(token, setCopiedToken)}
-              className="p-2 bg-[#212433] hover:bg-[#2B2F42] text-[#B2B9C8] hover:text-[#F3F4F6] rounded-xl transition-colors cursor-pointer shrink-0"
-              title="Скопировать токен"
-            >
-              {copiedToken ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
-            </button>
-          </div>
-        </div>
-
         {/* Footer Actions */}
-        <div className="pt-2 flex items-center justify-between border-t border-[#2B2F42]/60">
-          <button
-            onClick={handleDisconnect}
-            className="flex items-center space-x-1.5 px-3 py-2 text-xs font-medium text-[#FF2E93] hover:bg-[#FF2E93]/10 rounded-xl transition-colors cursor-pointer"
-          >
-            <LogOut className="w-3.5 h-3.5" />
-            <span>Выйти / Сменить токен</span>
-          </button>
-
+        <div className="pt-2 flex items-center justify-end border-t border-[#2B2F42]/60">
           <button
             onClick={onClose}
-            className="px-4 py-2 bg-[#212433] hover:bg-[#2B2F42] text-xs font-semibold text-[#F3F4F6] rounded-xl transition-colors cursor-pointer"
+            className="px-5 py-2 bg-[#00E5FF] hover:bg-[#00E5FF]/90 text-xs font-bold text-[#0D0E15] rounded-xl transition-colors cursor-pointer"
           >
-            Закрыть
+            Понятно
           </button>
         </div>
       </div>

@@ -18,10 +18,8 @@ import { CellVersionPickerModal } from './components/CellVersionPickerModal';
 import { ProfileModal } from './components/ProfileModal';
 import { BottomPlayerBar } from './components/BottomPlayerBar';
 import { PlaylistDrawer } from './components/PlaylistDrawer';
-import { TokenAuthScreen } from './components/TokenAuthScreen';
 import { TailscaleInfoModal } from './components/TailscaleInfoModal';
 import { LandingScreen } from './components/LandingScreen';
-import { getStoredToken, verifyToken, apiFetch } from './auth/authManager';
 import { usePlayer } from './player/playerContext';
 import type { TrackCell } from './types';
 
@@ -59,9 +57,6 @@ export function App() {
   const [isTailscaleModalOpen, setIsTailscaleModalOpen] = useState(false);
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
-  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(true);
-  const [isAuthChecking, setIsAuthChecking] = useState<boolean>(true);
-
   const [view, setView] = useState<'landing' | 'player'>('landing');
   const [isLoadingProfile, setIsLoadingProfile] = useState<boolean>(false);
 
@@ -80,35 +75,9 @@ export function App() {
       [profileId]
     ) || [];
 
-  // Check auth and initial routing on mount
+  // Routing on mount & popstate
   useEffect(() => {
     const initApp = async () => {
-      // 1. Check if server requires auth
-      try {
-        const verifyRes = await apiFetch('/api/auth/verify');
-        if (verifyRes.ok) {
-          const verifyData = await verifyRes.json();
-          if (!verifyData.authRequired) {
-            setIsAuthenticated(true);
-          } else {
-            setIsAuthenticated(verifyData.valid);
-          }
-        } else {
-          const token = getStoredToken();
-          if (token) {
-            const res = await verifyToken();
-            setIsAuthenticated(res.valid);
-          } else {
-            setIsAuthenticated(false);
-          }
-        }
-      } catch {
-        setIsAuthenticated(true); // Allow local usage if offline
-      } finally {
-        setIsAuthChecking(false);
-      }
-
-      // 2. Route resolution
       const slug = getSlugFromUrl();
       if (slug) {
         setIsLoadingProfile(true);
@@ -253,22 +222,6 @@ export function App() {
   const visibleTracks = useMemo(() => {
     return filteredTracks.slice(0, visibleCount);
   }, [filteredTracks, visibleCount]);
-
-  if (isAuthChecking) {
-    return (
-      <div className="min-h-screen bg-[#0D0E15] flex flex-col items-center justify-center text-[#00E5FF] p-4">
-        <div className="w-12 h-12 rounded-2xl bg-[#161822] border border-[#2B2F42] flex items-center justify-center animate-pulse mb-4 shadow-xl shadow-[#00E5FF]/10">
-          <Sparkles className="w-6 h-6 text-[#00E5FF]" />
-        </div>
-        <p className="text-sm font-semibold tracking-wider text-[#B2B9C8]">Загрузка SpotDrop...</p>
-      </div>
-    );
-  }
-
-  // Token Auth Screen only if server explicitly enforces secret token
-  if (!isAuthenticated) {
-    return <TokenAuthScreen onAuthenticated={() => setIsAuthenticated(true)} />;
-  }
 
   // Landing / Onboarding View
   if (view === 'landing') {
@@ -432,7 +385,6 @@ export function App() {
       <TailscaleInfoModal
         isOpen={isTailscaleModalOpen}
         onClose={() => setIsTailscaleModalOpen(false)}
-        onLogout={() => setIsAuthenticated(false)}
       />
 
       {/* Playlist & Queue Drawer */}

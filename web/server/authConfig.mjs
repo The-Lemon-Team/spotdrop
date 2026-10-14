@@ -27,59 +27,8 @@ if (fs.existsSync(envPath)) {
   }
 }
 
-export const AUTH_TOKEN = (process.env.SPOTDROP_AUTH_TOKEN || process.env.AUTH_TOKEN || '').trim();
-export const REQUIRE_AUTH = Boolean(AUTH_TOKEN);
 export const PORT = parseInt(process.env.PORT || '3001', 10);
 export const HOST = process.env.HOST || '0.0.0.0';
-
-/**
- * Extracts auth token from request headers, cookies, or query parameters
- */
-export function extractToken(req, url) {
-  const authHeader = req.headers['authorization'];
-  if (authHeader) {
-    const parts = authHeader.split(' ');
-    if (parts.length === 2 && /^Bearer$/i.test(parts[0])) {
-      return parts[1].trim();
-    }
-    return authHeader.trim();
-  }
-
-  if (req.headers['x-access-token']) {
-    return req.headers['x-access-token'].trim();
-  }
-  if (req.headers['x-auth-token']) {
-    return req.headers['x-auth-token'].trim();
-  }
-
-  const cookieHeader = req.headers['cookie'];
-  if (cookieHeader) {
-    const match = cookieHeader.match(/(?:^|;\s*)(?:token|spotdrop_token)=([^;]+)/);
-    if (match) {
-      return decodeURIComponent(match[1].trim());
-    }
-  }
-
-  if (url) {
-    if (url.searchParams.has('token')) {
-      return url.searchParams.get('token').trim();
-    }
-    if (url.searchParams.has('auth')) {
-      return url.searchParams.get('auth').trim();
-    }
-  }
-
-  return null;
-}
-
-/**
- * Verifies if request is authorized (returns true if auth is disabled)
- */
-export function isAuthorized(req, url) {
-  if (!REQUIRE_AUTH) return true;
-  const token = extractToken(req, url);
-  return token === AUTH_TOKEN;
-}
 
 /**
  * Finds Tailscale IPv4 address from network interfaces

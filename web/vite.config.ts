@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 // @ts-expect-error - mjs import
 import { searchYouTube, proxyAudioStream, DEFAULT_HTTP_PROXY, DEFAULT_SOCKS_PROXY } from './server/youtubeProxy.mjs';
 // @ts-expect-error - mjs import
-import { isAuthorized, AUTH_TOKEN, getTailscaleIp, getLanIp, PORT } from './server/authConfig.mjs';
+import { getTailscaleIp, getLanIp, PORT } from './server/authConfig.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -40,22 +40,9 @@ export default defineConfig({
             res.end(JSON.stringify(data));
           };
 
-          const sendUnauthorized = () => {
-            sendJson(401, {
-              error: 'Unauthorized',
-              message: 'Требуется токен доступа для авторизации.',
-            });
-          };
-
-          // Auth: /api/auth/verify
+          // Auth: /api/auth/verify (always valid, no tokens required)
           if (url.pathname === '/api/auth/verify') {
-            const valid = isAuthorized(req, url);
-            if (valid) {
-              const cookie = `token=${encodeURIComponent(AUTH_TOKEN)}; Path=/; Max-Age=31536000; SameSite=Lax`;
-              return sendJson(200, { valid: true, tailscaleIp: getTailscaleIp(), port: PORT }, { 'Set-Cookie': cookie });
-            } else {
-              return sendJson(401, { valid: false, error: 'Неверный токен доступа' });
-            }
+            return sendJson(200, { valid: true, authRequired: false, tailscaleIp: getTailscaleIp(), port: PORT });
           }
 
           // Network info: /api/network-info
@@ -65,16 +52,12 @@ export default defineConfig({
               lanIp: getLanIp(),
               port: PORT,
               hostname: os.hostname(),
-              authRequired: Boolean(AUTH_TOKEN),
+              authRequired: false,
             });
           }
 
-          // 1. YouTube Search endpoint (Protected)
+          // 1. YouTube Search endpoint
           if (url.pathname === '/api/search') {
-            if (!isAuthorized(req, url)) {
-              return sendUnauthorized();
-            }
-
             const query = url.searchParams.get('q');
             const proxy = url.searchParams.get('proxy') || DEFAULT_HTTP_PROXY;
 
@@ -91,12 +74,8 @@ export default defineConfig({
             }
           }
 
-          // 2. YouTube Audio Stream endpoint (Protected)
+          // 2. YouTube Audio Stream endpoint
           if (url.pathname === '/api/stream') {
-            if (!isAuthorized(req, url)) {
-              return sendUnauthorized();
-            }
-
             const videoId = url.searchParams.get('videoId');
             const proxy = url.searchParams.get('proxy') || DEFAULT_HTTP_PROXY;
 
@@ -108,12 +87,8 @@ export default defineConfig({
             return;
           }
 
-          // 3. Health & Proxy configuration endpoint (Protected)
+          // 3. Health & Proxy configuration endpoint
           if (url.pathname === '/api/config') {
-            if (!isAuthorized(req, url)) {
-              return sendUnauthorized();
-            }
-
             return sendJson(200, {
               httpProxy: DEFAULT_HTTP_PROXY,
               socksProxy: DEFAULT_SOCKS_PROXY,
@@ -123,12 +98,8 @@ export default defineConfig({
             });
           }
 
-          // 4. Defaults folder static serving (Protected)
+          // 4. Defaults folder static serving
           if (url.pathname.startsWith('/defaults/')) {
-            if (!isAuthorized(req, url)) {
-              return sendUnauthorized();
-            }
-
             const relPath = decodeURIComponent(url.pathname.replace(/^\/defaults\//, ''));
             const filePath = path.resolve(__dirname, '../defaults', relPath);
             if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {

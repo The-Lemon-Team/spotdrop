@@ -13,10 +13,6 @@ import {
 import {
   PORT,
   HOST,
-  AUTH_TOKEN,
-  REQUIRE_AUTH,
-  isAuthorized,
-  extractToken,
   getTailscaleIp,
   getLanIp,
 } from './authConfig.mjs';
@@ -66,13 +62,6 @@ function sendJson(res, statusCode, data, extraHeaders = {}) {
     ...extraHeaders,
   });
   res.end(JSON.stringify(data));
-}
-
-function sendUnauthorized(res) {
-  sendJson(res, 401, {
-    error: 'Unauthorized',
-    message: 'Требуется авторизация.',
-  });
 }
 
 const MASTER_AUDIO_DIR = path.resolve(DEFAULTS_DIR, 'default/audio');
@@ -149,12 +138,11 @@ const server = http.createServer(async (req, res) => {
     return res.end();
   }
 
-  // 1. Auth Endpoint: /api/auth/verify (Backwards compatibility)
+  // 1. Auth Endpoint: /api/auth/verify (Always returns valid since token auth is removed)
   if (url.pathname === '/api/auth/verify') {
-    const valid = isAuthorized(req, url);
-    return sendJson(res, valid ? 200 : 401, {
-      valid,
-      authRequired: REQUIRE_AUTH,
+    return sendJson(res, 200, {
+      valid: true,
+      authRequired: false,
       tailscaleIp: getTailscaleIp(),
       port: PORT,
     });
@@ -170,16 +158,12 @@ const server = http.createServer(async (req, res) => {
       hostname: os.hostname(),
       funnelHost: FUNNEL_HOST,
       funnelUrl: `https://${FUNNEL_HOST}`,
-      authRequired: REQUIRE_AUTH,
+      authRequired: false,
     });
   }
 
   // 3. YouTube Search API (Open)
   if (url.pathname === '/api/search') {
-    if (!isAuthorized(req, url)) {
-      return sendUnauthorized(res);
-    }
-
     const query = url.searchParams.get('q');
     const proxy = url.searchParams.get('proxy') || DEFAULT_HTTP_PROXY;
 
@@ -200,10 +184,6 @@ const server = http.createServer(async (req, res) => {
   // - If profileId is 'bandita' or 'default', check local audio cache first.
   // - All other profiles stream directly from YouTube proxy (zero disk writes).
   if (url.pathname === '/api/stream') {
-    if (!isAuthorized(req, url)) {
-      return sendUnauthorized(res);
-    }
-
     const videoId = url.searchParams.get('videoId');
     const profileId = (url.searchParams.get('profileId') || '').toLowerCase().trim();
     const proxy = url.searchParams.get('proxy') || DEFAULT_HTTP_PROXY;
