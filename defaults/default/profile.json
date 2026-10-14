@@ -1,0 +1,8 @@
+{
+  "id": "profile_default",
+  "name": "Bandita Library",
+  "avatarEmoji": "🎧",
+  "description": "Default pre-bundled music collection with 1,600 tracks and 28 playlists",
+  "isDefault": true,
+  "themeColor": "#00E5FF"
+}

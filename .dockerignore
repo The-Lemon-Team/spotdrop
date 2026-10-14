@@ -1,0 +1,13 @@
+node_modules
+web/node_modules
+.git
+.gradle
+.idea
+.kotlin
+app
+build
+*.apk
+*.log
+web/bin
+defaults/**/audio
+defaults/default/audio

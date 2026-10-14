@@ -1,0 +1,8 @@
+{
+  "id": "profile_my_collection",
+  "name": "My Custom Profile",
+  "avatarEmoji": "🎸",
+  "description": "Custom music profile description",
+  "isDefault": false,
+  "themeColor": "#FF2A85"
+}

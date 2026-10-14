@@ -1,0 +1,23 @@
+services:
+  spotdrop:
+    container_name: spotdrop
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: spotdrop:latest
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+    env_file:
+      - path: ./web/.env
+        required: false
+    environment:
+      - PORT=3001
+      - HOST=0.0.0.0
+      - HTTP_PROXY=${SPOTDROP_HTTP_PROXY:-http://host.docker.internal:10809}
+      - SOCKS_PROXY=${SPOTDROP_SOCKS_PROXY:-socks5://host.docker.internal:10808}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./defaults:/app/defaults:ro
+      - ./data:/app/data

@@ -1,0 +1,19 @@
+{
+  "playlists": [
+    {
+      "name": "Synthwave Drive",
+      "lastModifiedDate": "2024-01-15",
+      "items": [
+        {
+          "track": {
+            "trackName": "Resonance",
+            "artistName": "HOME",
+            "albumName": "Odyssey",
+            "trackUri": "spotify:track:1Tu2hY2e8dJ81s2D7p8F1"
+          },
+          "addedDate": "2024-01-15"
+        }
+      ]
+    }
+  ]
+}

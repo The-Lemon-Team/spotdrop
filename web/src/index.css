@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --dark-bg: #0D0E15;
+    --dark-surface: #161822;
+    --dark-variant: #212433;
+    --dark-border: #2B2F42;
+    --neon-cyan: #00E5FF;
+    --neon-pink: #FF2E93;
+    --text-primary: #F3F4F6;
+    --text-secondary: #B2B9C8;
+    --text-muted: #8E95A5;
+  }
+
+  body {
+    background-color: var(--dark-bg);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0D0E15;
+}
+::-webkit-scrollbar-thumb {
+  background: #2B2F42;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00E5FF;
+}
+
+/* Spotify-like Equalizer Audio Soundwave Animation */
+@keyframes soundwave {
+  0%, 100% {
+    height: 4px;
+  }
+  50% {
+    height: 18px;
+  }
+}
+
+.animate-soundwave-1 {
+  animation: soundwave 0.8s ease-in-out infinite;
+}
+.animate-soundwave-2 {
+  animation: soundwave 1.2s ease-in-out 0.2s infinite;
+}
+.animate-soundwave-3 {
+  animation: soundwave 0.9s ease-in-out 0.4s infinite;
+}
+.animate-soundwave-4 {
+  animation: soundwave 1.1s ease-in-out 0.1s infinite;
+}

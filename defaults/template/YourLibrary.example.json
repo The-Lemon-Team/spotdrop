@@ -1,0 +1,16 @@
+{
+  "tracks": [
+    {
+      "artist": "Daft Punk",
+      "album": "Discovery",
+      "track": "One More Time",
+      "uri": "spotify:track:0DiWol3AO6WpXZgp0gGlNW"
+    },
+    {
+      "artist": "The Weeknd",
+      "album": "After Hours",
+      "track": "Blinding Lights",
+      "uri": "spotify:track:0VjIjW4GlUZAMYd2vXMi3b"
+    }
+  ]
+}
