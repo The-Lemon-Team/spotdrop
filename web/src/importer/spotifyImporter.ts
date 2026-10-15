@@ -69,17 +69,11 @@ export async function importSpotifyData(
       for (let i = 0; i < playlists.length; i++) {
         const pl = playlists[i];
         const pName = (pl.name || `Playlist #${i}`).trim();
-        const pId = `pl_${encodeURIComponent(pName.toLowerCase())}`;
+        const cleanSlug = pName.toLowerCase().replace(/[^a-z0-9а-яё]/gi, '_').replace(/_+/g, '_').slice(0, 30);
+        const pId = `pl_${profileId}_${i}_${cleanSlug || 'playlist'}`;
         const playlistTag = normalizeTagName(pName);
         const items = pl.items || [];
-
-        playlistEntities.push({
-          id: pId,
-          profileId,
-          name: pName,
-          trackCount: items.length,
-          lastModifiedDate: pl.lastModifiedDate || '',
-        });
+        const playlistTrackIds: string[] = [];
 
         for (const item of items) {
           const t = item.track;
@@ -92,6 +86,8 @@ export async function importSpotifyData(
           if (!tName) continue;
 
           const key = uri || `${aName.toLowerCase()}|${tName.toLowerCase()}`;
+          playlistTrackIds.push(key);
+
           const existing = trackMap.get(key);
           const tags = new Set<string>(existing?.tags || []);
           tags.add('#all');
@@ -116,6 +112,16 @@ export async function importSpotifyData(
             addedAt: item.addedDate ? new Date(item.addedDate).getTime() : Date.now(),
           });
         }
+
+        playlistEntities.push({
+          id: pId,
+          profileId,
+          name: pName,
+          trackCount: playlistTrackIds.length,
+          trackIds: playlistTrackIds,
+          lastModifiedDate: pl.lastModifiedDate || '',
+          createdAt: pl.lastModifiedDate ? new Date(pl.lastModifiedDate).getTime() : Date.now(),
+        });
       }
     } catch (err) {
       console.error('Error parsing playlists JSON:', err);
@@ -249,6 +255,135 @@ export async function createAndUploadProfile(
 }
 
 /**
+ * Background synchronizer for pinned YouTube tracks from YourLibrary.json
+ * Ensures that newly downloaded or pinned tracks are updated in IndexedDB.
+ */
+export async function syncPinnedTracksFromDefaultLibrary(profileId: string): Promise<number> {
+  try {
+    const res = await apiFetch('/defaults/default/YourLibrary.json');
+    if (!res.ok) return 0;
+    const data: RawSpotifyLibraryExport = await res.json();
+    const serverTracks = data.tracks || [];
+
+    const serverPinnedMap = new Map<string, (typeof serverTracks)[0]>();
+    for (const st of serverTracks) {
+      if (st.pinnedVideoId) {
+        if (st.uri) serverPinnedMap.set(st.uri, st);
+        const nameKey = `${(st.artist || '').toLowerCase().trim()}|${(st.track || '').toLowerCase().trim()}`;
+        serverPinnedMap.set(nameKey, st);
+      }
+    }
+
+    if (serverPinnedMap.size === 0) return 0;
+
+    const localTracks = await db.tracks.where('profileId').equals(profileId).toArray();
+    const tracksToUpdate: TrackCell[] = [];
+
+    for (const lt of localTracks) {
+      if (!lt.pinnedVideoId) {
+        const nameKey = `${lt.artist.toLowerCase().trim()}|${lt.title.toLowerCase().trim()}`;
+        const match = (lt.id && serverPinnedMap.get(lt.id)) || serverPinnedMap.get(nameKey);
+        if (match && match.pinnedVideoId) {
+          tracksToUpdate.push({
+            ...lt,
+            pinnedVideoId: match.pinnedVideoId,
+            pinnedTitle: match.pinnedTitle || lt.pinnedTitle || lt.title,
+            pinnedChannel: match.pinnedChannel || lt.pinnedChannel || lt.artist,
+            pinnedDuration: match.pinnedDuration || lt.pinnedDuration || '',
+            pinnedThumbnail: match.pinnedThumbnail || lt.pinnedThumbnail || `https://i.ytimg.com/vi/${match.pinnedVideoId}/hqdefault.jpg`,
+          });
+        }
+      }
+    }
+
+    if (tracksToUpdate.length > 0) {
+      await db.tracks.bulkPut(tracksToUpdate);
+      console.log(`[syncPinned] Synchronized ${tracksToUpdate.length} pinned tracks from default library.`);
+    }
+
+    return tracksToUpdate.length;
+  } catch (err) {
+    console.warn('[syncPinned] Background sync skipped:', err);
+    return 0;
+  }
+}
+
+/**
+ * Ensures that playlists with complete trackIds exist for the profile.
+ * If playlists are missing or have no trackIds, imports from server / defaults.
+ */
+export async function ensurePlaylistsSynced(profileId: string): Promise<number> {
+  try {
+    const existing = await db.playlists.where('profileId').equals(profileId).toArray();
+    const hasValidPlaylists =
+      existing.length > 0 && existing.some((p) => Array.isArray(p.trackIds) && p.trackIds.length > 0);
+
+    if (hasValidPlaylists) {
+      return existing.length;
+    }
+
+    const isMaster =
+      profileId === 'bandita' || profileId === 'default' || profileId === 'profile_default';
+    const slug = isMaster ? 'bandita' : profileId;
+
+    let plJson = await fetchJsonSafely(`/api/profiles/${slug}/playlists`);
+    if (!plJson && isMaster) {
+      plJson = await fetchJsonSafely('/defaults/default/Playlist1.json');
+    }
+
+    if (!plJson) return existing.length;
+
+    const data: RawSpotifyPlaylistsExport = JSON.parse(plJson);
+    const playlists = data.playlists || [];
+    const playlistEntities: Playlist[] = [];
+
+    for (let i = 0; i < playlists.length; i++) {
+      const pl = playlists[i];
+      const pName = (pl.name || `Playlist #${i}`).trim();
+      const cleanSlug = pName
+        .toLowerCase()
+        .replace(/[^a-z0-9а-яё]/gi, '_')
+        .replace(/_+/g, '_')
+        .slice(0, 30);
+      const pId = `pl_${profileId}_${i}_${cleanSlug || 'playlist'}`;
+      const items = pl.items || [];
+      const trackIds: string[] = [];
+
+      for (const item of items) {
+        const t = item.track;
+        if (!t) continue;
+        const tName = (t.trackName || '').trim();
+        const aName = (t.artistName || '').trim();
+        const uri = (t.trackUri || '').trim();
+        if (!tName) continue;
+        const key = uri || `${aName.toLowerCase()}|${tName.toLowerCase()}`;
+        trackIds.push(key);
+      }
+
+      playlistEntities.push({
+        id: pId,
+        profileId,
+        name: pName,
+        trackCount: trackIds.length,
+        trackIds,
+        lastModifiedDate: pl.lastModifiedDate || '',
+        createdAt: pl.lastModifiedDate ? new Date(pl.lastModifiedDate).getTime() : Date.now(),
+      });
+    }
+
+    if (playlistEntities.length > 0) {
+      await db.playlists.bulkPut(playlistEntities);
+      console.log(`[Playlists] Synced ${playlistEntities.length} Spotify playlists for ${profileId}`);
+    }
+
+    return playlistEntities.length;
+  } catch (err) {
+    console.warn('[Playlists] Synchronization skipped:', err);
+    return 0;
+  }
+}
+
+/**
  * Loads a profile by its slug/id (e.g. 'bandita', 'default', 'spot_xxxxxx')
  */
 export async function loadProfileBySlug(slug: string): Promise<boolean> {
@@ -262,6 +397,11 @@ export async function loadProfileBySlug(slug: string): Promise<boolean> {
     const count = await db.tracks.where('profileId').equals(targetId).count();
     if (count > 0) {
       await setCurrentProfile(targetId);
+      ensurePlaylistsSynced(targetId).catch(() => {});
+      if (isMaster) {
+        // Sync newly pinned tracks from server YourLibrary.json into IndexedDB in background
+        syncPinnedTracksFromDefaultLibrary(targetId).catch(() => {});
+      }
       return true;
     }
   }
@@ -299,6 +439,7 @@ export async function loadProfileBySlug(slug: string): Promise<boolean> {
 
   if (libJson || plJson) {
     await importSpotifyData(targetId, libJson, plJson);
+    await ensurePlaylistsSynced(targetId);
     return true;
   }
 
@@ -309,5 +450,15 @@ export async function loadProfileBySlug(slug: string): Promise<boolean> {
  * Initializes default library & playlists if database is currently empty
  */
 export async function initializeDefaultsIfEmpty(): Promise<boolean> {
+  const current = await getCurrentProfile();
+  if (current) {
+    const count = await db.tracks.where('profileId').equals(current.id).count();
+    if (count > 0) {
+      syncPinnedTracksFromDefaultLibrary(current.id).catch(console.warn);
+      ensurePlaylistsSynced(current.id).catch(console.warn);
+      return false;
+    }
+  }
   return await loadProfileBySlug('bandita');
 }
+

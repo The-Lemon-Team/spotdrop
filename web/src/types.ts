@@ -32,7 +32,11 @@ export interface Playlist {
   profileId: string;
   name: string;
   trackCount: number;
+  trackIds: string[]; // Ordered track keys/URIs
   lastModifiedDate?: string;
+  createdAt?: number;
+  description?: string;
+  coverGradient?: string;
 }
 
 export interface YouTubeCandidate {
