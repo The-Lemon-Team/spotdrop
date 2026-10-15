@@ -1,0 +1,9 @@
+<resources>
+    <color name="bandita_black">#0D0E15</color>
+    <color name="bandita_dark">#161922</color>
+    <color name="bandita_card">#202433</color>
+    <color name="bandita_accent">#00E5FF</color>
+    <color name="bandita_secondary">#FF007F</color>
+    <color name="bandita_text_primary">#F0F3F6</color>
+    <color name="bandita_text_secondary">#9CA3AF</color>
+</resources>

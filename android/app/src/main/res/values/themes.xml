@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.BanditaPlayer" parent="android:Theme.Material.NoActionBar">
+        <item name="android:statusBarColor">@color/bandita_black</item>
+        <item name="android:navigationBarColor">@color/bandita_black</item>
+        <item name="android:windowBackground">@color/bandita_black</item>
+    </style>
+</resources>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SpotDrop</string>
+    <string name="search_hint">Search title, artist, or #tag...</string>
+    <string name="all_tracks">#all</string>
+    <string name="favorites">#favorites</string>
+    <string name="shuffle">Shuffle</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="choose_source">Choose Version</string>
+    <string name="pin_as_default">Pin as Default</string>
+    <string name="first_match">Auto (First Match)</string>
+    <string name="pinned">Pinned</string>
+</resources>
