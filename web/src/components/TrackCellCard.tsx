@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { Play, Pause, Heart, Sliders, Pin } from 'lucide-react';
+import { Play, Pause, Heart, Sliders, Pin, Share2, FolderPlus } from 'lucide-react';
 import type { TrackCell } from '../types';
 
 interface TrackCellCardProps {
@@ -9,6 +9,8 @@ interface TrackCellCardProps {
   onPlay: (track: TrackCell) => void;
   onOpenPicker: (track: TrackCell) => void;
   onToggleFavorite: (trackId: string) => void;
+  onAddToPlaylist?: (track: TrackCell) => void;
+  onShareTrack?: (track: TrackCell) => void;
 }
 
 export const TrackCellCard = memo<TrackCellCardProps>(function TrackCellCard({
@@ -18,6 +20,8 @@ export const TrackCellCard = memo<TrackCellCardProps>(function TrackCellCard({
   onPlay,
   onOpenPicker,
   onToggleFavorite,
+  onAddToPlaylist,
+  onShareTrack,
 }) {
   const handlePlay = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -98,13 +102,39 @@ export const TrackCellCard = memo<TrackCellCardProps>(function TrackCellCard({
       </div>
 
       {/* Action Buttons */}
-      <div className="flex items-center space-x-1.5 ml-2 shrink-0">
+      <div className="flex items-center space-x-1 sm:space-x-1.5 ml-2 shrink-0">
+        {onShareTrack && (
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              onShareTrack(track);
+            }}
+            className="p-1.5 sm:p-2 rounded-lg text-[#8E95A5] hover:text-[#00E5FF] hover:bg-[#212433] transition-colors cursor-pointer"
+            title="Поделиться треком"
+          >
+            <Share2 className="w-4 h-4" />
+          </button>
+        )}
+
+        {onAddToPlaylist && (
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              onAddToPlaylist(track);
+            }}
+            className="p-1.5 sm:p-2 rounded-lg text-[#8E95A5] hover:text-[#00E5FF] hover:bg-[#212433] transition-colors cursor-pointer"
+            title="Добавить в плейлист"
+          >
+            <FolderPlus className="w-4 h-4" />
+          </button>
+        )}
+
         <button
           onClick={(e) => {
             e.stopPropagation();
             onToggleFavorite(track.id);
           }}
-          className={`p-2 rounded-lg transition-colors cursor-pointer ${
+          className={`p-1.5 sm:p-2 rounded-lg transition-colors cursor-pointer ${
             track.isFavorite
               ? 'text-[#FF2E93] hover:text-[#FF2E93]/80'
               : 'text-[#8E95A5] hover:text-[#F3F4F6]'
@@ -121,7 +151,7 @@ export const TrackCellCard = memo<TrackCellCardProps>(function TrackCellCard({
             e.stopPropagation();
             onOpenPicker(track);
           }}
-          className={`p-2 rounded-lg transition-all cursor-pointer ${
+          className={`p-1.5 sm:p-2 rounded-lg transition-all cursor-pointer ${
             track.pinnedVideoId
               ? 'bg-[#00E5FF]/10 text-[#00E5FF] hover:bg-[#00E5FF]/20 border border-[#00E5FF]/30'
               : 'bg-[#212433] text-[#B2B9C8] hover:text-[#00E5FF] hover:bg-[#2A2E40]'

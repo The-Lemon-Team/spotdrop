@@ -1,8 +1,19 @@
 import React, { memo } from 'react';
-import { Play, Pause, SkipBack, SkipForward, Shuffle, Volume2, VolumeX, Pin, ListMusic, ChevronDown, ChevronUp } from 'lucide-react';
+import { Play, Pause, SkipBack, SkipForward, Shuffle, Volume2, VolumeX, Pin, ListMusic, ChevronDown, ChevronUp, Share2, FolderPlus, Heart } from 'lucide-react';
 import { usePlayer, usePlayerTime } from '../player/playerContext';
+import type { TrackCell } from '../types';
 
-export const BottomPlayerBar: React.FC = memo(function BottomPlayerBar() {
+interface BottomPlayerBarProps {
+  onShareTrack?: (track: TrackCell) => void;
+  onAddToPlaylist?: (track: TrackCell) => void;
+  onToggleFavorite?: (trackId: string) => void;
+}
+
+export const BottomPlayerBar: React.FC<BottomPlayerBarProps> = memo(function BottomPlayerBar({
+  onShareTrack,
+  onAddToPlaylist,
+  onToggleFavorite,
+}) {
   const {
     currentTrack,
     activeCandidate,
@@ -169,8 +180,42 @@ export const BottomPlayerBar: React.FC = memo(function BottomPlayerBar() {
           )}
         </div>
 
-        {/* Right: Volume & Queue (Desktop/Mobile) */}
-        <div className="flex items-center space-x-2 sm:space-x-3 shrink-0">
+        {/* Right: Actions, Volume & Queue (Desktop/Mobile) */}
+        <div className="flex items-center space-x-1 sm:space-x-2 shrink-0">
+          {onShareTrack && currentTrack && (
+            <button
+              onClick={() => onShareTrack(currentTrack)}
+              className="p-2 rounded-xl text-[#8E95A5] hover:text-[#00E5FF] hover:bg-[#2B2F42]/50 transition-colors cursor-pointer"
+              title="Поделиться треком"
+            >
+              <Share2 className="w-4 h-4" />
+            </button>
+          )}
+
+          {onAddToPlaylist && currentTrack && (
+            <button
+              onClick={() => onAddToPlaylist(currentTrack)}
+              className="p-2 rounded-xl text-[#8E95A5] hover:text-[#00E5FF] hover:bg-[#2B2F42]/50 transition-colors cursor-pointer"
+              title="Добавить в плейлист"
+            >
+              <FolderPlus className="w-4 h-4" />
+            </button>
+          )}
+
+          {onToggleFavorite && currentTrack && (
+            <button
+              onClick={() => onToggleFavorite(currentTrack.id)}
+              className={`p-2 rounded-xl transition-colors cursor-pointer ${
+                currentTrack.isFavorite
+                  ? 'text-[#FF2E93] hover:text-[#FF2E93]/80'
+                  : 'text-[#8E95A5] hover:text-white'
+              }`}
+              title={currentTrack.isFavorite ? 'Удалить из избранного' : 'В избранное'}
+            >
+              <Heart className={`w-4 h-4 ${currentTrack.isFavorite ? 'fill-[#FF2E93]' : ''}`} />
+            </button>
+          )}
+
           <button
             onClick={toggleQueueView}
             className={`p-2 rounded-xl transition-all cursor-pointer flex items-center space-x-1.5 ${

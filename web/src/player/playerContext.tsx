@@ -189,6 +189,7 @@ export function PlayerProvider({ children }: { children: React.ReactNode }) {
   const originalQueueRef = useRef<TrackCell[]>([]);
   const playRequestIdRef = useRef<number>(0);
   const abortControllerRef = useRef<AbortController | null>(null);
+  const playCountTimerRef = useRef<number | null>(null);
 
   useEffect(() => {
     queueRef.current = queue;
@@ -276,10 +277,15 @@ export function PlayerProvider({ children }: { children: React.ReactNode }) {
       setIsBuffering(true);
       setAudioError(null);
 
-      // Increment play count in DB
-      db.tracks.where('id').equals(track.id).modify((t) => {
-        t.playCount = (t.playCount || 0) + 1;
-      });
+      // Debounce play count increment in IndexedDB (only commit if track plays for at least 7 seconds)
+      if (playCountTimerRef.current) {
+        clearTimeout(playCountTimerRef.current);
+      }
+      playCountTimerRef.current = window.setTimeout(() => {
+        db.tracks.where('id').equals(track.id).modify((t) => {
+          t.playCount = (t.playCount || 0) + 1;
+        }).catch(() => {});
+      }, 7000);
 
       const streamEndpoint = getAudioStreamUrl(candidate.videoId, track.profileId);
 
@@ -297,6 +303,21 @@ export function PlayerProvider({ children }: { children: React.ReactNode }) {
           if (requestId === playRequestIdRef.current) {
             setIsBuffering(false);
             setIsPlaying(true);
+
+            // Background prefetch for next track in queue to ensure zero-lag switching
+            const curQ = queueRef.current;
+            const curIdx = queueIndexRef.current;
+            if (curQ.length > 1) {
+              const nextTrack = curQ[(curIdx + 1) % curQ.length];
+              if (nextTrack) {
+                if (nextTrack.pinnedVideoId) {
+                  fetch(getAudioStreamUrl(nextTrack.pinnedVideoId, nextTrack.profileId), { method: 'HEAD' }).catch(() => {});
+                } else {
+                  const nextQuery = `${nextTrack.artist} ${nextTrack.title} audio`;
+                  apiFetch(`/api/search?q=${encodeURIComponent(nextQuery)}`).catch(() => {});
+                }
+              }
+            }
           }
         })
         .catch((err) => {

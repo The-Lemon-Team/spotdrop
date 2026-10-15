@@ -20,6 +20,8 @@ import {
   Search,
   Sparkles,
   LocateFixed,
+  Share2,
+  FolderPlus,
 } from 'lucide-react';
 import { usePlayer, usePlayerTime, parseDurationText } from '../player/playerContext';
 import type { TrackCell } from '../types';
@@ -29,15 +31,41 @@ interface PlaylistDrawerProps {
   onClose: () => void;
   onOpenPicker: (track: TrackCell) => void;
   onToggleFavorite: (trackId: string) => void;
+  onShareTrack?: (track: TrackCell) => void;
+  onAddToPlaylist?: (track: TrackCell) => void;
 }
 
 type TabMode = 'all' | 'upcoming' | 'favorites';
+
+// Format seconds to mm:ss or hh:mm:ss
+function formatSeconds(secs: number) {
+  if (!Number.isFinite(secs) || isNaN(secs) || secs <= 0) return '0:00';
+  const total = Math.floor(secs);
+  const hrs = Math.floor(total / 3600);
+  const mins = Math.floor((total % 3600) / 60);
+  const rem = total % 60;
+  if (hrs > 0) {
+    return `${hrs}:${mins < 10 ? '0' : ''}${mins}:${rem < 10 ? '0' : ''}${rem}`;
+  }
+  return `${mins}:${rem < 10 ? '0' : ''}${rem}`;
+}
+
+const NowPlayingTimer = memo(function NowPlayingTimer() {
+  const { currentTime, duration } = usePlayerTime();
+  return (
+    <span className="text-[11px] font-mono text-[#8E95A5]">
+      {formatSeconds(currentTime)} / {formatSeconds(duration)}
+    </span>
+  );
+});
 
 export const PlaylistDrawer = memo<PlaylistDrawerProps>(function PlaylistDrawer({
   isOpen,
   onClose,
   onOpenPicker,
   onToggleFavorite,
+  onShareTrack,
+  onAddToPlaylist,
 }) {
   const {
     currentTrack,
@@ -55,14 +83,34 @@ export const PlaylistDrawer = memo<PlaylistDrawerProps>(function PlaylistDrawer(
     playNext,
   } = usePlayer();
 
-  const { currentTime, duration } = usePlayerTime();
-
   const [activeTab, setActiveTab] = useState<TabMode>('all');
   const [filterQuery, setFilterQuery] = useState('');
   const [showSearch, setShowSearch] = useState(false);
+  const [visibleDrawerCount, setVisibleDrawerCount] = useState(60);
 
   const activeTrackRef = useRef<HTMLDivElement | null>(null);
   const touchStartY = useRef<number>(0);
+
+  // Reset pagination on tab/query change
+  useEffect(() => {
+    setVisibleDrawerCount(60);
+  }, [activeTab, filterQuery]);
+
+  // Calculate estimated total remaining duration of queue
+  const totalQueueDurationText = useMemo(() => {
+    let totalSecs = 0;
+    for (let i = 0; i < queue.length; i++) {
+      const dur = parseDurationText(queue[i].pinnedDuration);
+      totalSecs += dur > 0 ? dur : 210; // fallback ~3.5m
+    }
+    const mins = Math.round(totalSecs / 60);
+    if (mins >= 60) {
+      const hrs = Math.floor(mins / 60);
+      const remMins = mins % 60;
+      return `~${hrs} ч ${remMins} мин`;
+    }
+    return `~${mins} мин`;
+  }, [queue]);
 
   // Close on Escape key
   useEffect(() => {
@@ -98,35 +146,6 @@ export const PlaylistDrawer = memo<PlaylistDrawerProps>(function PlaylistDrawer(
     }
   }, []);
 
-  // Format seconds to mm:ss or hh:mm:ss
-  const formatSeconds = (secs: number) => {
-    if (!Number.isFinite(secs) || isNaN(secs) || secs <= 0) return '0:00';
-    const total = Math.floor(secs);
-    const hrs = Math.floor(total / 3600);
-    const mins = Math.floor((total % 3600) / 60);
-    const rem = total % 60;
-    if (hrs > 0) {
-      return `${hrs}:${mins < 10 ? '0' : ''}${mins}:${rem < 10 ? '0' : ''}${rem}`;
-    }
-    return `${mins}:${rem < 10 ? '0' : ''}${rem}`;
-  };
-
-  // Calculate estimated total remaining duration of queue
-  const totalQueueDurationText = useMemo(() => {
-    let totalSecs = 0;
-    for (let i = 0; i < queue.length; i++) {
-      const dur = parseDurationText(queue[i].pinnedDuration);
-      totalSecs += dur > 0 ? dur : 210; // fallback ~3.5m
-    }
-    const mins = Math.round(totalSecs / 60);
-    if (mins >= 60) {
-      const hrs = Math.floor(mins / 60);
-      const remMins = mins % 60;
-      return `~${hrs} ч ${remMins} мин`;
-    }
-    return `~${mins} мин`;
-  }, [queue]);
-
   // Filtered queue items based on active tab and search query
   const displayedItems = useMemo(() => {
     let items = queue.map((track, originalIndex) => ({ track, originalIndex }));
@@ -149,6 +168,12 @@ export const PlaylistDrawer = memo<PlaylistDrawerProps>(function PlaylistDrawer(
 
     return items;
   }, [queue, queueIndex, activeTab, filterQuery]);
+
+  // Windowed items: only render a batch to keep DOM lean and 60fps smooth
+  const slicedItems = useMemo(() => {
+    if (!isOpen) return [];
+    return displayedItems.slice(0, visibleDrawerCount);
+  }, [displayedItems, visibleDrawerCount, isOpen]);
 
   const upcomingCount = Math.max(0, queue.length - queueIndex - 1);
 
@@ -348,9 +373,7 @@ export const PlaylistDrawer = memo<PlaylistDrawerProps>(function PlaylistDrawer(
                     <Sparkles className="w-3.5 h-3.5" />
                     <span>Сейчас играет</span>
                   </span>
-                  <span className="text-[11px] font-mono text-[#8E95A5]">
-                    {formatSeconds(currentTime)} / {formatSeconds(duration)}
-                  </span>
+                  <NowPlayingTimer />
                 </div>
 
                 <div
@@ -501,7 +524,7 @@ export const PlaylistDrawer = memo<PlaylistDrawerProps>(function PlaylistDrawer(
                 </div>
               ) : (
                 <div className="space-y-1.5">
-                  {displayedItems.map(({ track, originalIndex }) => {
+                  {slicedItems.map(({ track, originalIndex }) => {
                     const isCurrent = currentTrack?.id === track.id;
                     const isPassed = originalIndex < queueIndex;
 
@@ -593,6 +616,34 @@ export const PlaylistDrawer = memo<PlaylistDrawerProps>(function PlaylistDrawer(
                             </span>
                           )}
 
+                          {/* Share track */}
+                          {onShareTrack && (
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                onShareTrack(track);
+                              }}
+                              className="p-1.5 rounded-lg text-[#8E95A5] opacity-0 group-hover:opacity-100 hover:text-[#00E5FF] hover:bg-[#212433] transition-all cursor-pointer"
+                              title="Поделиться треком"
+                            >
+                              <Share2 className="w-3.5 h-3.5" />
+                            </button>
+                          )}
+
+                          {/* Add to playlist */}
+                          {onAddToPlaylist && (
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                onAddToPlaylist(track);
+                              }}
+                              className="p-1.5 rounded-lg text-[#8E95A5] opacity-0 group-hover:opacity-100 hover:text-[#00E5FF] hover:bg-[#212433] transition-all cursor-pointer"
+                              title="Добавить в плейлист"
+                            >
+                              <FolderPlus className="w-3.5 h-3.5" />
+                            </button>
+                          )}
+
                           {/* Favorite toggle */}
                           <button
                             onClick={(e) => {
@@ -650,6 +701,19 @@ export const PlaylistDrawer = memo<PlaylistDrawerProps>(function PlaylistDrawer(
                   })}
                 </div>
               )}
+
+              {/* Load More Button for Large Queues */}
+              {displayedItems.length > visibleDrawerCount && (
+                <div className="pt-2 pb-4 text-center">
+                  <button
+                    onClick={() => setVisibleDrawerCount((prev) => prev + 60)}
+                    className="px-4 py-2 bg-[#212433] hover:bg-[#2B2F42] text-xs font-semibold text-[#00E5FF] rounded-xl border border-[#00E5FF]/30 transition-all cursor-pointer"
+                  >
+                    Показать еще ({Math.min(60, displayedItems.length - visibleDrawerCount)} из {displayedItems.length - visibleDrawerCount})
+                  </button>
+                </div>
+              )}
+
             </div>
           </div>
         </div>
