@@ -11504,1303 +11504,2171 @@
       "artist": "Metallica",
       "album": "Metallica",
       "track": "Sad But True",
-      "uri": "spotify:track:1PhLYngBKbeDtdmDzCg3Pb"
+      "uri": "spotify:track:1PhLYngBKbeDtdmDzCg3Pb",
+      "pinnedVideoId": "TpohVYomw2o",
+      "pinnedTitle": "Sad But True (Remastered)",
+      "pinnedChannel": "Metallica",
+      "pinnedDuration": "5:25"
     },
     {
       "artist": "Paul van Dyk",
       "album": "Let Go",
       "track": "Let Go - Single Edit",
-      "uri": "spotify:track:32UzL4LPJB0uNtmAS1UFq7"
+      "uri": "spotify:track:32UzL4LPJB0uNtmAS1UFq7",
+      "pinnedVideoId": "9phZWySNsXY",
+      "pinnedTitle": "Paul van Dyk feat. Rea Garvey - Let Go (Official Video)",
+      "pinnedChannel": "Paul van Dyk",
+      "pinnedDuration": "3:48"
     },
     {
       "artist": "In Flames",
       "album": "A Sense of Purpose",
       "track": "The Chosen Pessimist",
-      "uri": "spotify:track:5fkbfFNVHAhLqQ008eUlOD"
+      "uri": "spotify:track:5fkbfFNVHAhLqQ008eUlOD",
+      "pinnedVideoId": "L50Zu4xmQIc",
+      "pinnedTitle": "IN FLAMES - The Chosen Pessimist (OFFICIAL LIVE VIDEO)",
+      "pinnedChannel": "Nuclear Blast Records",
+      "pinnedDuration": "7:50"
     },
     {
       "artist": "LXST CXNTURY",
       "album": "UNIVERSE OF THE PAST",
       "track": "ODIUM",
-      "uri": "spotify:track:336ASHsxDakSN80bubkfZV"
+      "uri": "spotify:track:336ASHsxDakSN80bubkfZV",
+      "pinnedVideoId": "5R4Zu1nrAYY",
+      "pinnedTitle": "LXST CXNTURY - ODIUM (ft. Kingpin Skinny Pimp)",
+      "pinnedChannel": "LXST CXNTURY",
+      "pinnedDuration": "2:47"
     },
     {
       "artist": "Robert Cristian",
       "album": "Missing You",
       "track": "Missing You",
-      "uri": "spotify:track:6y25OlexhixX24Ze8NrF7S"
+      "uri": "spotify:track:6y25OlexhixX24Ze8NrF7S",
+      "pinnedVideoId": "BVkuwp2eNQI",
+      "pinnedTitle": "Robert Cristian - Missing You (Official Audio)",
+      "pinnedChannel": "Cherokee Recordings",
+      "pinnedDuration": "5:34"
     },
     {
       "artist": "MC Fava",
       "album": "Hearts Wander",
       "track": "Hearts Wander",
-      "uri": "spotify:track:39a3pZgFKvTee1Z3DO8Boj"
+      "uri": "spotify:track:39a3pZgFKvTee1Z3DO8Boj",
+      "pinnedVideoId": "fy4PqA5SQ_w",
+      "pinnedTitle": "Hearts Wander",
+      "pinnedChannel": "Mc Fava - Topic",
+      "pinnedDuration": "6:14"
     },
     {
       "artist": "Markus Schulz",
       "album": "In Search Of Sunrise 22 Mix 01: The Awakening",
       "track": "Edge of Morning - Mixed",
-      "uri": "spotify:track:3KRUF3KT7KSdX9GssCyDjO"
+      "uri": "spotify:track:3KRUF3KT7KSdX9GssCyDjO",
+      "pinnedVideoId": "Gtd1zWTlZcM",
+      "pinnedTitle": "Edge of Morning (Mixed)",
+      "pinnedChannel": "Markus Schulz",
+      "pinnedDuration": "2:36"
     },
     {
       "artist": "Megadeth",
       "album": "Countdown To Extinction",
       "track": "Psychotron",
-      "uri": "spotify:track:6HyVffzF6uXt9NHMgEkQpJ"
+      "uri": "spotify:track:6HyVffzF6uXt9NHMgEkQpJ",
+      "pinnedVideoId": "1ibTHVW79v4",
+      "pinnedTitle": "Psychotron (Remastered/2012)",
+      "pinnedChannel": "Megadeth",
+      "pinnedDuration": "4:41"
     },
     {
       "artist": "H.1",
       "album": "Indigo Night",
       "track": "Hollow Moon",
-      "uri": "spotify:track:3lulo0VNEgxpOFm5y6GZAV"
+      "uri": "spotify:track:3lulo0VNEgxpOFm5y6GZAV",
+      "pinnedVideoId": "PSqf3dn3EU0",
+      "pinnedTitle": "Hollow Moon Official Lyric Video",
+      "pinnedChannel": "Birth of Monsters",
+      "pinnedDuration": "3:43"
     },
     {
       "artist": "Sabaton",
       "album": "The Last Stand",
       "track": "The Last Stand",
-      "uri": "spotify:track:0bUgTRe5st6TMbRCEjKezX"
+      "uri": "spotify:track:0bUgTRe5st6TMbRCEjKezX",
+      "pinnedVideoId": "HaTn3oRPtzg",
+      "pinnedTitle": "SABATON - The Last Stand (Official Lyric Video)",
+      "pinnedChannel": "Sabaton",
+      "pinnedDuration": "3:59"
     },
     {
       "artist": "Armin van Buuren",
       "album": "Jonson's Play",
       "track": "Jonson's Play",
-      "uri": "spotify:track:3lhXPDVaenHGjGOTCJ68GA"
+      "uri": "spotify:track:3lhXPDVaenHGjGOTCJ68GA",
+      "pinnedVideoId": "hfJWjd-wL7Y",
+      "pinnedTitle": "Jonson's Play (Extended Mix)",
+      "pinnedChannel": "Armin van Buuren",
+      "pinnedDuration": "6:31"
     },
     {
       "artist": "Zemfira",
       "album": "Четырнадцать недель тишины",
       "track": "Знак бесконечность",
-      "uri": "spotify:track:1z9MKbbqDIUGn1zhJTqBnA"
+      "uri": "spotify:track:1z9MKbbqDIUGn1zhJTqBnA",
+      "pinnedVideoId": "A29cDw57qWQ",
+      "pinnedTitle": "������� � ������������� (Official Video)",
+      "pinnedChannel": "Zemfira",
+      "pinnedDuration": "5:17"
     },
     {
       "artist": "Mike Foyle",
       "album": "A State Of Trance Classics, Vol. 13",
       "track": "Love Theme Dusk - Mike's Broken Record Mix",
-      "uri": "spotify:track:2ma4FV0U0yN4D9mb6gWMzK"
+      "uri": "spotify:track:2ma4FV0U0yN4D9mb6gWMzK",
+      "pinnedVideoId": "wjqVSi85UuM",
+      "pinnedTitle": "Mike Foyle vs Signalrunners - Love Theme Dusk (Mike Foyle Broken Record Mix) |As Played on #ASOT1200",
+      "pinnedChannel": "Edson Gomes",
+      "pinnedDuration": "4:56"
     },
     {
       "artist": "Linkin Park",
       "album": "Minutes to Midnight",
       "track": "Bleed It Out",
-      "uri": "spotify:track:0UFDKFqW2oGspYeYqo9wjA"
+      "uri": "spotify:track:0UFDKFqW2oGspYeYqo9wjA",
+      "pinnedVideoId": "bSwzZoLCoZ0",
+      "pinnedTitle": "Bleed It Out",
+      "pinnedChannel": "Linkin Park",
+      "pinnedDuration": "2:44"
     },
     {
       "artist": "Gorillaz",
       "album": "Demon Days",
       "track": "DARE (feat. Shaun Ryder & Roses Gabor)",
-      "uri": "spotify:track:4Hff1IjRbLGeLgFgxvHflk"
+      "uri": "spotify:track:4Hff1IjRbLGeLgFgxvHflk",
+      "pinnedVideoId": "rIq6i4-8Nww",
+      "pinnedTitle": "DARE",
+      "pinnedChannel": "Gorillaz",
+      "pinnedDuration": "3:34"
     },
     {
       "artist": "Ben Gold",
       "album": "Sound Advice",
       "track": "Why You El?",
-      "uri": "spotify:track:39dsIEN1aGpVhF6WmaJrUu"
+      "uri": "spotify:track:39dsIEN1aGpVhF6WmaJrUu",
+      "pinnedVideoId": "AebZg4ria4U",
+      "pinnedTitle": "Why You El?",
+      "pinnedChannel": "Ben Gold - Topic",
+      "pinnedDuration": "3:46"
     },
     {
       "artist": "Lange",
       "album": "Sincere",
       "track": "Sincere - Tomac Remix",
-      "uri": "spotify:track:7n19L6QFuJcvtgcpQQ1ZuB"
+      "uri": "spotify:track:7n19L6QFuJcvtgcpQQ1ZuB",
+      "pinnedVideoId": "CSMdKbiShZE",
+      "pinnedTitle": "Sincere For You (Radio Mix)",
+      "pinnedChannel": "Lange - Topic",
+      "pinnedDuration": "3:54"
     },
     {
       "artist": "Judas Priest",
       "album": "Nostradamus",
       "track": "Prophecy",
-      "uri": "spotify:track:3R1fTgjdOdOM7gSVJ79yEu"
+      "uri": "spotify:track:3R1fTgjdOdOM7gSVJ79yEu",
+      "pinnedVideoId": "-AlLsDN_4nQ",
+      "pinnedTitle": "Prophecy",
+      "pinnedChannel": "Judas Priest",
+      "pinnedDuration": "5:26"
     },
     {
       "artist": "Estiva",
       "album": "Spectacle",
       "track": "Hero",
-      "uri": "spotify:track:5XAQO5MN3T7Z5ecAAql0JV"
+      "uri": "spotify:track:5XAQO5MN3T7Z5ecAAql0JV",
+      "pinnedVideoId": "BB23Wv6-cuk",
+      "pinnedTitle": "Hero",
+      "pinnedChannel": "Estiva - Topic",
+      "pinnedDuration": "3:14"
     },
     {
       "artist": "Paul van Dyk",
       "album": "Sunday Sessions 047",
       "track": "Stronger Together (Sunday Sessions 047)",
-      "uri": "spotify:track:5V9wZQPIH8Tz3DDiYVy9Tx"
+      "uri": "spotify:track:5V9wZQPIH8Tz3DDiYVy9Tx",
+      "pinnedVideoId": "lmjhl0e20vY",
+      "pinnedTitle": "Paul van Dyk & Pierre Pienaar - Stronger Together",
+      "pinnedChannel": "Paul van Dyk",
+      "pinnedDuration": "3:39"
     },
     {
       "artist": "Forester",
       "album": "Honey",
       "track": "Honey - Eli & Fur Remix",
-      "uri": "spotify:track:6wZX5BXVdZxw8enQXJdhNa"
+      "uri": "spotify:track:6wZX5BXVdZxw8enQXJdhNa",
+      "pinnedVideoId": "HMEJ7-_b98g",
+      "pinnedTitle": "Forester, Eli & Fur - Honey ft. Madeline Megery (Eli & Fur Remix)",
+      "pinnedChannel": "Forester",
+      "pinnedDuration": "3:39"
     },
     {
       "artist": "Miss Monique",
       "album": "Bloom At Night",
       "track": "Bloom At Night",
-      "uri": "spotify:track:1Hz5ZPQxC6esErNVN4cxr6"
+      "uri": "spotify:track:1Hz5ZPQxC6esErNVN4cxr6",
+      "pinnedVideoId": "tnTT-BLsbvM",
+      "pinnedTitle": "Miss Monique - Bloom At Night (Official Audio)",
+      "pinnedChannel": "Tomorrowland Music",
+      "pinnedDuration": "3:23"
     },
     {
       "artist": "Ill Niño",
       "album": "Confession [Special Edition]",
       "track": "Have You Ever Felt?",
-      "uri": "spotify:track:348rHT4gfx7A7ZU6QhnN0c"
+      "uri": "spotify:track:348rHT4gfx7A7ZU6QhnN0c",
+      "pinnedVideoId": "AqWlSKDM5O8",
+      "pinnedTitle": "Have You Ever Felt?",
+      "pinnedChannel": "ILL NINO",
+      "pinnedDuration": "3:18"
     },
     {
       "artist": "Sound Quelle",
       "album": "Trait",
       "track": "Summer Rain",
-      "uri": "spotify:track:14a2qGxPGeNtDQuTehnisv"
+      "uri": "spotify:track:14a2qGxPGeNtDQuTehnisv",
+      "pinnedVideoId": "TbIUbTwgFqc",
+      "pinnedTitle": "Sound Quelle & Diana Miro - Summer Rain",
+      "pinnedChannel": "Colorize",
+      "pinnedDuration": "3:56"
     },
     {
       "artist": "KhoMha",
       "album": "Earthshine",
       "track": "Earthshine",
-      "uri": "spotify:track:13gzqa9L58ZszOIqON5ZZR"
+      "uri": "spotify:track:13gzqa9L58ZszOIqON5ZZR",
+      "pinnedVideoId": "_M-9ScvcPJk",
+      "pinnedTitle": "KhoMha - Earthshine (Official Visualizer)",
+      "pinnedChannel": "Armada Music TV",
+      "pinnedDuration": "2:36"
     },
     {
       "artist": "Oxxxymiron",
       "album": "miXXXtape II: Долгий путь домой",
       "track": "Больше Бена",
-      "uri": "spotify:track:3zpcgoZOwtvgoGpc3nxd24"
+      "uri": "spotify:track:3zpcgoZOwtvgoGpc3nxd24",
+      "pinnedVideoId": "tVd-KX2Flbw",
+      "pinnedTitle": "Oxxxymiron & ���� - ������ ����",
+      "pinnedChannel": "oxxxymironofficial",
+      "pinnedDuration": "3:42"
     },
     {
       "artist": "Argy",
       "album": "New World",
       "track": "Pantheon",
-      "uri": "spotify:track:2JoOFFQnOG8LH01koNUE0w"
+      "uri": "spotify:track:2JoOFFQnOG8LH01koNUE0w",
+      "pinnedVideoId": "THnm60-jrrk",
+      "pinnedTitle": "Argy & Goom Gum - Pantheon [Extended Mix]",
+      "pinnedChannel": "Afterlife",
+      "pinnedDuration": "6:22"
     },
     {
       "artist": "Korn",
       "album": "The Paradigm Shift (World Tour Edition)",
       "track": "Hater",
-      "uri": "spotify:track:1vlgn36Bko8wbMBwzS4Mdr"
+      "uri": "spotify:track:1vlgn36Bko8wbMBwzS4Mdr",
+      "pinnedVideoId": "3-yJsnkbEco",
+      "pinnedTitle": "Korn - \"Hater\" from the forthcoming The Paradigm Shift: World Tour Edition",
+      "pinnedChannel": "KoRn",
+      "pinnedDuration": "3:55"
     },
     {
       "artist": "Skryptonite",
       "album": "Свистки и бумажки",
       "track": "Колёса 2",
-      "uri": "spotify:track:5Y5R8Xmj96re9Z6bqam7gA"
+      "uri": "spotify:track:5Y5R8Xmj96re9Z6bqam7gA",
+      "pinnedVideoId": "8HswPNpfFaE",
+      "pinnedTitle": "���������� - ����� 2 [Official Audio]",
+      "pinnedChannel": "Skryptonite",
+      "pinnedDuration": "3:11"
     },
     {
       "artist": "Oxxxymiron",
       "album": "miXXXtape II: Долгий путь домой",
       "track": "Хитиновый покров",
-      "uri": "spotify:track:6iDGZJolZoqGC4RBGt9MD8"
+      "uri": "spotify:track:6iDGZJolZoqGC4RBGt9MD8",
+      "pinnedVideoId": "uuzvjgQWfM0",
+      "pinnedTitle": "��������� ������",
+      "pinnedChannel": "oxxxymironofficial",
+      "pinnedDuration": "3:08"
     },
     {
       "artist": "Перемотка",
       "album": "Зелёный луч",
       "track": "Это любовь",
-      "uri": "spotify:track:7ikGDHYUbxkvg9K3BqVa7M"
+      "uri": "spotify:track:7ikGDHYUbxkvg9K3BqVa7M",
+      "pinnedVideoId": "JOf2QJeLCo8",
+      "pinnedTitle": "��� ������",
+      "pinnedChannel": "��������� - Topic",
+      "pinnedDuration": "3:30"
     },
     {
       "artist": "Gareth Emery",
       "album": "Trance Top 1000 Selection, Vol. 8 (Extended Versions)",
       "track": "Sanctuary",
-      "uri": "spotify:track:1BFNs0VdsCb7miRUELoKkr"
+      "uri": "spotify:track:1BFNs0VdsCb7miRUELoKkr",
+      "pinnedVideoId": "MMlVFa_754o",
+      "pinnedTitle": "Gareth Emery feat. Lucy Saunders - Sanctuary [Official Music Video]",
+      "pinnedChannel": "Gareth Emery",
+      "pinnedDuration": "4:05"
     },
     {
       "artist": "Blue Stahli",
       "album": "Blue Stahli",
       "track": "ULTRAnumb",
-      "uri": "spotify:track:3B0hzwc1e8AYOytj9hZS2I"
+      "uri": "spotify:track:3B0hzwc1e8AYOytj9hZS2I",
+      "pinnedVideoId": "tpJ-2xX5ZMg",
+      "pinnedTitle": "Blue Stahli - \"ULTRAnumb\"",
+      "pinnedChannel": "Blue Stahli",
+      "pinnedDuration": "4:19"
     },
     {
       "artist": "Kelsey Parks",
       "album": "Chasing After You",
       "track": "Chasing After You",
-      "uri": "spotify:track:2js8NMzTGtZiDWl00DxNmN"
+      "uri": "spotify:track:2js8NMzTGtZiDWl00DxNmN",
+      "pinnedVideoId": "ZoXVljuyp8I",
+      "pinnedTitle": "Chasing After You (feat. Katie Garfield)",
+      "pinnedChannel": "Kelsey Parks",
+      "pinnedDuration": "3:07"
     },
     {
       "artist": "Jochen Miller",
       "album": "Lunation",
       "track": "Lunation",
-      "uri": "spotify:track:14pZgMn2szcOLkS6Y1sWJq"
+      "uri": "spotify:track:14pZgMn2szcOLkS6Y1sWJq",
+      "pinnedVideoId": "Ff9812ES0e8",
+      "pinnedTitle": "Lunation",
+      "pinnedChannel": "Jochen Miller - Topic",
+      "pinnedDuration": "3:05"
     },
     {
       "artist": "Noize MC",
       "album": "Розыгрыш",
       "track": "Давай приколемся",
-      "uri": "spotify:track:2TxV8a86SRwzCoUJy1b8ts"
+      "uri": "spotify:track:2TxV8a86SRwzCoUJy1b8ts",
+      "pinnedVideoId": "KCqwCzT_Mt8",
+      "pinnedTitle": "����� ����������",
+      "pinnedChannel": "Noize MC",
+      "pinnedDuration": "3:29"
     },
     {
       "artist": "Rafael Osmo",
       "album": "Perfecto Records 2021",
       "track": "Sunset In Ibiza (Mixed)",
-      "uri": "spotify:track:0YjHtELfRLljHXBSJvA3P6"
+      "uri": "spotify:track:0YjHtELfRLljHXBSJvA3P6",
+      "pinnedVideoId": "KhuMhKuVzAM",
+      "pinnedTitle": "Ibiza",
+      "pinnedChannel": "Rafael Osmo",
+      "pinnedDuration": "7:16"
     },
     {
       "artist": "Disarmonia Mundi",
       "album": "The Isolation Game",
       "track": "Perdition Haze",
-      "uri": "spotify:track:4JlCtE5lFoJk5SNopehX7q"
+      "uri": "spotify:track:4JlCtE5lFoJk5SNopehX7q",
+      "pinnedVideoId": "mcshNQEAoqo",
+      "pinnedTitle": "Disarmonia Mundi- Perdition Haze (320kbps)",
+      "pinnedChannel": "syncreticeye",
+      "pinnedDuration": "4:21"
     },
     {
       "artist": "Free Flow Flava",
       "album": "Hidden Tape",
       "track": "Shinigami",
-      "uri": "spotify:track:7siEXmyPCprXKAyVY8nFip"
+      "uri": "spotify:track:7siEXmyPCprXKAyVY8nFip",
+      "pinnedVideoId": "AOuMaMigKSk",
+      "pinnedTitle": "Shinigami",
+      "pinnedChannel": "FREE FLOW FLAVA",
+      "pinnedDuration": "2:30"
     },
     {
       "artist": "PAIN",
       "album": "Cynic Paradise",
       "track": "Generation X",
-      "uri": "spotify:track:7eOgoqQylvoaLadVlIOXiQ"
+      "uri": "spotify:track:7eOgoqQylvoaLadVlIOXiQ",
+      "pinnedVideoId": "sm-eRzk8xXM",
+      "pinnedTitle": "Generation X",
+      "pinnedChannel": "PAIN",
+      "pinnedDuration": "4:18"
     },
     {
       "artist": "Skryptonite",
       "album": "2004",
       "track": "Москва любит...",
-      "uri": "spotify:track:41bGn6u78I8eNZg86tx3vp"
+      "uri": "spotify:track:41bGn6u78I8eNZg86tx3vp",
+      "pinnedVideoId": "V8XsbtoGKtg",
+      "pinnedTitle": "���������� - ������ �����... [Official Audio]",
+      "pinnedChannel": "Skryptonite",
+      "pinnedDuration": "3:26"
     },
     {
       "artist": "zwieR.Z.",
       "album": "Wings",
       "track": "Wings",
-      "uri": "spotify:track:314PIvK98uqyzREa81i5rb"
+      "uri": "spotify:track:314PIvK98uqyzREa81i5rb",
+      "pinnedVideoId": "_f88BPQiPLY",
+      "pinnedTitle": "zwieR.Z. - Wings (Cinematic/Rock/Orchestral)",
+      "pinnedChannel": "zwieR.Z.",
+      "pinnedDuration": "4:23"
     },
     {
       "artist": "Tinlicker",
       "album": "In Another Lifetime",
       "track": "Just To Hear You Say",
-      "uri": "spotify:track:66F2eP3BZWCmQiycL0trAs"
+      "uri": "spotify:track:66F2eP3BZWCmQiycL0trAs",
+      "pinnedVideoId": "ePGWWO1-Yo8",
+      "pinnedTitle": "Just To Hear You Say (Joseph Ray Extended Mix)",
+      "pinnedChannel": "Tinlicker",
+      "pinnedDuration": "6:20"
     },
     {
       "artist": "Inward Universe",
       "album": "At Night",
       "track": "At Night",
-      "uri": "spotify:track:6PWvduTczOkClFUufpS3Gh"
+      "uri": "spotify:track:6PWvduTczOkClFUufpS3Gh",
+      "pinnedVideoId": "YZVNJbYyPmE",
+      "pinnedTitle": "Inward Universe feat. Call From Beyond � At Night",
+      "pinnedChannel": "Inward Universe",
+      "pinnedDuration": "5:06"
     },
     {
       "artist": "Lady Gaga",
       "album": "The Cure",
       "track": "The Cure",
-      "uri": "spotify:track:34oB5r0lcN3fYWCs2uA1k5"
+      "uri": "spotify:track:34oB5r0lcN3fYWCs2uA1k5",
+      "pinnedVideoId": "I4IXxzioDAk",
+      "pinnedTitle": "Lady Gaga - The Cure (Official Lyric Video)",
+      "pinnedChannel": "Lady Gaga",
+      "pinnedDuration": "3:29"
     },
     {
       "artist": "l'Outlander",
       "album": "Homeland",
       "track": "Homeland",
-      "uri": "spotify:track:0N9v7WX0IZ1EcAthicd0JN"
+      "uri": "spotify:track:0N9v7WX0IZ1EcAthicd0JN",
+      "pinnedVideoId": "z3jJ8bJVU_8",
+      "pinnedTitle": "l�Outlander - Homeland  [lofi hip hop/relaxing beats]",
+      "pinnedChannel": "LOFI HIP HOP",
+      "pinnedDuration": "14:53"
     },
     {
       "artist": "Ohota",
       "album": "Ultramarine Rain",
       "track": "Ultramarine Rain",
-      "uri": "spotify:track:19x5n5HvoC5RpTTg1jhCIr"
+      "uri": "spotify:track:19x5n5HvoC5RpTTg1jhCIr",
+      "pinnedVideoId": "DDsuWCqyZS8",
+      "pinnedTitle": "Ultramarine Rain",
+      "pinnedChannel": "Ohota",
+      "pinnedDuration": "2:35"
     },
     {
       "artist": "Innerpartysystem",
       "album": "Innerpartysystem",
       "track": "Die Tonight Live Forever",
-      "uri": "spotify:track:0YpP7wlaWp0ZxpNAd0tAky"
+      "uri": "spotify:track:0YpP7wlaWp0ZxpNAd0tAky",
+      "pinnedVideoId": "DpLHx3wjdHE",
+      "pinnedTitle": "Die Tonight Live Forever (Album Version)",
+      "pinnedChannel": "INNERPARTYSYSTEM",
+      "pinnedDuration": "4:42"
     },
     {
       "artist": "Fly By Midnight",
       "album": "Borrow Your Time",
       "track": "Borrow Your Time - Lofi Version",
-      "uri": "spotify:track:32ZmVkbMDPnaBoYWxrBvMs"
+      "uri": "spotify:track:32ZmVkbMDPnaBoYWxrBvMs",
+      "pinnedVideoId": "zuk8iQ5WW7Q",
+      "pinnedTitle": "Fly by Midnight - Borrow Your Time (slowed + reverb)",
+      "pinnedChannel": "yxng night",
+      "pinnedDuration": "4:07"
     },
     {
       "artist": "deadmau5",
       "album": "W:/2016ALBUM/",
       "track": "Let Go - Extended Edit",
-      "uri": "spotify:track:6sxDe87etUDtY31ahvkKHJ"
+      "uri": "spotify:track:6sxDe87etUDtY31ahvkKHJ",
+      "pinnedVideoId": "eq0xP1aL9-U",
+      "pinnedTitle": "deadmau5 feat. Grabbitz - Let Go (Extended Edit)",
+      "pinnedChannel": "mau5trap",
+      "pinnedDuration": "11:32"
     },
     {
       "artist": "Korn",
       "album": "The Serenity of Suffering",
       "track": "A Different World (feat. Corey Taylor)",
-      "uri": "spotify:track:3ns1Hn52RB28zGVHiFvz7W"
+      "uri": "spotify:track:3ns1Hn52RB28zGVHiFvz7W",
+      "pinnedVideoId": "nuGrrrFu248",
+      "pinnedTitle": "Korn - A Different World (Feat. Corey Taylor) (LOUDER THAN LIFE FESTIVAL)",
+      "pinnedChannel": "KoRn",
+      "pinnedDuration": "3:17"
     },
     {
       "artist": "James De Torres",
       "album": "Kaleidoscope Vol. 1",
       "track": "Perseidas",
-      "uri": "spotify:track:4yHcsmwaHrxL8HdpwYp6Yn"
+      "uri": "spotify:track:4yHcsmwaHrxL8HdpwYp6Yn",
+      "pinnedVideoId": "2y_UBt8xkLI",
+      "pinnedTitle": "Iigo Vontier - Mental Letal (Original Mix) [Optimo Music Digital Danceforce]",
+      "pinnedChannel": "Technomind",
+      "pinnedDuration": "6:35"
     },
     {
       "artist": "Алексей Понамарёв",
       "album": "А мы не ангелы, парень",
       "track": "А мы не ангелы, парень",
-      "uri": "spotify:track:5xinrlDYEYyem6S3vLa6X2"
+      "uri": "spotify:track:5xinrlDYEYyem6S3vLa6X2",
+      "pinnedVideoId": "0R5GFbpgRtg",
+      "pinnedTitle": "������� ��������� \"�� �� ������, ������\"",
+      "pinnedChannel": "Ulenkin",
+      "pinnedDuration": "3:05"
     },
     {
       "artist": "Orkidea",
       "album": "20Ximer",
       "track": "Unity - Solarstone Pure Mix",
-      "uri": "spotify:track:0BxzCIoGUvvxyFAspLPtXM"
+      "uri": "spotify:track:0BxzCIoGUvvxyFAspLPtXM",
+      "pinnedVideoId": "OV6Dm4yY7Do",
+      "pinnedTitle": "Orkidea - Unity (Solarstone Pure Mix)",
+      "pinnedChannel": "Solaris Recordings",
+      "pinnedDuration": "9:24"
     },
     {
       "artist": "Mnogoznaal",
       "album": "Гостиница Космос",
       "track": "Минус 40",
-      "uri": "spotify:track:2vak91y1VICVF2VTH8KZl8"
+      "uri": "spotify:track:2vak91y1VICVF2VTH8KZl8",
+      "pinnedVideoId": "n9GGTU0NEKA",
+      "pinnedTitle": "Mnogoznaal - ����� 40",
+      "pinnedChannel": "sped up songs",
+      "pinnedDuration": "2:35"
     },
     {
       "artist": "Alex Sonata & TheRio",
       "album": "A State Of Trance 2020",
       "track": "Nebula (Mixed)",
-      "uri": "spotify:track:1UDGULbpDK6bIPMUI6rJoN"
+      "uri": "spotify:track:1UDGULbpDK6bIPMUI6rJoN",
+      "pinnedVideoId": "ID9Yza8xzWI",
+      "pinnedTitle": "Nebula",
+      "pinnedChannel": "Alex Sonata - Topic",
+      "pinnedDuration": "3:06"
     },
     {
       "artist": "Roman Messer",
       "album": "Not About Us",
       "track": "Not About Us",
-      "uri": "spotify:track:0rlFNN5mmWUPUAYRLmtIzx"
+      "uri": "spotify:track:0rlFNN5mmWUPUAYRLmtIzx",
+      "pinnedVideoId": "kZEqFH4qx_g",
+      "pinnedTitle": "Not About Us (AM 001)",
+      "pinnedChannel": "Roman Messer",
+      "pinnedDuration": "2:34"
     },
     {
       "artist": "Deftones",
       "album": "White Pony",
       "track": "Change (In the House of Flies)",
-      "uri": "spotify:track:51c94ac31swyDQj9B3Lzs3"
+      "uri": "spotify:track:51c94ac31swyDQj9B3Lzs3",
+      "pinnedVideoId": "eeQxSNVCuKw",
+      "pinnedTitle": "Deftones - Change (In the House of Flies) / Lyrics",
+      "pinnedChannel": "riot wav",
+      "pinnedDuration": "5:00"
     },
     {
       "artist": "Onyx",
       "album": "Shut 'Em Down",
       "track": "Take That",
-      "uri": "spotify:track:6kBHI791mV09fFNrLKiEXG"
+      "uri": "spotify:track:6kBHI791mV09fFNrLKiEXG",
+      "pinnedVideoId": "E5JLZ3uZ_Ew",
+      "pinnedTitle": "Onyx ft. Move-Yo - Take That (That's It Up) (Remix)",
+      "pinnedChannel": "Yoska / Move-Yo / DJ Bone",
+      "pinnedDuration": "3:51"
     },
     {
       "artist": "Onyx",
       "album": "Onyx 4 Life",
       "track": "The Whole World",
-      "uri": "spotify:track:00l98wGo1jHQKEuOK2XKHN"
+      "uri": "spotify:track:00l98wGo1jHQKEuOK2XKHN",
+      "pinnedVideoId": "lqabIs6iXRM",
+      "pinnedTitle": "Onyx - The Whole World - HQ",
+      "pinnedChannel": "UnderDope",
+      "pinnedDuration": "3:24"
     },
     {
       "artist": "Joachim Pastor",
       "album": "Green Washer",
       "track": "Green Washer - Extended Mix",
-      "uri": "spotify:track:17uWNU8b4uyrR6k2O5AqNn"
+      "uri": "spotify:track:17uWNU8b4uyrR6k2O5AqNn",
+      "pinnedVideoId": "_C5KdrGVpOY",
+      "pinnedTitle": "Green Washer (Tony Romera Remix)",
+      "pinnedChannel": "Joachim Pastor",
+      "pinnedDuration": "4:06"
     },
     {
       "artist": "IAMX",
       "album": "Volatile Times",
       "track": "Bernadette",
-      "uri": "spotify:track:0bs4kqtMjLLAGnzW3ueLZV"
+      "uri": "spotify:track:0bs4kqtMjLLAGnzW3ueLZV",
+      "pinnedVideoId": "VyEaHN7QKik",
+      "pinnedTitle": "IAMX - Bernadette (Official Music Video)",
+      "pinnedChannel": "IAMX",
+      "pinnedDuration": "4:11"
     },
     {
       "artist": "Zemfira",
       "album": "Прости меня моя любовь",
       "track": "Хочешь?",
-      "uri": "spotify:track:3Zvo4oKr1SRCIgfmHAuQlA"
+      "uri": "spotify:track:3Zvo4oKr1SRCIgfmHAuQlA",
+      "pinnedVideoId": "b3VTJH09GQU",
+      "pinnedTitle": "������� - ������ | ����� �����",
+      "pinnedChannel": "Klewiski",
+      "pinnedDuration": "3:19"
     },
     {
       "artist": "Linkin Park",
       "album": "LIVING THINGS",
       "track": "CASTLE OF GLASS",
-      "uri": "spotify:track:1r1fPuhj9H4VdXr7OK6FL5"
+      "uri": "spotify:track:1r1fPuhj9H4VdXr7OK6FL5",
+      "pinnedVideoId": "D3MB_EkNV5Y",
+      "pinnedTitle": "Linkin Park - Castle Of Glass (Audio HD)",
+      "pinnedChannel": "AfterSoundTV",
+      "pinnedDuration": "3:26"
     },
     {
       "artist": "Supermode",
       "album": "Tell Me Why",
       "track": "Tell Me Why - Radio Edit",
-      "uri": "spotify:track:4yhGkvdYU5bi4950r80FRo"
+      "uri": "spotify:track:4yhGkvdYU5bi4950r80FRo",
+      "pinnedVideoId": "DmUZfB6UFLs",
+      "pinnedTitle": "Supermode - Tell Me Why (Radio Edit)",
+      "pinnedChannel": "Spinnin' Records",
+      "pinnedDuration": "2:54"
     },
     {
       "artist": "Теургия",
       "album": "Гений сновидений",
       "track": "Гений сновидений",
-      "uri": "spotify:track:4Go9CKbCs7GprbEfjeiZGr"
+      "uri": "spotify:track:4Go9CKbCs7GprbEfjeiZGr",
+      "pinnedVideoId": "qq-Scu3iQ3E",
+      "pinnedTitle": "������� - ����� ���������� (feat. ������ �������� � �������� ���������, ����)",
+      "pinnedChannel": "�������",
+      "pinnedDuration": "5:28"
     },
     {
       "artist": "Krisu",
       "album": "The Divine Sequence",
       "track": "The Freedom in Letting Go",
-      "uri": "spotify:track:7npB8hLfinMlgzBUk6Ekse"
+      "uri": "spotify:track:7npB8hLfinMlgzBUk6Ekse",
+      "pinnedVideoId": "szclNJXy6EI",
+      "pinnedTitle": "The Freedom in Letting Go",
+      "pinnedChannel": "Krisu - Topic",
+      "pinnedDuration": "5:33"
     },
     {
       "artist": "NBSPLV",
       "album": "Research",
       "track": "Research",
-      "uri": "spotify:track:6896uCLYlhci8pY2RIdT9l"
+      "uri": "spotify:track:6896uCLYlhci8pY2RIdT9l",
+      "pinnedVideoId": "XiIHe7nP_QM",
+      "pinnedTitle": "NBSPLV � The Lost Soul Down X Lost Soul (Tiktok Song) [Lyrics]",
+      "pinnedChannel": "Future Vibes",
+      "pinnedDuration": "2:13"
     },
     {
       "artist": "My",
       "album": "Kpbim",
       "track": "Pretending",
-      "uri": "spotify:track:1zjoDCvn3gLG8KCeQmB4OB"
+      "uri": "spotify:track:1zjoDCvn3gLG8KCeQmB4OB",
+      "pinnedVideoId": "A8kl5R3Wn2o",
+      "pinnedTitle": "Glee Cast - Pretending (Official Audio)",
+      "pinnedChannel": "Glee Cast",
+      "pinnedDuration": "3:59"
     },
     {
       "artist": "Slipknot",
       "album": "Iowa",
       "track": "Gently",
-      "uri": "spotify:track:00WbLoO3bSlUdAy8al106S"
+      "uri": "spotify:track:00WbLoO3bSlUdAy8al106S",
+      "pinnedVideoId": "jPQTsgux_NM",
+      "pinnedTitle": "Gently (Live in London 2002)",
+      "pinnedChannel": "Slipknot",
+      "pinnedDuration": "4:36"
     },
     {
       "artist": "Daft Punk",
       "album": "Discovery",
       "track": "One More Time",
-      "uri": "spotify:track:0DiWol3AO6WpXZgp0goxAV"
+      "uri": "spotify:track:0DiWol3AO6WpXZgp0goxAV",
+      "pinnedVideoId": "WYhv-hR6Q2U",
+      "pinnedTitle": "One More Time (Radio Edit)",
+      "pinnedChannel": "Daft Punk",
+      "pinnedDuration": "3:55"
     },
     {
       "artist": "Texture",
       "album": "Say My Name",
       "track": "Say My Name",
-      "uri": "spotify:track:1Gy8ww0NQnuRoCHt9PKpVp"
+      "uri": "spotify:track:1Gy8ww0NQnuRoCHt9PKpVp",
+      "pinnedVideoId": "XwHQcM41uv4",
+      "pinnedTitle": "Say My Name",
+      "pinnedChannel": "Texture - Topic",
+      "pinnedDuration": "1:56"
     },
     {
       "artist": "felix jaehn",
       "album": "I",
       "track": "Ain't Nobody (Loves Me Better) (feat. Jasmine Thompson)",
-      "uri": "spotify:track:3c8iiZGfEammKJuWTErE5x"
+      "uri": "spotify:track:3c8iiZGfEammKJuWTErE5x",
+      "pinnedVideoId": "oL4X4sc6IF4",
+      "pinnedTitle": "Felix Jaehn - Ain't Nobody (feat. Jasmine Thompson)",
+      "pinnedChannel": "MrRevillz",
+      "pinnedDuration": "4:02"
     },
     {
       "artist": "Кисло-Сладкий",
       "album": "UWU",
       "track": "AM JALAMA",
-      "uri": "spotify:track:32HTbHfG1GjvY69AzAnMpS"
+      "uri": "spotify:track:32HTbHfG1GjvY69AzAnMpS",
+      "pinnedVideoId": "pIPl9zkmQx0",
+      "pinnedTitle": "AM JALAMA",
+      "pinnedChannel": "�����-�������",
+      "pinnedDuration": "3:00"
     },
     {
       "artist": "Claptone",
       "album": "Charmer",
       "track": "Heartbeat",
-      "uri": "spotify:track:68Q6c22JNyLUlZYX4dE2tn"
+      "uri": "spotify:track:68Q6c22JNyLUlZYX4dE2tn",
+      "pinnedVideoId": "itoFPTVz1f4",
+      "pinnedTitle": "Claptone -  Heartbeat",
+      "pinnedChannel": "Daniel Erazo",
+      "pinnedDuration": "5:30"
     },
     {
       "artist": "Krovostok",
       "album": "Пиры и раны",
       "track": "Столовая",
-      "uri": "spotify:track:0aFG4IZOlLBu2qfRfKxIXr"
+      "uri": "spotify:track:0aFG4IZOlLBu2qfRfKxIXr",
+      "pinnedVideoId": "v5dLRWMwMhU",
+      "pinnedTitle": "��������� - ��������",
+      "pinnedChannel": "Vro Edits",
+      "pinnedDuration": "3:10"
     },
     {
       "artist": "ZHU",
       "album": "Genesis Series",
       "track": "Automatic",
-      "uri": "spotify:track:1NB0VPwAw6Rx8b9qvDKB5M"
+      "uri": "spotify:track:1NB0VPwAw6Rx8b9qvDKB5M",
+      "pinnedVideoId": "wppVmN0MT9Q",
+      "pinnedTitle": "ZHU, AlunaGeorge - Automatic",
+      "pinnedChannel": "Because Music",
+      "pinnedDuration": "3:52"
     },
     {
       "artist": "Edward Maya",
       "album": "Stereo Love",
       "track": "Stereo Love",
-      "uri": "spotify:track:11Iv8RCFmeImLOpaHYxKb4"
+      "uri": "spotify:track:11Iv8RCFmeImLOpaHYxKb4",
+      "pinnedVideoId": "y9Kqb2z9Lzs",
+      "pinnedTitle": "Edward Maya, Vika Jigulina - Stereo love (Radio Edit) (Lyrics)",
+      "pinnedChannel": "LyricsZone",
+      "pinnedDuration": "3:04"
     },
     {
       "artist": "Skryptonite",
       "album": "Мультибрендовый",
       "track": "Мультибрендовый",
-      "uri": "spotify:track:2b5Fq8pe5UI6pYRGMv0wNn"
+      "uri": "spotify:track:2b5Fq8pe5UI6pYRGMv0wNn",
+      "pinnedVideoId": "QiPalxw_ceA",
+      "pinnedTitle": "���������� - ��������������� feat. 104, T-Fest, Niman",
+      "pinnedChannel": "Stanislav Rozov",
+      "pinnedDuration": "4:32"
     },
     {
       "artist": "AYRYS",
       "album": "Наркота",
       "track": "Наркота",
-      "uri": "spotify:track:1uy3GWIGe9nxyR6a5jDdi5"
+      "uri": "spotify:track:1uy3GWIGe9nxyR6a5jDdi5",
+      "pinnedVideoId": "cJrmGvU_PXg",
+      "pinnedTitle": "AYRYS - ������� (feat. ���-�����)",
+      "pinnedChannel": "XUSTLE",
+      "pinnedDuration": "1:33"
     },
     {
       "artist": "Rammstein",
       "album": "Reise, Reise",
       "track": "Keine Lust",
-      "uri": "spotify:track:7eeDeUM9E7b0vkDfRz20Zt"
+      "uri": "spotify:track:7eeDeUM9E7b0vkDfRz20Zt",
+      "pinnedVideoId": "rmmMZcly25o",
+      "pinnedTitle": "Keine Lust",
+      "pinnedChannel": "Rammstein Official",
+      "pinnedDuration": "3:42"
     },
     {
       "artist": "Body Head Bangerz",
       "album": "Body Head Bangerz, Vol. 1",
       "track": "Body Head Anthem",
-      "uri": "spotify:track:4EcF55fGcfwbZhGM7K1yLA"
+      "uri": "spotify:track:4EcF55fGcfwbZhGM7K1yLA",
+      "pinnedVideoId": "WvQ2_wIFSug",
+      "pinnedTitle": "Body Head Anthem",
+      "pinnedChannel": "Body Head Bangerz - Topic",
+      "pinnedDuration": "3:52"
     },
     {
       "artist": "Rammstein",
       "album": "Mutter",
       "track": "Mutter",
-      "uri": "spotify:track:7jfZybgHr6yzp4iuMS2K8u"
+      "uri": "spotify:track:7jfZybgHr6yzp4iuMS2K8u",
+      "pinnedVideoId": "GMWqPz73Hnw",
+      "pinnedTitle": "Mutter",
+      "pinnedChannel": "Rammstein Official",
+      "pinnedDuration": "4:29"
     },
     {
       "artist": "Tiësto",
       "album": "Just Be",
       "track": "Walking on Clouds (feat. Kirsty Hawkshaw)",
-      "uri": "spotify:track:14WcJQlZXAD2pijVtyXX3W"
+      "uri": "spotify:track:14WcJQlZXAD2pijVtyXX3W",
+      "pinnedVideoId": "K2CeXZlSZak",
+      "pinnedTitle": "Tisto featuring Kirsty Hawkshaw - Walking On Clouds",
+      "pinnedChannel": "Black Hole Recordings",
+      "pinnedDuration": "7:37"
     },
     {
       "artist": "TOOL",
       "album": "Ænima",
       "track": "Third Eye",
-      "uri": "spotify:track:2Dqg2mRbfIVKhBZleNrgmH"
+      "uri": "spotify:track:2Dqg2mRbfIVKhBZleNrgmH",
+      "pinnedVideoId": "7ChNRnQWk9w",
+      "pinnedTitle": "TOOL - Third Eye | Audio Reactive Visuals | 4K 60FPS",
+      "pinnedChannel": "Vardanse",
+      "pinnedDuration": "13:49"
     },
     {
       "artist": "Golden Sky",
       "album": "Resonation Vol. 4 - 2021",
       "track": "Rise & Fall (RES004)",
-      "uri": "spotify:track:52QfjRz3kxYd6kVdyFpOEc"
+      "uri": "spotify:track:52QfjRz3kxYd6kVdyFpOEc",
+      "pinnedVideoId": "_xoGUUOnvz0",
+      "pinnedTitle": "Rise & Fall (RES004)",
+      "pinnedChannel": "Golden Sky - Topic",
+      "pinnedDuration": "3:35"
     },
     {
       "artist": "No_4mat",
       "album": "1992",
       "track": "1992",
-      "uri": "spotify:track:4N28QlYB0XW6H5gaXBHt6T"
+      "uri": "spotify:track:4N28QlYB0XW6H5gaXBHt6T",
+      "pinnedVideoId": "14CGp0VF2TU",
+      "pinnedTitle": "1992",
+      "pinnedChannel": "No_4mat - Topic",
+      "pinnedDuration": "6:45"
     },
     {
       "artist": "Xzibit",
       "album": "8 Mile",
       "track": "Spit Shine - From \"8 Mile\" Soundtrack",
-      "uri": "spotify:track:45DOOsOeijzGUY6uve6LpM"
+      "uri": "spotify:track:45DOOsOeijzGUY6uve6LpM",
+      "pinnedVideoId": "sS68fYUqiX4",
+      "pinnedTitle": "Spit Shine",
+      "pinnedChannel": "Xzibit",
+      "pinnedDuration": "3:39"
     },
     {
       "artist": "Dom Dolla",
       "album": "Dreamin (feat. Daya)",
       "track": "Dreamin (feat. Daya)",
-      "uri": "spotify:track:6oWmcKVK6atTCoWVYTdSg1"
+      "uri": "spotify:track:6oWmcKVK6atTCoWVYTdSg1",
+      "pinnedVideoId": "C3uhKNDCbZA",
+      "pinnedTitle": "Dom Dolla - �Dreamin� ft. Daya (Official Music Video)",
+      "pinnedChannel": "Dom Dolla",
+      "pinnedDuration": "3:18"
     },
     {
       "artist": "Gareth Emery",
       "album": "Kingdom United",
       "track": "Vesper",
-      "uri": "spotify:track:1WDAVrBjJ18eoADaPItUko"
+      "uri": "spotify:track:1WDAVrBjJ18eoADaPItUko",
+      "pinnedVideoId": "ZBs7I-cjMhA",
+      "pinnedTitle": "Gareth Emery & Ashley Wallbridge feat. NASH - Vesper",
+      "pinnedChannel": "Gareth Emery",
+      "pinnedDuration": "5:08"
     },
     {
       "artist": "The Chemical Brothers",
       "album": "Push The Button",
       "track": "Galvanize",
-      "uri": "spotify:track:4bz7uB4edifWKJXSDxwHcs"
+      "uri": "spotify:track:4bz7uB4edifWKJXSDxwHcs",
+      "pinnedVideoId": "Xu3FTEmN-eg",
+      "pinnedTitle": "The Chemical Brothers - Galvanize featuring Q-Tip (Official Music Video)",
+      "pinnedChannel": "The Chemical Brothers",
+      "pinnedDuration": "3:43"
     },
     {
       "artist": "Miyagi & Andy Panda",
       "album": "YAMAKASI",
       "track": "Utopia",
-      "uri": "spotify:track:5vsXtB67Zc2Hd5cTUXOLWq"
+      "uri": "spotify:track:5vsXtB67Zc2Hd5cTUXOLWq",
+      "pinnedVideoId": "ZReLVZVirLE",
+      "pinnedTitle": "Miyagi & Andy Panda - Utopia (Official Audio)",
+      "pinnedChannel": "Hajime",
+      "pinnedDuration": "3:29"
     },
     {
       "artist": "Megaherz",
       "album": "Herzwerk II",
       "track": "Herzblut",
-      "uri": "spotify:track:7esQgvovdBf5o80R1kLCMT"
+      "uri": "spotify:track:7esQgvovdBf5o80R1kLCMT",
+      "pinnedVideoId": "VeBX_ZkWBEA",
+      "pinnedTitle": "Herzblut",
+      "pinnedChannel": "MEGAHERZ Official",
+      "pinnedDuration": "5:19"
     },
     {
       "artist": "Markus Schulz",
       "album": "Ave Maria",
       "track": "Ave Maria",
-      "uri": "spotify:track:4lH4HRI8Yg0536HuXTQHYE"
+      "uri": "spotify:track:4lH4HRI8Yg0536HuXTQHYE",
+      "pinnedVideoId": "pj6IUgPwyo8",
+      "pinnedTitle": "Ave Maria",
+      "pinnedChannel": "Markus Schulz",
+      "pinnedDuration": "4:02"
     },
     {
       "artist": "Rigo Kamp",
       "album": "The People",
       "track": "The People",
-      "uri": "spotify:track:03JxBMz5guJWjiwOpU95CS"
+      "uri": "spotify:track:03JxBMz5guJWjiwOpU95CS",
+      "pinnedVideoId": "q6_TiL_295U",
+      "pinnedTitle": "Respect Life",
+      "pinnedChannel": "Mandoza",
+      "pinnedDuration": "4:12"
     },
     {
       "artist": "Ohota",
       "album": "All This Shit We Did",
       "track": "All This Shit We Did",
-      "uri": "spotify:track:2mknVJPquOIj2ZDdm6ayks"
+      "uri": "spotify:track:2mknVJPquOIj2ZDdm6ayks",
+      "pinnedVideoId": "0P0kjWrNOg0",
+      "pinnedTitle": "All This Shit We Did",
+      "pinnedChannel": "Ohota",
+      "pinnedDuration": "3:31"
     },
     {
       "artist": "Rihanna",
       "album": "Loud",
       "track": "Only Girl (In The World)",
-      "uri": "spotify:track:2ENexcMEMsYk0rVJigVD3i"
+      "uri": "spotify:track:2ENexcMEMsYk0rVJigVD3i",
+      "pinnedVideoId": "pa14VNsdSYM",
+      "pinnedTitle": "Rihanna - Only Girl (In The World)",
+      "pinnedChannel": "Rihanna",
+      "pinnedDuration": "4:12"
     },
     {
       "artist": "TOOL",
       "album": "Fear Inoculum",
       "track": "Fear Inoculum",
-      "uri": "spotify:track:39zWYYZStDgWi32sOU9AX4"
+      "uri": "spotify:track:39zWYYZStDgWi32sOU9AX4",
+      "pinnedVideoId": "q7DfQMPmJRI",
+      "pinnedTitle": "TOOL - Fear Inoculum (Audio)",
+      "pinnedChannel": "TOOL",
+      "pinnedDuration": "10:23"
     },
     {
       "artist": "MiyaGi & Endspiel",
       "album": "Умшакалака",
       "track": "Райзап",
-      "uri": "spotify:track:0rminMOzpGT790N6gjNdmZ"
+      "uri": "spotify:track:0rminMOzpGT790N6gjNdmZ",
+      "pinnedVideoId": "gUrKI3SQPlY",
+      "pinnedTitle": "MiyaGi & �������� feat. Amigo - ������",
+      "pinnedChannel": "MiyaGi & ��������",
+      "pinnedDuration": "4:29"
     },
     {
       "artist": "The Mamas & The Papas",
       "album": "All The Leaves Are Brown The Golden Era Collection",
       "track": "California Dreamin'",
-      "uri": "spotify:track:1ZEOIhSn6BKErV59bIgn76"
+      "uri": "spotify:track:1ZEOIhSn6BKErV59bIgn76",
+      "pinnedVideoId": "N-aK6JnyFmk",
+      "pinnedTitle": "The Mamas & The Papas - California Dreamin'",
+      "pinnedChannel": "Folk Experience",
+      "pinnedDuration": "2:38"
     },
     {
       "artist": "Nord Horizon",
       "album": "Perfecto Fluoro 2021 Mix",
       "track": "The Prophecy (Mixed)",
-      "uri": "spotify:track:3KG9STdf5uQfa8wHWch8Iv"
+      "uri": "spotify:track:3KG9STdf5uQfa8wHWch8Iv",
+      "pinnedVideoId": "oBd5SyhmgoY",
+      "pinnedTitle": "Nord Horizon - The Prophecy (Extended Mix)",
+      "pinnedChannel": "Tarantula Music",
+      "pinnedDuration": "6:52"
     },
     {
       "artist": "Ngoc Long",
       "album": "Trở Lại",
       "track": "long chín ngón",
-      "uri": "spotify:track:1J0zDzBbmtATja3KEUJnxh"
+      "uri": "spotify:track:1J0zDzBbmtATja3KEUJnxh",
+      "pinnedVideoId": "5xv7PGIY6uw",
+      "pinnedTitle": "Long Chn Ngn - Ngoc Long (Wrong Name Youtube Audio Library No Copyright Music)",
+      "pinnedChannel": "Jincheng Zhang find the real music title 4",
+      "pinnedDuration": "3:27"
     },
     {
       "artist": "Tim Schaufert",
       "album": "Somewhere",
       "track": "Somewhere",
-      "uri": "spotify:track:1OKr3k3XMARUPezgBPvjNg"
+      "uri": "spotify:track:1OKr3k3XMARUPezgBPvjNg",
+      "pinnedVideoId": "nBCG9vAoEoc",
+      "pinnedTitle": "Somewhere",
+      "pinnedChannel": "Tim Schaufert",
+      "pinnedDuration": "3:11"
     },
     {
       "artist": "ALPHA 9",
       "album": "The Night Is Ours",
       "track": "The Night Is Ours",
-      "uri": "spotify:track:4pElBNn0tiwxxTz2sntX5a"
+      "uri": "spotify:track:4pElBNn0tiwxxTz2sntX5a",
+      "pinnedVideoId": "kOFJfk3WxZE",
+      "pinnedTitle": "Alpha 9 - The Night Is Ours (Extended Mix)",
+      "pinnedChannel": "Heavenly Emotions",
+      "pinnedDuration": "5:12"
     },
     {
       "artist": "Metallica",
       "album": "Hardwired…To Self-Destruct",
       "track": "Moth Into Flame",
-      "uri": "spotify:track:3JjZq20Kv6UphyyirAaY9A"
+      "uri": "spotify:track:3JjZq20Kv6UphyyirAaY9A",
+      "pinnedVideoId": "yt99p4BEcMk",
+      "pinnedTitle": "Metallica Moth Into Flame (official audio)",
+      "pinnedChannel": "Eliana Valderrama",
+      "pinnedDuration": "5:51"
     },
     {
       "artist": "Lady Gaga",
       "album": "Born This Way",
       "track": "Marry The Night",
-      "uri": "spotify:track:02d1E4NRuh7OEQO4vCb9PD"
+      "uri": "spotify:track:02d1E4NRuh7OEQO4vCb9PD",
+      "pinnedVideoId": "O4IgYxHEAuk",
+      "pinnedTitle": "Lady Gaga - Marry The Night (Official Audio)",
+      "pinnedChannel": "Lady Gaga",
+      "pinnedDuration": "4:25"
     },
     {
       "artist": "Monoteq",
       "album": "Do You Know",
       "track": "Do You Know - Original Mix",
-      "uri": "spotify:track:1fg52K1RZiP0zis6Z2ZBfj"
+      "uri": "spotify:track:1fg52K1RZiP0zis6Z2ZBfj",
+      "pinnedVideoId": "d1h_Le9A55w",
+      "pinnedTitle": "Monoteq & Grisha Gerrus Feat. Syntheticsax - All That Mattered (Original Mix)",
+      "pinnedChannel": "retrospectiveaudio",
+      "pinnedDuration": "5:21"
     },
     {
       "artist": "NBSPLV",
       "album": "Kite",
       "track": "Kite",
-      "uri": "spotify:track:6Ugin4bvoU0SwKN7RIYTpF"
+      "uri": "spotify:track:6Ugin4bvoU0SwKN7RIYTpF",
+      "pinnedVideoId": "fl184F9WSlg",
+      "pinnedTitle": "Kite",
+      "pinnedChannel": "NBSPLV",
+      "pinnedDuration": "3:02"
     },
     {
       "artist": "Omnia",
       "album": "As We Become One",
       "track": "As We Become One",
-      "uri": "spotify:track:2Be2GTeMc1iyMV2VCjpLHg"
+      "uri": "spotify:track:2Be2GTeMc1iyMV2VCjpLHg",
+      "pinnedVideoId": "9YZUdoxk4-U",
+      "pinnedTitle": "We Become One",
+      "pinnedChannel": "Mario Bianco - Topic",
+      "pinnedDuration": "6:54"
     },
     {
       "artist": "David Guetta",
       "album": "Nothing but the Beat",
       "track": "Titanium (feat. Sia)",
-      "uri": "spotify:track:0TDLuuLlV54CkRRUOahJb4"
+      "uri": "spotify:track:0TDLuuLlV54CkRRUOahJb4",
+      "pinnedVideoId": "Rohq0D72X3Q",
+      "pinnedTitle": "David Guetta - Titanium (feat. Sia) [Official Audio]",
+      "pinnedChannel": "David Guetta & Sia",
+      "pinnedDuration": "4:10"
     },
     {
       "artist": "Korn",
       "album": "The Paradigm Shift (World Tour Edition)",
       "track": "Love & Meth",
-      "uri": "spotify:track:3ZJw9KSGCIiNDYwsG7sfom"
+      "uri": "spotify:track:3ZJw9KSGCIiNDYwsG7sfom",
+      "pinnedVideoId": "G3TKKsXpG6c",
+      "pinnedTitle": "Korn - Love & Meth (Official Audio)",
+      "pinnedChannel": "KoRn",
+      "pinnedDuration": "4:03"
     },
     {
       "artist": "Jerome Isma-Ae",
       "album": "Reflection",
       "track": "Reflection",
-      "uri": "spotify:track:5egCSjWOXvbIcEeVSFEBc9"
+      "uri": "spotify:track:5egCSjWOXvbIcEeVSFEBc9",
+      "pinnedVideoId": "0nJ2UhDPvl4",
+      "pinnedTitle": "Reflection (Extended Mix)",
+      "pinnedChannel": "Alastor - Topic",
+      "pinnedDuration": "8:04"
     },
     {
       "artist": "NEMIGA",
       "album": "Молодость",
       "track": "Белым",
-      "uri": "spotify:track:3ShWMF4yQcFp3abDPtpFQ7"
+      "uri": "spotify:track:3ShWMF4yQcFp3abDPtpFQ7",
+      "pinnedVideoId": "E2KZf2bHXLU",
+      "pinnedTitle": "NEMIGA - ����� | �����",
+      "pinnedChannel": "NEMIGA music",
+      "pinnedDuration": "3:44"
     },
     {
       "artist": "The Chemical Brothers",
       "album": "Surrender",
       "track": "Hey Boy Hey Girl",
-      "uri": "spotify:track:7kXmJwrZGIhDaLT9sNo3ut"
+      "uri": "spotify:track:7kXmJwrZGIhDaLT9sNo3ut",
+      "pinnedVideoId": "tpKCqp9CALQ",
+      "pinnedTitle": "The Chemical Brothers - Hey Boy Hey Girl (Official Music Video)",
+      "pinnedChannel": "The Chemical Brothers",
+      "pinnedDuration": "3:39"
     },
     {
       "artist": "deadmau5",
       "album": "We Are Friends, Vol. 6",
       "track": "Polaris",
-      "uri": "spotify:track:4HyefsBihebUexaNmDHYa3"
+      "uri": "spotify:track:4HyefsBihebUexaNmDHYa3",
+      "pinnedVideoId": "LnnyQcRbwEI",
+      "pinnedTitle": "deadmau5 - Polaris",
+      "pinnedChannel": "mau5trap",
+      "pinnedDuration": "9:45"
     },
     {
       "artist": "Eli & Fur",
       "album": "My Reflection",
       "track": "My Reflection",
-      "uri": "spotify:track:2wUOPi5t2EsSXguK0Gnkht"
+      "uri": "spotify:track:2wUOPi5t2EsSXguK0Gnkht",
+      "pinnedVideoId": "KvXq1UREfQ4",
+      "pinnedTitle": "Eli & Fur � My Reflection (Original Mix)",
+      "pinnedChannel": "Helena's World Of Music",
+      "pinnedDuration": "5:13"
     },
     {
       "artist": "WYS",
       "album": "South Pole",
       "track": "Trying To Sleep",
-      "uri": "spotify:track:2viehU027IaaY0NbmRHvfx"
+      "uri": "spotify:track:2viehU027IaaY0NbmRHvfx",
+      "pinnedVideoId": "1VKy7MAkdN4",
+      "pinnedTitle": "Trying To Sleep",
+      "pinnedChannel": "WYS",
+      "pinnedDuration": "2:54"
     },
     {
       "artist": "Mondo Loops",
       "album": "On The Way Home",
       "track": "On The Way Home",
-      "uri": "spotify:track:5ZXyEfJ0RK7RAToEhWS4p5"
+      "uri": "spotify:track:5ZXyEfJ0RK7RAToEhWS4p5",
+      "pinnedVideoId": "i4Ahk3rIcCA",
+      "pinnedTitle": "Mondo Loops x Aiguille - The Road Home",
+      "pinnedChannel": "DAEN",
+      "pinnedDuration": "3:10"
     },
     {
       "artist": "Lady Gaga",
       "album": "The Fame Monster",
       "track": "Paparazzi",
-      "uri": "spotify:track:59rtWuk5sGhPMkyXuCrrgd"
+      "uri": "spotify:track:59rtWuk5sGhPMkyXuCrrgd",
+      "pinnedVideoId": "rgUAFqUdqKk",
+      "pinnedTitle": "Lady Gaga - Paparazzi (Audio)",
+      "pinnedChannel": "Singles By Famous",
+      "pinnedDuration": "3:28"
     },
     {
       "artist": "Red Hot Chili Peppers",
       "album": "Blood Sugar Sex Magik",
       "track": "Under the Bridge",
-      "uri": "spotify:track:3d9DChrdc6BOeFsbrZ3Is0"
+      "uri": "spotify:track:3d9DChrdc6BOeFsbrZ3Is0",
+      "pinnedVideoId": "N7ZyzCNeFKY",
+      "pinnedTitle": "Red Hot Chili Peppers - Under The Bridge - Remastered",
+      "pinnedChannel": "Brian Martens Music",
+      "pinnedDuration": "4:25"
     },
     {
       "artist": "ZHU",
       "album": "Musical Chairs Mixtape",
       "track": "I Wonder",
-      "uri": "spotify:track:3W1oHe6Sfi9fycAcz9EATc"
+      "uri": "spotify:track:3W1oHe6Sfi9fycAcz9EATc",
+      "pinnedVideoId": "MHLGoYGJEr4",
+      "pinnedTitle": "ZHU - I Wonder",
+      "pinnedChannel": "Astralwerks Records",
+      "pinnedDuration": "4:02"
     },
     {
       "artist": "Megadeth",
       "album": "Cryptic Writings",
       "track": "She-Wolf - Remastered 2004 / Remixed",
-      "uri": "spotify:track:5MhNgheI9IjDxQS5XQ3Ojo"
+      "uri": "spotify:track:5MhNgheI9IjDxQS5XQ3Ojo",
+      "pinnedVideoId": "Qcy07OvWdl0",
+      "pinnedTitle": "She-Wolf (Remastered 2004 / Remixed)",
+      "pinnedChannel": "Megadeth",
+      "pinnedDuration": "3:38"
     },
     {
       "artist": "Dezza",
       "album": "Resonation Vol. 4 - 2021",
       "track": "Ghost (RES004)",
-      "uri": "spotify:track:32MdXZWrFpO3ll3KYB3OfD"
+      "uri": "spotify:track:32MdXZWrFpO3ll3KYB3OfD",
+      "pinnedVideoId": "u1O21Zjr6hU",
+      "pinnedTitle": "Ghost (RES004)",
+      "pinnedChannel": "Dezza",
+      "pinnedDuration": "3:48"
     },
     {
       "artist": "CamelPhat",
       "album": "Cycles",
       "track": "Cycles",
-      "uri": "spotify:track:2bzCnD7nJuuS4yDNCAtLYz"
+      "uri": "spotify:track:2bzCnD7nJuuS4yDNCAtLYz",
+      "pinnedVideoId": "lfTct3FoNns",
+      "pinnedTitle": "Camelphat & Arodes - Cycles | Interstellar Recordings",
+      "pinnedChannel": "Interstellar",
+      "pinnedDuration": "3:06"
     },
     {
       "artist": "Metallica",
       "album": "…And Justice for All",
       "track": "...And Justice for All",
-      "uri": "spotify:track:4a47TNOfJ9vbpbmU31wpgT"
+      "uri": "spotify:track:4a47TNOfJ9vbpbmU31wpgT",
+      "pinnedVideoId": "2lgGJRWUIvM",
+      "pinnedTitle": "... And Justice for All (Remastered)",
+      "pinnedChannel": "Metallica",
+      "pinnedDuration": "9:47"
     },
     {
       "artist": "softy",
       "album": "Takeaway",
       "track": "Takeaway",
-      "uri": "spotify:track:2BheOTP7ihbfdaTCMznUFt"
+      "uri": "spotify:track:2BheOTP7ihbfdaTCMznUFt",
+      "pinnedVideoId": "FhPLQVlUiNQ",
+      "pinnedTitle": "Getaway Car",
+      "pinnedChannel": "Taylor Swift",
+      "pinnedDuration": "3:54"
     },
     {
       "artist": "Van Halen",
       "album": "1984",
       "track": "Panama - 2015 Remaster",
-      "uri": "spotify:track:05RgAMGypEvqhNs5hPCbMS"
+      "uri": "spotify:track:05RgAMGypEvqhNs5hPCbMS",
+      "pinnedVideoId": "2wHU5ocfFsA",
+      "pinnedTitle": "Panama",
+      "pinnedChannel": "Van Halen",
+      "pinnedDuration": "3:33"
     },
     {
       "artist": "Primus",
       "album": "Primus & the Chocolate Factory With the Fungi Ensemble",
       "track": "Candy Man",
-      "uri": "spotify:track:3dAmt97nM7tPkrdiXTw8x1"
+      "uri": "spotify:track:3dAmt97nM7tPkrdiXTw8x1",
+      "pinnedVideoId": "5C9jJ2O79XI",
+      "pinnedTitle": "Primus - Candyman (Official Video)",
+      "pinnedChannel": "officialprimus",
+      "pinnedDuration": "4:23"
     },
     {
       "artist": "Gorillaz",
       "album": "The Now Now",
       "track": "Tranz",
-      "uri": "spotify:track:7jYUaoOfdcYgUvkK8NnFfx"
+      "uri": "spotify:track:7jYUaoOfdcYgUvkK8NnFfx",
+      "pinnedVideoId": "E2Q52cVx7Bo",
+      "pinnedTitle": "Gorillaz - Tranz (Official Video)",
+      "pinnedChannel": "Gorillaz",
+      "pinnedDuration": "2:54"
     },
     {
       "artist": "PAIN",
       "album": "Dancing With The Dead",
       "track": "Dancing With The Dead",
-      "uri": "spotify:track:3e4az1hZBSa8b8zBXiAJBN"
+      "uri": "spotify:track:3e4az1hZBSa8b8zBXiAJBN",
+      "pinnedVideoId": "spBoTv6NujY",
+      "pinnedTitle": "Dancing With The Dead",
+      "pinnedChannel": "PAIN",
+      "pinnedDuration": "4:14"
     },
     {
       "artist": "Drummatix",
       "album": "Рубикон",
       "track": "Темным по Белому",
-      "uri": "spotify:track:6q74hyNM8sCRemxhuYFnZ7"
+      "uri": "spotify:track:6q74hyNM8sCRemxhuYFnZ7",
+      "pinnedVideoId": "VKcl0DLp1n8",
+      "pinnedTitle": "DRUMMATIX - Ҹ���� �� ������",
+      "pinnedChannel": "DRUMMATIX",
+      "pinnedDuration": "3:26"
     },
     {
       "artist": "Lucid Planet",
       "album": "Lucid Planet",
       "track": "Olm 053",
-      "uri": "spotify:track:1DzOxJHhQYeNgYPoxMpUeO"
+      "uri": "spotify:track:1DzOxJHhQYeNgYPoxMpUeO",
+      "pinnedVideoId": "gqjBuJZHZFo",
+      "pinnedTitle": "Lucid Planet - OLM053 (Progressive / Psychedelic / Tribal / Metal)",
+      "pinnedChannel": "Lucid Planet",
+      "pinnedDuration": "7:10"
     },
     {
       "artist": "Rammstein",
       "album": "Rammstein",
       "track": "Radio",
-      "uri": "spotify:track:5vZ4IeUenK2cHub2d7yfWk"
+      "uri": "spotify:track:5vZ4IeUenK2cHub2d7yfWk",
+      "pinnedVideoId": "Hk77fdYbxOM",
+      "pinnedTitle": "Rammstein- Radio (Audio HQ)",
+      "pinnedChannel": "Topsic",
+      "pinnedDuration": "4:37"
     },
     {
       "artist": "Linkin Park",
       "album": "Meteora",
       "track": "Lying from You",
-      "uri": "spotify:track:4qVR3CF8FuFvHN4L6vXlB1"
+      "uri": "spotify:track:4qVR3CF8FuFvHN4L6vXlB1",
+      "pinnedVideoId": "NjdgcHdzvac",
+      "pinnedTitle": "Lying From You - Linkin Park (Meteora)",
+      "pinnedChannel": "Linkin Park",
+      "pinnedDuration": "2:55"
     },
     {
       "artist": "Lauren Aquilina",
       "album": "Isn’t It Strange?",
       "track": "Ocean",
-      "uri": "spotify:track:20dyDdutlGUpKffvWOLpni"
+      "uri": "spotify:track:20dyDdutlGUpKffvWOLpni",
+      "pinnedVideoId": "lQk7l6O-FGc",
+      "pinnedTitle": "Ocean",
+      "pinnedChannel": "Lauren Aquilina",
+      "pinnedDuration": "4:19"
     },
     {
       "artist": "Sean Tyas",
       "album": "Lift",
       "track": "Lift (Original Mix)",
-      "uri": "spotify:track:4XYEd8S2wKsHUUQz60GbjP"
+      "uri": "spotify:track:4XYEd8S2wKsHUUQz60GbjP",
+      "pinnedVideoId": "IIO_8jLnoRU",
+      "pinnedTitle": "Sean Tyas - Lift (Time System's Celtic Remix)",
+      "pinnedChannel": "Falling Islands",
+      "pinnedDuration": "9:50"
     },
     {
       "artist": "Kaskade",
       "album": "Move For Me",
       "track": "Move for Me (feat. Haley Gibby)",
-      "uri": "spotify:track:1snWJGS3Awhr1NoaoTE9qv"
+      "uri": "spotify:track:1snWJGS3Awhr1NoaoTE9qv",
+      "pinnedVideoId": "atFTgQOF-cU",
+      "pinnedTitle": "Kaskade - Move For Me (HQ)",
+      "pinnedChannel": "Ultra Records",
+      "pinnedDuration": "3:54"
     },
     {
       "artist": "Simon Fischer",
       "album": "A Light In The Darkness",
       "track": "A Light In The Darkness - Extended Mix",
-      "uri": "spotify:track:515uWVhmmkiQP6lhWVVxGY"
+      "uri": "spotify:track:515uWVhmmkiQP6lhWVVxGY",
+      "pinnedVideoId": "Lm5lBgRyNL4",
+      "pinnedTitle": "Simon Fischer pres. Tales Of Elevation - A Light In The Darkness",
+      "pinnedChannel": "DJ Phalanx",
+      "pinnedDuration": "4:07"
     },
     {
       "artist": "Halford",
       "album": "Halford IV - Made Of Metal",
       "track": "Till the Day I Die",
-      "uri": "spotify:track:0gdblbrg46L8JAx9wuAZcW"
+      "uri": "spotify:track:0gdblbrg46L8JAx9wuAZcW",
+      "pinnedVideoId": "fNRaF-AJcB0",
+      "pinnedTitle": "Halford - Till The Day I Die",
+      "pinnedChannel": "ILovePoems",
+      "pinnedDuration": "3:49"
     },
     {
       "artist": "Depeche Mode",
       "album": "Playing the Angel (Deluxe)",
       "track": "Precious",
-      "uri": "spotify:track:1cBxAm8a0fENn2ix3Dfm3u"
+      "uri": "spotify:track:1cBxAm8a0fENn2ix3Dfm3u",
+      "pinnedVideoId": "GqSVrJQi8AQ",
+      "pinnedTitle": "Precious",
+      "pinnedChannel": "Depeche Mode",
+      "pinnedDuration": "4:08"
     },
     {
       "artist": "Seabound",
       "album": "When Black Beats Blue [Rarities]",
       "track": "Domination vs. Bound (Mindless Faith)",
-      "uri": "spotify:track:3bD87PRt6ffMHHAyTvRWW9"
+      "uri": "spotify:track:3bD87PRt6ffMHHAyTvRWW9",
+      "pinnedVideoId": "2pzsx4_JBu8",
+      "pinnedTitle": "Seabound Breathe (Acretongue)",
+      "pinnedChannel": "ump9Music",
+      "pinnedDuration": "6:50"
     },
     {
       "artist": "deadmau5",
       "album": "The Veldt",
       "track": "The Veldt - Radio Edit",
-      "uri": "spotify:track:1vQ92830bxiBcIhpUj4qrn"
+      "uri": "spotify:track:1vQ92830bxiBcIhpUj4qrn",
+      "pinnedVideoId": "q76upEkZfek",
+      "pinnedTitle": "The Veldt (Radio Edit)",
+      "pinnedChannel": "deadmau5",
+      "pinnedDuration": "2:50"
     },
     {
       "artist": "Shuba",
       "album": "Fire In Me",
       "track": "Fire In Me",
-      "uri": "spotify:track:7rlHWhEjvXx4JsKVnw93Vw"
+      "uri": "spotify:track:7rlHWhEjvXx4JsKVnw93Vw",
+      "pinnedVideoId": "EC_ZxuLSSIo",
+      "pinnedTitle": "Fire In Me",
+      "pinnedChannel": "Shuba - Topic",
+      "pinnedDuration": "3:30"
     },
     {
       "artist": "Mnogoznaal",
       "album": "Гостиница Космос",
       "track": "Среди них",
-      "uri": "spotify:track:4JmOf843KDTNUF1hNKSbK8"
+      "uri": "spotify:track:4JmOf843KDTNUF1hNKSbK8",
+      "pinnedVideoId": "fhKSmzVMaSU",
+      "pinnedTitle": "����� ���",
+      "pinnedChannel": "Mnogoznaal",
+      "pinnedDuration": "2:28"
     },
     {
       "artist": "Claptone",
       "album": "Wanderlust",
       "track": "Wanderlust - Eran Hersh & DJ Freespirit Remix",
-      "uri": "spotify:track:7rUJGyEid8BetqLGCz0xhV"
+      "uri": "spotify:track:7rUJGyEid8BetqLGCz0xhV",
+      "pinnedVideoId": "ITf9INI3ncg",
+      "pinnedTitle": "Claptone - Wanderlust (Eran Hersh & DJ Freespirit Extended Remix) -  #afrohouse #thesacredtribe",
+      "pinnedChannel": "The Sacred Tribe",
+      "pinnedDuration": "6:12"
     },
     {
       "artist": "Zeromancer",
       "album": "Eurotrash",
       "track": "Dr. Online",
-      "uri": "spotify:track:5hUXk4avvJ7a1vjbsS0Kiq"
+      "uri": "spotify:track:5hUXk4avvJ7a1vjbsS0Kiq",
+      "pinnedVideoId": "mrlS7v-1QZk",
+      "pinnedTitle": "Doctor Online",
+      "pinnedChannel": "Zeromancer - Topic",
+      "pinnedDuration": "3:18"
     },
     {
       "artist": "D12",
       "album": "8 Mile",
       "track": "Rap Game - From \"8 Mile\" Soundtrack",
-      "uri": "spotify:track:72HvXf3mpdTCnXDDoNDHzs"
+      "uri": "spotify:track:72HvXf3mpdTCnXDDoNDHzs",
+      "pinnedVideoId": "sKeCuJ60UC0",
+      "pinnedTitle": "Rap Game",
+      "pinnedChannel": "D12",
+      "pinnedDuration": "5:54"
     },
     {
       "artist": "Johnny Cash",
       "album": "American IV: The Man Comes Around",
       "track": "Hurt",
-      "uri": "spotify:track:28cnXtME493VX9NOw9cIUh"
+      "uri": "spotify:track:28cnXtME493VX9NOw9cIUh",
+      "pinnedVideoId": "8AHCfZTRGiI",
+      "pinnedTitle": "Johnny Cash - Hurt",
+      "pinnedChannel": "Johnny Cash",
+      "pinnedDuration": "3:48"
     },
     {
       "artist": "softy",
       "album": "Blue Yard",
       "track": "Blue Yard",
-      "uri": "spotify:track:0Zn9Rmb2vQgfwOafuG1Ks8"
+      "uri": "spotify:track:0Zn9Rmb2vQgfwOafuG1Ks8",
+      "pinnedVideoId": "eh9e95ipxgo",
+      "pinnedTitle": "(MUZIN) - Blue Yard (Feat. )",
+      "pinnedChannel": "Korean Pop",
+      "pinnedDuration": "3:19"
     },
     {
       "artist": "AMINTO",
       "album": "In The Club",
       "track": "In The Club",
-      "uri": "spotify:track:2A1hsk8xZASX8Fzsah8EBz"
+      "uri": "spotify:track:2A1hsk8xZASX8Fzsah8EBz",
+      "pinnedVideoId": "DApzVVyNMRI",
+      "pinnedTitle": "Quality Control, Layton Greene, Lil Baby - Leave Em Alone ft. City Girls, PnB Rock",
+      "pinnedChannel": "Layton Greene",
+      "pinnedDuration": "2:52"
     },
     {
       "artist": "Breaking Benjamin",
       "album": "Phobia",
       "track": "The Diary of Jane - Single Version",
-      "uri": "spotify:track:0faXHILILebCGnJBPU6KJJ"
+      "uri": "spotify:track:0faXHILILebCGnJBPU6KJJ",
+      "pinnedVideoId": "Ci_h4nJRga0",
+      "pinnedTitle": "The Diary Of Jane",
+      "pinnedChannel": "Breaking Benjamin",
+      "pinnedDuration": "3:20"
     },
     {
       "artist": "Ganju",
       "album": "Slow Down",
       "track": "V A C U U M",
-      "uri": "spotify:track:07AW4VWaMUyK2jTBiGlZxJ"
+      "uri": "spotify:track:07AW4VWaMUyK2jTBiGlZxJ",
+      "pinnedVideoId": "bJOEAhB7eP8",
+      "pinnedTitle": "������ - V  C U U M (����)]",
+      "pinnedChannel": "HASKI4",
+      "pinnedDuration": "2:55"
     },
     {
       "artist": "Judas Priest",
       "album": "Painkiller",
       "track": "Metal Meltdown",
-      "uri": "spotify:track:679lDz2Jn7TOD6LRl2gM8y"
+      "uri": "spotify:track:679lDz2Jn7TOD6LRl2gM8y",
+      "pinnedVideoId": "PZhlY-p3yCo",
+      "pinnedTitle": "Judas Priest - Metal Meltdown (Official Audio)",
+      "pinnedChannel": "Judas Priest",
+      "pinnedDuration": "4:49"
     },
     {
       "artist": "Markus Schulz",
       "album": "Before the Light Knew Us",
       "track": "Before the Light Knew Us",
-      "uri": "spotify:track:7sIzd13zF1aSpmZi7OvVvt"
+      "uri": "spotify:track:7sIzd13zF1aSpmZi7OvVvt",
+      "pinnedVideoId": "AK9l4dFIaoU",
+      "pinnedTitle": "Sunrise Over the Bay",
+      "pinnedChannel": "Markus Schulz",
+      "pinnedDuration": "3:33"
     },
     {
       "artist": "Spaceouters",
       "album": "Ma",
       "track": "Ma",
-      "uri": "spotify:track:4cE43bSBoVrGbPFBunKpa0"
+      "uri": "spotify:track:4cE43bSBoVrGbPFBunKpa0",
+      "pinnedVideoId": "kEr8tW76Jvw",
+      "pinnedTitle": "Spaceouters - Ma",
+      "pinnedChannel": "Fluidified",
+      "pinnedDuration": "4:18"
     },
     {
       "artist": "MIKA",
       "album": "Life In Cartoon Motion",
       "track": "Relax, Take It Easy",
-      "uri": "spotify:track:0KM2y796j63t5RHhvRUxld"
+      "uri": "spotify:track:0KM2y796j63t5RHhvRUxld",
+      "pinnedVideoId": "lKtmF_JQ98k",
+      "pinnedTitle": "Relax, Take It Easy",
+      "pinnedChannel": "MIKA",
+      "pinnedDuration": "3:43"
     },
     {
       "artist": "Tiësto",
       "album": "The Business",
       "track": "The Business",
-      "uri": "spotify:track:6f3Slt0GbA2bPZlz0aIFXN"
+      "uri": "spotify:track:6f3Slt0GbA2bPZlz0aIFXN",
+      "pinnedVideoId": "wJS9eb6_o00",
+      "pinnedTitle": "Tisto - The Business (Official Audio)",
+      "pinnedChannel": "Spinnin' Records",
+      "pinnedDuration": "2:50"
     },
     {
       "artist": "ZHU",
       "album": "BURN",
       "track": "BLACK MIDAS",
-      "uri": "spotify:track:2FiFJvFM7lHNctbImmx2Uz"
+      "uri": "spotify:track:2FiFJvFM7lHNctbImmx2Uz",
+      "pinnedVideoId": "-ZNlEzSNjF8",
+      "pinnedTitle": "BLACK MIDAS",
+      "pinnedChannel": "ZHU",
+      "pinnedDuration": "4:05"
     },
     {
       "artist": "Armin van Buuren",
       "album": "Imagine",
       "track": "In And Out Of Love - Extended Mix",
-      "uri": "spotify:track:18Ffw8gKfSBm2SL7ZnOx47"
+      "uri": "spotify:track:18Ffw8gKfSBm2SL7ZnOx47",
+      "pinnedVideoId": "xq25sd2fOfQ",
+      "pinnedTitle": "In And Out Of Love (Extended Mix)",
+      "pinnedChannel": "Armin van Buuren",
+      "pinnedDuration": "6:05"
     },
     {
       "artist": "In Flames",
       "album": "Sounds of a Playground Fading",
       "track": "Deliver Us",
-      "uri": "spotify:track:0n4P0Jb7OSNvaVrtV0oZTH"
+      "uri": "spotify:track:0n4P0Jb7OSNvaVrtV0oZTH",
+      "pinnedVideoId": "Wr9LZ1hAFpQ",
+      "pinnedTitle": "In Flames - Deliver Us (Official Music Video)",
+      "pinnedChannel": "In Flames",
+      "pinnedDuration": "3:36"
     },
     {
       "artist": "Ohota",
       "album": "The Note",
       "track": "The Note",
-      "uri": "spotify:track:49nMYLzNO3DKif1debYo6w"
+      "uri": "spotify:track:49nMYLzNO3DKif1debYo6w",
+      "pinnedVideoId": "yUm-gDY8JNU",
+      "pinnedTitle": "Ohota - Full Metal Dildo",
+      "pinnedChannel": "EBSM Electro Body Synth Music",
+      "pinnedDuration": "3:36"
     },
     {
       "artist": "All That Remains",
       "album": "Overcome",
       "track": "Two Weeks",
-      "uri": "spotify:track:0XT70Wk9pP8JZkmJhfntuL"
+      "uri": "spotify:track:0XT70Wk9pP8JZkmJhfntuL",
+      "pinnedVideoId": "j-r9VQQMM9w",
+      "pinnedTitle": "All That Remains - Two Weeks *HQ*",
+      "pinnedChannel": "OutsiderVocals",
+      "pinnedDuration": "4:22"
     },
     {
       "artist": "Lynnic",
       "album": "Afterglow",
       "track": "Afterglow",
-      "uri": "spotify:track:6YaOyLCNPydfoaDhvUzzzp"
+      "uri": "spotify:track:6YaOyLCNPydfoaDhvUzzzp",
+      "pinnedVideoId": "O0h3ySUCOWw",
+      "pinnedTitle": "Lynnic & ItsArius - Afterglow",
+      "pinnedChannel": "Antioch.",
+      "pinnedDuration": "6:15"
     },
     {
       "artist": "Valentino Khan",
       "album": "JustYourSoul",
       "track": "JustYourSoul - Tchami Remix",
-      "uri": "spotify:track:5NJi42d7VDo8KPVksb7dS8"
+      "uri": "spotify:track:5NJi42d7VDo8KPVksb7dS8",
+      "pinnedVideoId": "z1sHPOaFUy8",
+      "pinnedTitle": "Valentino Khan & Diplo - JustYourSoul (Tchami Remix) [Official Audio]",
+      "pinnedChannel": "Valentino Khan",
+      "pinnedDuration": "3:54"
     },
     {
       "artist": "Seether",
       "album": "Karma and Effect",
       "track": "Remedy",
-      "uri": "spotify:track:5ynxx6zC4dgzsMHLYQ04Dc"
+      "uri": "spotify:track:5ynxx6zC4dgzsMHLYQ04Dc",
+      "pinnedVideoId": "mwb23KYE9N0",
+      "pinnedTitle": "Seether - Remedy (Official Audio)",
+      "pinnedChannel": "Seether",
+      "pinnedDuration": "3:27"
     },
     {
       "artist": "Slipknot",
       "album": ".5: The Gray Chapter",
       "track": "If Rain Is What You Want",
-      "uri": "spotify:track:1JP26wqamuPK9rdwF126rQ"
+      "uri": "spotify:track:1JP26wqamuPK9rdwF126rQ",
+      "pinnedVideoId": "RUV5-ZqQ4o0",
+      "pinnedTitle": "Slipknot - If Rain Is What You Want (Audio)",
+      "pinnedChannel": "Slipknot",
+      "pinnedDuration": "6:21"
     },
     {
       "artist": "Andy Panda",
       "album": "King Kong",
       "track": "Orange Sunset",
-      "uri": "spotify:track:1jg2uTn8aEByo89OEe3xYL"
+      "uri": "spotify:track:1jg2uTn8aEByo89OEe3xYL",
+      "pinnedVideoId": "LbFVmcP0a6M",
+      "pinnedTitle": "Andy Panda - Orange Sunset (Official Audio)",
+      "pinnedChannel": "Hajime",
+      "pinnedDuration": "3:43"
     },
     {
       "artist": "Eric Prydz",
       "album": "Call on Me",
       "track": "Call on Me - Radio Mix",
-      "uri": "spotify:track:1xNcBAoUw8Hz6LqK2jt4Ff"
+      "uri": "spotify:track:1xNcBAoUw8Hz6LqK2jt4Ff",
+      "pinnedVideoId": "YRjtvGwVO_M",
+      "pinnedTitle": "Eric Prydz - Call On Me (Radio Edit) (HD)",
+      "pinnedChannel": "HD Music",
+      "pinnedDuration": "2:51"
     },
     {
       "artist": "Boris Grebenshikov",
       "album": "Время N",
       "track": "Время N",
-      "uri": "spotify:track:2w5w3fpTsjJPixstfDkgpD"
+      "uri": "spotify:track:2w5w3fpTsjJPixstfDkgpD",
+      "pinnedVideoId": "qk3NGiE9E0Q",
+      "pinnedTitle": "����� N",
+      "pinnedChannel": "�������� I ��+",
+      "pinnedDuration": "3:22"
     },
     {
       "artist": "Eels",
       "album": "Beautiful Freak",
       "track": "My Beloved Monster",
-      "uri": "spotify:track:0GXPDJCtVhrgZFuVlepFLp"
+      "uri": "spotify:track:0GXPDJCtVhrgZFuVlepFLp",
+      "pinnedVideoId": "Rte6jgjvEew",
+      "pinnedTitle": "My Beloved Monster",
+      "pinnedChannel": "OfficialEels",
+      "pinnedDuration": "2:12"
     },
     {
       "artist": "AVIRA",
       "album": "Hot Tub Time Machine",
       "track": "Hot Tub Time Machine",
-      "uri": "spotify:track:6KDHALPczYRgug40ohucum"
+      "uri": "spotify:track:6KDHALPczYRgug40ohucum",
+      "pinnedVideoId": "GtqSCvF0d7Q",
+      "pinnedTitle": "Hot Tub Time Machine",
+      "pinnedChannel": "AVIRA - Topic",
+      "pinnedDuration": "3:00"
     },
     {
       "artist": "Ludovico Einaudi",
       "album": "Divenire",
       "track": "Fly",
-      "uri": "spotify:track:3yuCAw61jqfyv2KzMoVdXA"
+      "uri": "spotify:track:3yuCAw61jqfyv2KzMoVdXA",
+      "pinnedVideoId": "5LRwYKpV-6A",
+      "pinnedTitle": "Ludovico Einaudi - Einaudi: Fly (Official Visualiser)",
+      "pinnedChannel": "Ludovico Einaudi",
+      "pinnedDuration": "4:41"
     },
     {
       "artist": "DJ Snake",
       "album": "Turn Down for What",
       "track": "Turn Down for What",
-      "uri": "spotify:track:67awxiNHNyjMXhVgsHuIrs"
+      "uri": "spotify:track:67awxiNHNyjMXhVgsHuIrs",
+      "pinnedVideoId": "QFy0hQ3lY-w",
+      "pinnedTitle": "DJ Snake, Lil Jon - Turn Down for What (Audio)",
+      "pinnedChannel": "DJ Snake",
+      "pinnedDuration": "3:36"
     },
     {
       "artist": "Dub FX",
       "album": "Everythinks a Ripple",
       "track": "Love Me or Not",
-      "uri": "spotify:track:5b59RfPJUVfpO565rhnrkx"
+      "uri": "spotify:track:5b59RfPJUVfpO565rhnrkx",
+      "pinnedVideoId": "9cEQsF3Xe-Q",
+      "pinnedTitle": "Dub Fx - Love Me or Not - Everythinks A RMX",
+      "pinnedChannel": "NiCkELoP",
+      "pinnedDuration": "6:33"
     },
     {
       "artist": "Karen Overton",
       "album": "Your Loving Arms",
       "track": "Your Loving Arms - ALPHA 9 Remix",
-      "uri": "spotify:track:6qKvPOJjG5ilpqbB6UH9hx"
+      "uri": "spotify:track:6qKvPOJjG5ilpqbB6UH9hx",
+      "pinnedVideoId": "KXKEX3nXZBU",
+      "pinnedTitle": "Karen Overton - Your Loving Arms (ALPHA 9 Remix) [Official Lyric Video]",
+      "pinnedChannel": "Armada Music TV",
+      "pinnedDuration": "4:43"
     },
     {
       "artist": "Gorillaz",
       "album": "Humanz",
       "track": "Andromeda (feat. DRAM)",
-      "uri": "spotify:track:2C0KFbb4v9CNWR5c9jWcKC"
+      "uri": "spotify:track:2C0KFbb4v9CNWR5c9jWcKC",
+      "pinnedVideoId": "9W44NWYwa1g",
+      "pinnedTitle": "Gorillaz - Andromeda (Official Audio)",
+      "pinnedChannel": "Gorillaz",
+      "pinnedDuration": "3:18"
     },
     {
       "artist": "Taylor Swift",
       "album": "1989",
       "track": "Blank Space",
-      "uri": "spotify:track:1p80LdxRV74UKvL8gnD7ky"
+      "uri": "spotify:track:1p80LdxRV74UKvL8gnD7ky",
+      "pinnedVideoId": "6us_CHq4ySo",
+      "pinnedTitle": "Taylor Swift - Blank Space (1989 World Tour) (4K)",
+      "pinnedChannel": "Swift Leaks 2.0",
+      "pinnedDuration": "5:51"
     },
     {
       "artist": "Krovostok",
       "album": "ЧБ",
       "track": "Чебурашка",
-      "uri": "spotify:track:7cK5zpBOCga4ULPeqCqDkF"
+      "uri": "spotify:track:7cK5zpBOCga4ULPeqCqDkF",
+      "pinnedVideoId": "-mR78CXk-b8",
+      "pinnedTitle": "���������",
+      "pinnedChannel": "���������",
+      "pinnedDuration": "3:06"
     },
     {
       "artist": "Godsmack",
       "album": "Awake",
       "track": "Greed",
-      "uri": "spotify:track:32R46DFcMtaNrSnfrmeWnD"
+      "uri": "spotify:track:32R46DFcMtaNrSnfrmeWnD",
+      "pinnedVideoId": "opU1urLhw50",
+      "pinnedTitle": "Godsmack - Awake (Official Music Video)",
+      "pinnedChannel": "Godsmack",
+      "pinnedDuration": "4:51"
     },
     {
       "artist": "Till Lindemann",
       "album": "Alle Tage ist kein Sonntag / Weinen sollst du",
       "track": "Alle Tage ist kein Sonntag / Weinen sollst du - Edit",
-      "uri": "spotify:track:6IkEcPiDrcarg87sv3mpTw"
+      "uri": "spotify:track:6IkEcPiDrcarg87sv3mpTw",
+      "pinnedVideoId": "hr54owRMIC0",
+      "pinnedTitle": "Alle Tage ist kein Sonntag / Weinen sollst du (Edit)",
+      "pinnedChannel": "Till Lindemann",
+      "pinnedDuration": "5:26"
     },
     {
       "artist": "Lynnic",
       "album": "Maze Of Memories",
       "track": "Maze Of Memories",
-      "uri": "spotify:track:4ynY3o2BtztX3AdESEe3St"
+      "uri": "spotify:track:4ynY3o2BtztX3AdESEe3St",
+      "pinnedVideoId": "JEmAczhkjNI",
+      "pinnedTitle": "Lynnic, ItsArius & Dinia - Maze Of Memories",
+      "pinnedChannel": "Lynnic",
+      "pinnedDuration": "3:23"
     },
     {
       "artist": "Møme",
       "album": "Panorama",
       "track": "Panorama",
-      "uri": "spotify:track:5eK0ezj03FZvkc1vFwQVnv"
+      "uri": "spotify:track:5eK0ezj03FZvkc1vFwQVnv",
+      "pinnedVideoId": "TmJY9t66neQ",
+      "pinnedTitle": "Panorama",
+      "pinnedChannel": "Mme Music",
+      "pinnedDuration": "4:04"
     },
     {
       "artist": "Omnia",
       "album": "Paradise",
       "track": "Paradise",
-      "uri": "spotify:track:5Ly04EpOVwInjteERKdBjv"
+      "uri": "spotify:track:5Ly04EpOVwInjteERKdBjv",
+      "pinnedVideoId": "d-T9Qkc3C8s",
+      "pinnedTitle": "ARMIN VAN BUUREN @Paradise Club,Mykonos (1-8-2012) - Omnia - The Fusion",
+      "pinnedChannel": "Tasos Brightside",
+      "pinnedDuration": "4:00"
     },
     {
       "artist": "Butyrka",
       "album": "Второй альбом",
       "track": "Запахло весной",
-      "uri": "spotify:track:34MrxiQ5g0zqRBAd12mq9E"
+      "uri": "spotify:track:34MrxiQ5g0zqRBAd12mq9E",
+      "pinnedVideoId": "jD7-9MgV3NI",
+      "pinnedTitle": "������� ������",
+      "pinnedChannel": "������ �������",
+      "pinnedDuration": "4:10"
     },
     {
       "artist": "Guns N' Roses",
       "album": "Use Your Illusion I",
       "track": "Don't Cry (Original)",
-      "uri": "spotify:track:2N2yrmodOnVF10mKvItC9P"
+      "uri": "spotify:track:2N2yrmodOnVF10mKvItC9P",
+      "pinnedVideoId": "zRIbf6JqkNc",
+      "pinnedTitle": "Guns N' Roses - Don't Cry",
+      "pinnedChannel": "Guns N' Roses",
+      "pinnedDuration": "5:13"
     },
     {
       "artist": "Splean",
       "album": "25 Кадр",
       "track": "Линия жизни",
-      "uri": "spotify:track:2dpGc40PtSLEeNAGrTnJGI"
+      "uri": "spotify:track:2dpGc40PtSLEeNAGrTnJGI",
+      "pinnedVideoId": "crhhkg7vHoM",
+      "pinnedTitle": "����� �����",
+      "pinnedChannel": "����������� ����� ������ �����",
+      "pinnedDuration": "3:02"
     },
     {
       "artist": "Felipe Reinheimer",
       "album": "Morning Sky",
       "track": "Morning Sky",
-      "uri": "spotify:track:3Y0rHowrgBeeXQKJT5WiXL"
+      "uri": "spotify:track:3Y0rHowrgBeeXQKJT5WiXL",
+      "pinnedVideoId": "h_87H4aoyM0",
+      "pinnedTitle": "Felipe Reinheimer � Morning Sky (Original Mix) [Surrealismo Records]",
+      "pinnedChannel": "Power Station / Dangerous Dark",
+      "pinnedDuration": "6:15"
     },
     {
       "artist": "Method Man",
       "album": "How High - The Soundtrack",
       "track": "Part II",
-      "uri": "spotify:track:2n7h09QrGitVul66b2D8Re"
+      "uri": "spotify:track:2n7h09QrGitVul66b2D8Re",
+      "pinnedVideoId": "wzu28kibx8c",
+      "pinnedTitle": "Method Man & Redman -  Part II (Official Audio)",
+      "pinnedChannel": "Music",
+      "pinnedDuration": "4:05"
     },
     {
       "artist": "Electric Universe",
       "album": "Mantra",
       "track": "Mantra",
-      "uri": "spotify:track:0iXNpYZw6eZN30cQkc72B0"
+      "uri": "spotify:track:0iXNpYZw6eZN30cQkc72B0",
+      "pinnedVideoId": "Oo0o84-TJTU",
+      "pinnedTitle": "Electric Universe - Mantra",
+      "pinnedChannel": "Psymafia",
+      "pinnedDuration": "7:38"
     },
     {
       "artist": "Oxxxymiron",
       "album": "Красота и Уродство",
       "track": "Празднуй",
-      "uri": "spotify:track:6Y69svxqqWCeN5Zi6SzPkK"
+      "uri": "spotify:track:6Y69svxqqWCeN5Zi6SzPkK",
+      "pinnedVideoId": "mXWouWDtxfs",
+      "pinnedTitle": "��������",
+      "pinnedChannel": "oxxxymironofficial",
+      "pinnedDuration": "4:56"
     },
     {
       "artist": "Korn",
       "album": "Greatest Hits, Vol. 1",
       "track": "Another Brick in the Wall, Pt. 1, 2, 3 - Pink Floyd Cover",
-      "uri": "spotify:track:39SHjPPvNVW2H9rSsGGOPD"
+      "uri": "spotify:track:39SHjPPvNVW2H9rSsGGOPD",
+      "pinnedVideoId": "lXlcC3WTQzg",
+      "pinnedTitle": "Korn - Another Brick in the Wall, Pt. 1, 2, 3 (Official Audio)",
+      "pinnedChannel": "KoRn",
+      "pinnedDuration": "7:10"
     },
     {
       "artist": "Gorillaz",
       "album": "Gorillaz",
       "track": "Clint Eastwood",
-      "uri": "spotify:track:1RKUoGiLEbcXN4GY4spQDx"
+      "uri": "spotify:track:1RKUoGiLEbcXN4GY4spQDx",
+      "pinnedVideoId": "1V_xRb0x9aw",
+      "pinnedTitle": "Gorillaz - Clint Eastwood (Official Video)",
+      "pinnedChannel": "Gorillaz",
+      "pinnedDuration": "4:27"
     },
     {
       "artist": "Scooter",
       "album": "The Fifth Chapter (SPY Version)",
       "track": "Listen",
-      "uri": "spotify:track:2mByswTtKvqJhzVUihYpyW"
+      "uri": "spotify:track:2mByswTtKvqJhzVUihYpyW",
+      "pinnedVideoId": "d8M3hgl5v1w",
+      "pinnedTitle": "SCOOTER SONG - Lyrical Video | Su From So |Siddhartha Belmannu | Sumedh | Raj B Shetty |J P Thuminad",
+      "pinnedChannel": "Lighter Buddha Films",
+      "pinnedDuration": "3:49"
     },
     {
       "artist": "ZHU",
       "album": "GENERATIONWHY",
       "track": "Hometown Girl",
-      "uri": "spotify:track:7CNRVEMSXo0fRJwZyM0L2n"
+      "uri": "spotify:track:7CNRVEMSXo0fRJwZyM0L2n",
+      "pinnedVideoId": "G8ypDAuOpgw",
+      "pinnedTitle": "Hometown Girl",
+      "pinnedChannel": "ZHU",
+      "pinnedDuration": "4:12"
     },
     {
       "artist": "AFROJACK",
       "album": "Hero",
       "track": "Hero - Dubvision Remix",
-      "uri": "spotify:track:1zz4r1u9x46gVmY5qZthEC"
+      "uri": "spotify:track:1zz4r1u9x46gVmY5qZthEC",
+      "pinnedVideoId": "U7FFX_OQNRw",
+      "pinnedTitle": "Afrojack & David Guetta - Hero (Dubvision Remix)",
+      "pinnedChannel": "Afrojack",
+      "pinnedDuration": "3:52"
     },
     {
       "artist": "partywithray",
       "album": "Lil Mama",
       "track": "Lil Mama",
-      "uri": "spotify:track:44GPmiM2FZjxzFXbeQ4Ovl"
+      "uri": "spotify:track:44GPmiM2FZjxzFXbeQ4Ovl",
+      "pinnedVideoId": "XN-aBxFRULY",
+      "pinnedTitle": "partywithray & ZHU - Lil Mama (Official Music Video)",
+      "pinnedChannel": "partywithray",
+      "pinnedDuration": "4:15"
     },
     {
       "artist": "Nouvelle Phénomène",
       "album": "Glory of Romance",
       "track": "All Away",
-      "uri": "spotify:track:3pwz3zha3KTc7dT9NhlHjm"
+      "uri": "spotify:track:3pwz3zha3KTc7dT9NhlHjm",
+      "pinnedVideoId": "IFT7gaGbt20",
+      "pinnedTitle": "Nouvelle Phenomene - All Away",
+      "pinnedChannel": "nouvellephenomene",
+      "pinnedDuration": "4:24"
     },
     {
       "artist": "Dub FX",
       "album": "Everythinks a Ripple",
       "track": "Fly with Me",
-      "uri": "spotify:track:2XwT7P3GpPqupeoZ3r1LgA"
+      "uri": "spotify:track:2XwT7P3GpPqupeoZ3r1LgA",
+      "pinnedVideoId": "pg7OW6QBX4E",
+      "pinnedTitle": "Dub FX - Fly With Me",
+      "pinnedChannel": "Hadyomama",
+      "pinnedDuration": "6:45"
     },
     {
       "artist": "Sia",
       "album": "Move Your Body",
       "track": "Move Your Body - Single Mix",
-      "uri": "spotify:track:7ynCQo1KpBOyTdTdAnjSLZ"
+      "uri": "spotify:track:7ynCQo1KpBOyTdTdAnjSLZ",
+      "pinnedVideoId": "NLucGESPfuA",
+      "pinnedTitle": "Sia - Move Your Body (Single Mix) [Audio]",
+      "pinnedChannel": "SiaOnYouTube",
+      "pinnedDuration": "4:14"
     },
     {
       "artist": "Innerpartysystem",
       "album": "The Download EP",
       "track": "Don't Stop",
-      "uri": "spotify:track:331kIZW0aTqKVr6efZtBAK"
+      "uri": "spotify:track:331kIZW0aTqKVr6efZtBAK",
+      "pinnedVideoId": "oIGl50PGk6k",
+      "pinnedTitle": "Don't Stop",
+      "pinnedChannel": "INNERPARTYSYSTEM",
+      "pinnedDuration": "4:43"
     },
     {
       "artist": "Whitewildbear",
       "album": "Rue",
       "track": "Rue",
-      "uri": "spotify:track:2Graarqd5fax1OtQNDxZyu"
+      "uri": "spotify:track:2Graarqd5fax1OtQNDxZyu",
+      "pinnedVideoId": "DsmU1J6jdZU",
+      "pinnedTitle": "Whitewildbear & Ambyion - Rue",
+      "pinnedChannel": "MOR Network",
+      "pinnedDuration": "5:13"
     },
     {
       "artist": "Civil Servant",
       "album": "Exodus",
       "track": "Rhythm of Exodus",
-      "uri": "spotify:track:1RLKPZ4DEpPgeyDgpKL0jd"
+      "uri": "spotify:track:1RLKPZ4DEpPgeyDgpKL0jd",
+      "pinnedVideoId": "DHHuRZTXINk",
+      "pinnedTitle": "Civil Servant � Rhythm of Exodus (Original Mix) [Descension Recordings]",
+      "pinnedChannel": "Power Station / Dangerous Dark",
+      "pinnedDuration": "4:55"
     },
     {
       "artist": "Benny Benassi",
       "album": "Hypnotica",
       "track": "Love is Gonna Save Us",
-      "uri": "spotify:track:0DbdwGmYsyax64LpniHfxV"
+      "uri": "spotify:track:0DbdwGmYsyax64LpniHfxV",
+      "pinnedVideoId": "039uT1Tg2N0",
+      "pinnedTitle": "Love is Gonna Save Us",
+      "pinnedChannel": "bennybenassitv",
+      "pinnedDuration": "5:05"
     },
     {
       "artist": "Ка тет",
       "album": "Террариум",
       "track": "Машина прогресса",
-      "uri": "spotify:track:4P4tPxsABjF2j0Z58LsuDv"
+      "uri": "spotify:track:4P4tPxsABjF2j0Z58LsuDv",
+      "pinnedVideoId": "AgPyyMUfjXQ",
+      "pinnedTitle": "��-��� feat. Oxxxymiron - ������ ��������� (2017)",
+      "pinnedChannel": "oxxxymironofficial",
+      "pinnedDuration": "3:25"
     },
     {
       "artist": "Late Night Alumni",
       "album": "Empty Streets",
       "track": "Empty Streets - Markus Schulz Extended In Search of Sunrise Remix",
-      "uri": "spotify:track:7MWYqQCW39z3pMMoQgD06Z"
+      "uri": "spotify:track:7MWYqQCW39z3pMMoQgD06Z",
+      "pinnedVideoId": "RloiqsKv2Sc",
+      "pinnedTitle": "Late Night Alumni - Empty Streets (Markus Schulz Extended In Search Of Sunrise Remix) (HQ Audio)",
+      "pinnedChannel": "Sekath",
+      "pinnedDuration": "6:03"
     },
     {
       "artist": "Britney Spears",
       "album": "Circus (Deluxe Version)",
       "track": "Womanizer",
-      "uri": "spotify:track:4fixebDZAVToLbUCuEloa2"
+      "uri": "spotify:track:4fixebDZAVToLbUCuEloa2",
+      "pinnedVideoId": "4lYa-PpkcuA",
+      "pinnedTitle": "Womanizer",
+      "pinnedChannel": "Britney Spears",
+      "pinnedDuration": "3:44"
     },
     {
       "artist": "Mnogoznaal",
       "album": "Без Обид",
       "track": "Без Обид",
-      "uri": "spotify:track:6RbnSfbNO4cbrIf86O3nDV"
+      "uri": "spotify:track:6RbnSfbNO4cbrIf86O3nDV",
+      "pinnedVideoId": "GYZcjXhez1s",
+      "pinnedTitle": "Mnogoznaal - ��� ����",
+      "pinnedChannel": "Mnogoznaal",
+      "pinnedDuration": "2:16"
     },
     {
       "artist": "Mahmut Orhan",
       "album": "Everyday",
       "track": "Everyday",
-      "uri": "spotify:track:47AiGjtI7cOLyPwPSCqTuO"
+      "uri": "spotify:track:47AiGjtI7cOLyPwPSCqTuO",
+      "pinnedVideoId": "7X2Gywv0wCg",
+      "pinnedTitle": "Everyday",
+      "pinnedChannel": "Mahmut Orhan",
+      "pinnedDuration": "7:04"
     },
     {
       "artist": "Disturbed",
       "album": "The Sickness",
       "track": "Stupify",
-      "uri": "spotify:track:54cWVWqgyFukgDKQYmaKM3"
+      "uri": "spotify:track:54cWVWqgyFukgDKQYmaKM3",
+      "pinnedVideoId": "ns0_RQNU5Hw",
+      "pinnedTitle": "Disturbed - Stupify [Official Audio]",
+      "pinnedChannel": "Disturbed",
+      "pinnedDuration": "4:34"
     },
     {
       "artist": "Paul Oakenfold",
       "album": "Southern Sun / Ready Steady Go",
       "track": "Southern Sun",
-      "uri": "spotify:track:6GZO2jSzaULhCH30DakBhu"
+      "uri": "spotify:track:6GZO2jSzaULhCH30DakBhu",
+      "pinnedVideoId": "7UphfrPANJk",
+      "pinnedTitle": "Paul Oakenfold - Southern Sun (Original Mix)",
+      "pinnedChannel": "buksovac78",
+      "pinnedDuration": "6:57"
     },
     {
       "artist": "Rautu",
       "album": "Horizon",
       "track": "Night Trip - Original Mix",
-      "uri": "spotify:track:6Ab25h5ukxIQMPBUKpEadv"
+      "uri": "spotify:track:6Ab25h5ukxIQMPBUKpEadv",
+      "pinnedVideoId": "1FyEd3yRjVU",
+      "pinnedTitle": "Rautu = NIGHT TRIP [VIP Mix]",
+      "pinnedChannel": "TALL DRAGON",
+      "pinnedDuration": "3:06"
     },
     {
       "artist": "Idina Menzel",
       "album": "Frozen",
       "track": "Let It Go - From \"Frozen\"/Soundtrack Version",
-      "uri": "spotify:track:0qcr5FMsEO85NAQjrlDRKo"
+      "uri": "spotify:track:0qcr5FMsEO85NAQjrlDRKo",
+      "pinnedVideoId": "FnpJBkAMk44",
+      "pinnedTitle": "Idina Menzel - Let It Go (from \"Frozen\") (Audio)",
+      "pinnedChannel": "DisneyMusicVEVO",
+      "pinnedDuration": "3:52"
     },
     {
       "artist": "Anberlin",
       "album": "New Surrender",
       "track": "True Faith",
-      "uri": "spotify:track:6Pvu8jB9QnfLR4rvGwKT3G"
+      "uri": "spotify:track:6Pvu8jB9QnfLR4rvGwKT3G",
+      "pinnedVideoId": "AxUbccX4NW4",
+      "pinnedTitle": "True Faith (2015 Remaster)",
+      "pinnedChannel": "New Order",
+      "pinnedDuration": "4:12"
     },
     {
       "artist": "Korn",
       "album": "Korn",
       "track": "Blind",
-      "uri": "spotify:track:1pr9TZGOXeJUggIal1Wq3R"
+      "uri": "spotify:track:1pr9TZGOXeJUggIal1Wq3R",
+      "pinnedVideoId": "5_hIojjA3A4",
+      "pinnedTitle": "Korn - Blind",
+      "pinnedChannel": "kornfreak0naleash",
+      "pinnedDuration": "4:20"
     },
     {
       "artist": "kyu",
       "album": "Dreamscapes",
       "track": "Stargazing",
-      "uri": "spotify:track:6IM9Er6nQT3ZTp8LBUzB8d"
+      "uri": "spotify:track:6IM9Er6nQT3ZTp8LBUzB8d",
+      "pinnedVideoId": "7Y7ZLV44s2U",
+      "pinnedTitle": "Kygo - Stargazing feat. Justin Jesso (Cover Art) [Ultra Music]",
+      "pinnedChannel": "Ultra Records",
+      "pinnedDuration": "3:57"
     },
     {
       "artist": "The Weeknd",
       "album": "Take My Breath",
       "track": "Take My Breath - Single Version",
-      "uri": "spotify:track:6M3PsepEj5gyJoIi7Xvr7u"
+      "uri": "spotify:track:6M3PsepEj5gyJoIi7Xvr7u",
+      "pinnedVideoId": "eT1E3gmST9U",
+      "pinnedTitle": "The Weeknd - Take My Breath (Official Audio)",
+      "pinnedChannel": "The Weeknd",
+      "pinnedDuration": "3:40"
     },
     {
       "artist": "Izzamuzzic",
       "album": "Unsaid",
       "track": "Just one",
-      "uri": "spotify:track:5kCEcdZ1wWifC6uGNW7T3T"
+      "uri": "spotify:track:5kCEcdZ1wWifC6uGNW7T3T",
+      "pinnedVideoId": "lBQUxEgPqUM",
+      "pinnedTitle": "Just one",
+      "pinnedChannel": "Izzamuzzic",
+      "pinnedDuration": "6:38"
     },
     {
       "artist": "Ngoc Long",
@@ -12812,1393 +13680,2321 @@
       "artist": "TOOL",
       "album": "10,000 Days",
       "track": "Right In Two",
-      "uri": "spotify:track:0NLDZzVke3Qu7vDhWyGzRk"
+      "uri": "spotify:track:0NLDZzVke3Qu7vDhWyGzRk",
+      "pinnedVideoId": "bndL7wwAj0U",
+      "pinnedTitle": "TOOL - Right In Two (Official Audio)",
+      "pinnedChannel": "TOOL",
+      "pinnedDuration": "8:57"
     },
     {
       "artist": "Dire Straits",
       "album": "Dire Straits",
       "track": "Sultans Of Swing",
-      "uri": "spotify:track:37Tmv4NnfQeb0ZgUC4fOJj"
+      "uri": "spotify:track:37Tmv4NnfQeb0ZgUC4fOJj",
+      "pinnedVideoId": "89Qg_gYqkys",
+      "pinnedTitle": "Dire Straits - Sultans of Swing (Official Audio)",
+      "pinnedChannel": "RHINO",
+      "pinnedDuration": "5:50"
     },
     {
       "artist": "Wavey",
       "album": "Forever",
       "track": "Forever",
-      "uri": "spotify:track:1QY1XwW35qIyzavlWOCcZo"
+      "uri": "spotify:track:1QY1XwW35qIyzavlWOCcZo",
+      "pinnedVideoId": "fvl5N6r_slo",
+      "pinnedTitle": "Forever",
+      "pinnedChannel": "Wavey - Topic",
+      "pinnedDuration": "2:22"
     },
     {
       "artist": "BT",
       "album": "Atari's Lantern",
       "track": "Atari's Lantern",
-      "uri": "spotify:track:3sFK9DCXkXlVNK5KQsPXos"
+      "uri": "spotify:track:3sFK9DCXkXlVNK5KQsPXos",
+      "pinnedVideoId": "EXgVMivvfYM",
+      "pinnedTitle": "Atari's Lantern",
+      "pinnedChannel": "BT",
+      "pinnedDuration": "3:37"
     },
     {
       "artist": "Orkidea",
       "album": "XP100",
       "track": "XP100",
-      "uri": "spotify:track:6q7PnBypDyH3GjisTpPy4r"
+      "uri": "spotify:track:6q7PnBypDyH3GjisTpPy4r",
+      "pinnedVideoId": "NjcaVX2X5QY",
+      "pinnedTitle": "Orkidea � XP100 [Pure Progressive]",
+      "pinnedChannel": "Solarstone & Pure Trance",
+      "pinnedDuration": "8:00"
     },
     {
       "artist": "Paul Oakenfold",
       "album": "Sky",
       "track": "Sky",
-      "uri": "spotify:track:1cCrV43wioL4wVWpBPRD35"
+      "uri": "spotify:track:1cCrV43wioL4wVWpBPRD35",
+      "pinnedVideoId": "XINlEYXA3k0",
+      "pinnedTitle": "Fritz & Paul Kalkbrenner - Sky and Sand (Original Mix)",
+      "pinnedChannel": "andreboros",
+      "pinnedDuration": "8:52"
     },
     {
       "artist": "Iron Maiden",
       "album": "Piece of Mind",
       "track": "The Trooper - 2015 Remaster",
-      "uri": "spotify:track:4OROzZUy6gOWN4UGQVaZMF"
+      "uri": "spotify:track:4OROzZUy6gOWN4UGQVaZMF",
+      "pinnedVideoId": "LJHPoWKgOTI",
+      "pinnedTitle": "Iron Maiden-The Trooper (2015 Remaster)",
+      "pinnedChannel": "Imperio Metal",
+      "pinnedDuration": "4:13"
     },
     {
       "artist": "Dom Dolla",
       "album": "No Room For A Saint (From F1® The Movie)",
       "track": "No Room For A Saint (From F1® The Movie)",
-      "uri": "spotify:track:5xalbHoIf0F0AmuTKlm2Ct"
+      "uri": "spotify:track:5xalbHoIf0F0AmuTKlm2Ct",
+      "pinnedVideoId": "kdNlhtuCVAI",
+      "pinnedTitle": "Dom Dolla - No Room For A Saint (feat. Nathan Nicholson) [From F1� The Movie] [Official Audio]",
+      "pinnedChannel": "F1 The Album",
+      "pinnedDuration": "3:56"
     },
     {
       "artist": "Miyagi & Andy Panda",
       "album": "YAMAKASI",
       "track": "Yamakasi",
-      "uri": "spotify:track:2fIBmScNzkGmSJ3y2XsmEI"
+      "uri": "spotify:track:2fIBmScNzkGmSJ3y2XsmEI",
+      "pinnedVideoId": "CIfQQ7-SoTs",
+      "pinnedTitle": "Miyagi & Andy Panda - Yamakasi (Official Audio)",
+      "pinnedChannel": "Hajime",
+      "pinnedDuration": "4:23"
     },
     {
       "artist": "KLOUD",
       "album": "AUTONOMY",
       "track": "DISCONNECT",
-      "uri": "spotify:track:63CIZNPyppJJSlMcK3aHVg"
+      "uri": "spotify:track:63CIZNPyppJJSlMcK3aHVg",
+      "pinnedVideoId": "Hf_JuPkquMc",
+      "pinnedTitle": "GEN.KLOUD - DISCONNECT",
+      "pinnedChannel": "KLOUD",
+      "pinnedDuration": "3:22"
     },
     {
       "artist": "Korn",
       "album": "Untitled",
       "track": "Evolution",
-      "uri": "spotify:track:3iLCPsQR9oBdJU05N1H1EA"
+      "uri": "spotify:track:3iLCPsQR9oBdJU05N1H1EA",
+      "pinnedVideoId": "2zb2RyKP09A",
+      "pinnedTitle": "Korn - Evolution",
+      "pinnedChannel": "The Korn Projekt",
+      "pinnedDuration": "3:38"
     },
     {
       "artist": "ZHU",
       "album": "Generationwhy",
       "track": "Good Life",
-      "uri": "spotify:track:5kcaxCYOzXC3qP1SEEjJH7"
+      "uri": "spotify:track:5kcaxCYOzXC3qP1SEEjJH7",
+      "pinnedVideoId": "gGpRJ1CgRvg",
+      "pinnedTitle": "Zhu - Good Life (lyrics)",
+      "pinnedChannel": "Anano Chechvadze",
+      "pinnedDuration": "4:33"
     },
     {
       "artist": "Dezza",
       "album": "In Tents/Law Of Attraction",
       "track": "Law of Attraction",
-      "uri": "spotify:track:3h4XNmeol2gHd288mRQZ1i"
+      "uri": "spotify:track:3h4XNmeol2gHd288mRQZ1i",
+      "pinnedVideoId": "OabIUG0b2_E",
+      "pinnedTitle": "Dezza - Law Of Attraction (Zerothree Exclusive)",
+      "pinnedChannel": "Zerothree",
+      "pinnedDuration": "6:51"
     },
     {
       "artist": "Gorillaz",
       "album": "Andromeda (feat. D.R.A.M.)",
       "track": "Andromeda (feat. DRAM) - ZHU Remix",
-      "uri": "spotify:track:29lFht1dGK1XMcXWfSLH82"
+      "uri": "spotify:track:29lFht1dGK1XMcXWfSLH82",
+      "pinnedVideoId": "cP7uuS63CD8",
+      "pinnedTitle": "Gorillaz - Andromeda (ZHU Remix)",
+      "pinnedChannel": "Gorillaz",
+      "pinnedDuration": "5:13"
     },
     {
       "artist": "Helsloot",
       "album": "Get Physical Radio by Momoda",
       "track": "Hideaway - Mixed - January 2026",
-      "uri": "spotify:track:6vNDYLGod69A8Nmj2IypvK"
+      "uri": "spotify:track:6vNDYLGod69A8Nmj2IypvK",
+      "pinnedVideoId": "oZAX2jtXoaY",
+      "pinnedTitle": "Hideaway (Mixed - January 2026)",
+      "pinnedChannel": "Helsloot - Topic",
+      "pinnedDuration": "5:48"
     },
     {
       "artist": "Paul McCartney",
       "album": "The Kiss Of Venus (Dominic Fike)",
       "track": "The Kiss Of Venus (Dominic Fike)",
-      "uri": "spotify:track:3gCYle76USfbHa7VDTDg5V"
+      "uri": "spotify:track:3gCYle76USfbHa7VDTDg5V",
+      "pinnedVideoId": "jubYqQqHLDw",
+      "pinnedTitle": "Paul McCartney, Dominic Fike - The Kiss Of Venus (Visualizer)",
+      "pinnedChannel": "PAUL McCARTNEY",
+      "pinnedDuration": "2:22"
     },
     {
       "artist": "Emotional Oranges",
       "album": "STILL EMO",
       "track": "Not Like This (feat. ZHU)",
-      "uri": "spotify:track:3LDZY8eKfAQsUKAc6eeh96"
+      "uri": "spotify:track:3LDZY8eKfAQsUKAc6eeh96",
+      "pinnedVideoId": "uzaHHqVSGMI",
+      "pinnedTitle": "Emotional Oranges - Not Like This (ft. ZHU) [Lyric Video]",
+      "pinnedChannel": "Emotional Oranges",
+      "pinnedDuration": "3:27"
     },
     {
       "artist": "Ohota",
       "album": "Mtc",
       "track": "Mtc",
-      "uri": "spotify:track:4mePHhHx3Gyt7KCb8TR7fC"
+      "uri": "spotify:track:4mePHhHx3Gyt7KCb8TR7fC",
+      "pinnedVideoId": "KSPGmtgGjsM",
+      "pinnedTitle": "Mtc",
+      "pinnedChannel": "Ohota",
+      "pinnedDuration": "1:51"
     },
     {
       "artist": "Boris Brejcha",
       "album": "Atomic Heart",
       "track": "Atomic Heart",
-      "uri": "spotify:track:5kN3qF5amNSpqTRGQVHItq"
+      "uri": "spotify:track:5kN3qF5amNSpqTRGQVHItq",
+      "pinnedVideoId": "Act4IUWlfhU",
+      "pinnedTitle": "Boris Brejcha - Atomic Heart (Ukrainian Extended Fix)",
+      "pinnedChannel": "Michael Kroll",
+      "pinnedDuration": "8:19"
     },
     {
       "artist": "Paul Oakenfold",
       "album": "Bunkka",
       "track": "Hold Your Hand",
-      "uri": "spotify:track:44r4p3qQDLk3iqtipomt40"
+      "uri": "spotify:track:44r4p3qQDLk3iqtipomt40",
+      "pinnedVideoId": "eo8zp1OYU50",
+      "pinnedTitle": "Paul Oakenfold - Hold your hands",
+      "pinnedChannel": "akuja000",
+      "pinnedDuration": "3:40"
     },
     {
       "artist": "Eminem",
       "album": "The Marshall Mathers LP",
       "track": "The Real Slim Shady",
-      "uri": "spotify:track:3yfqSUWxFvZELEM4PmlwIR"
+      "uri": "spotify:track:3yfqSUWxFvZELEM4PmlwIR",
+      "pinnedVideoId": "1-M4JrFcrNY",
+      "pinnedTitle": "The Real Slim Shady",
+      "pinnedChannel": "EminemMusic",
+      "pinnedDuration": "4:44"
     },
     {
       "artist": "CamelPhat",
       "album": "Dark Matter",
       "track": "For a Feeling (feat. RHODES) - Adam Sellouk & Y do I Remix",
-      "uri": "spotify:track:73AH0nlOJXIP366b1iJEHi"
+      "uri": "spotify:track:73AH0nlOJXIP366b1iJEHi",
+      "pinnedVideoId": "UVsgeFIx3gA",
+      "pinnedTitle": "For a Feeling (Adam Sellouk & Y do I Remix - Official Audio)",
+      "pinnedChannel": "CamelPhat",
+      "pinnedDuration": "4:03"
     },
     {
       "artist": "Pendulum",
       "album": "Immersion",
       "track": "The Island, Pt. I (Dawn)",
-      "uri": "spotify:track:1Thv8uCYzyOFC7PME9J936"
+      "uri": "spotify:track:1Thv8uCYzyOFC7PME9J936",
+      "pinnedVideoId": "6EKYcAS_2ys",
+      "pinnedTitle": "Pendulum - The Island  Part 1 (Dawn) (Full HD)",
+      "pinnedChannel": "State Of Mind",
+      "pinnedDuration": "5:21"
     },
     {
       "artist": "Skryptonite",
       "album": "PVL is back",
       "track": "Spice Girls",
-      "uri": "spotify:track:3olb2v1q1h0vE0xQxlgdhd"
+      "uri": "spotify:track:3olb2v1q1h0vE0xQxlgdhd",
+      "pinnedVideoId": "fmYzXstalqM",
+      "pinnedTitle": "���������� & Niman - Spice Girls  ( �������� ����� 2020 )",
+      "pinnedChannel": "EDII ED",
+      "pinnedDuration": "2:58"
     },
     {
       "artist": "Skryptonite",
       "album": "Дом с нормальными явлениями",
       "track": "Вечеринка",
-      "uri": "spotify:track:3H49cfXiRznOzHEcphIr3j"
+      "uri": "spotify:track:3H49cfXiRznOzHEcphIr3j",
+      "pinnedVideoId": "Ja0FsOSBqHo",
+      "pinnedTitle": "���������� � ��������� / Jillzay ft. KolyaOlya � ��� - ��� �������",
+      "pinnedChannel": "Scriptonite music",
+      "pinnedDuration": "6:05"
     },
     {
       "artist": "Linkin Park",
       "album": "Hybrid Theory",
       "track": "Pushing Me Away",
-      "uri": "spotify:track:1gAaRSN57UYVRI4eWRyAvP"
+      "uri": "spotify:track:1gAaRSN57UYVRI4eWRyAvP",
+      "pinnedVideoId": "Ve1LNJEIKUE",
+      "pinnedTitle": "Pushing Me Away - Linkin Park (Hybrid Theory)",
+      "pinnedChannel": "Linkin Park",
+      "pinnedDuration": "3:12"
     },
     {
       "artist": "FERR",
       "album": "Morning Rays",
       "track": "Morning Rays",
-      "uri": "spotify:track:25f9rani6lyjwJR8onhDtA"
+      "uri": "spotify:track:25f9rani6lyjwJR8onhDtA",
+      "pinnedVideoId": "RVfaOiuc9Qc",
+      "pinnedTitle": "FERR & Ferry Corsten - Morning Rays",
+      "pinnedChannel": "Best music for relaxaton",
+      "pinnedDuration": "4:41"
     },
     {
       "artist": "Korn",
       "album": "The Serenity of Suffering",
       "track": "Rotting In Vain",
-      "uri": "spotify:track:5PCKCffFrcyUvnhxJoPlK2"
+      "uri": "spotify:track:5PCKCffFrcyUvnhxJoPlK2",
+      "pinnedVideoId": "Uv_ryLCAQ6Y",
+      "pinnedTitle": "Korn - Rotting In Vain (Audio)",
+      "pinnedChannel": "Morgoth",
+      "pinnedDuration": "3:33"
     },
     {
       "artist": "Boris Brejcha",
       "album": "Feuerfalter Part 02",
       "track": "Purple Noise",
-      "uri": "spotify:track:6MoTeX5dtuPZ3hwaecuBkz"
+      "uri": "spotify:track:6MoTeX5dtuPZ3hwaecuBkz",
+      "pinnedVideoId": "e_K-3YMUStc",
+      "pinnedTitle": "Purple Noise (Remastered)",
+      "pinnedChannel": "Boris Brejcha",
+      "pinnedDuration": "9:00"
     },
     {
       "artist": "CAZZETTE",
       "album": "Eject",
       "track": "Beam Me Up - Radio Edit",
-      "uri": "spotify:track:64y85LeHY8Z6OlTOM9cpKD"
+      "uri": "spotify:track:64y85LeHY8Z6OlTOM9cpKD",
+      "pinnedVideoId": "mp-IZEFqrG0",
+      "pinnedTitle": "CAZZETTE - Beam Me Up (Official Director Cut)",
+      "pinnedChannel": "Cazzette",
+      "pinnedDuration": "3:55"
     },
     {
       "artist": "Eli & Fur",
       "album": "Dreams At Dusk Part II",
       "track": "Devil",
-      "uri": "spotify:track:0lteocVQSgALEf31yTzhQQ"
+      "uri": "spotify:track:0lteocVQSgALEf31yTzhQQ",
+      "pinnedVideoId": "UQn0u5MBrCg",
+      "pinnedTitle": "Eli & Fur - Devil (Logic Pro Remake)",
+      "pinnedChannel": "logic xx",
+      "pinnedDuration": "1:53"
     },
     {
       "artist": "Rafael Osmo",
       "album": "Restless",
       "track": "Restless",
-      "uri": "spotify:track:1GcOf1HrttVdeKkEWt6noT"
+      "uri": "spotify:track:1GcOf1HrttVdeKkEWt6noT",
+      "pinnedVideoId": "emmvPcV2HuI",
+      "pinnedTitle": "Rafael Osmo - Restless",
+      "pinnedChannel": "Black Hole Recordings",
+      "pinnedDuration": "6:02"
     },
     {
       "artist": "Within Temptation",
       "album": "The Unforgiving",
       "track": "Faster",
-      "uri": "spotify:track:4XBtYPGMAYJkuJu2w4pmYl"
+      "uri": "spotify:track:4XBtYPGMAYJkuJu2w4pmYl",
+      "pinnedVideoId": "clK7UTpuuos",
+      "pinnedTitle": "Within Temptation - Faster (Audio Only)",
+      "pinnedChannel": "Within Temptation",
+      "pinnedDuration": "4:24"
     },
     {
       "artist": "The Chainsmokers",
       "album": "Memories...Do Not Open",
       "track": "Something Just Like This",
-      "uri": "spotify:track:6RUKPb4LETWmmr3iAEQktW"
+      "uri": "spotify:track:6RUKPb4LETWmmr3iAEQktW",
+      "pinnedVideoId": "FM7MFYoylVs",
+      "pinnedTitle": "The Chainsmokers & Coldplay - Something Just Like This (Official Lyric Video)",
+      "pinnedChannel": "The Chainsmokers",
+      "pinnedDuration": "4:07"
     },
     {
       "artist": "Papa Roach",
       "album": "Infest",
       "track": "Last Resort",
-      "uri": "spotify:track:5W8YXBz9MTIDyrpYaCg2Ky"
+      "uri": "spotify:track:5W8YXBz9MTIDyrpYaCg2Ky",
+      "pinnedVideoId": "PiihIwhjIvQ",
+      "pinnedTitle": "Last Resort",
+      "pinnedChannel": "Papa Roach",
+      "pinnedDuration": "3:20"
     },
     {
       "artist": "Tenno",
       "album": "3 Am. Study Session",
       "track": "Luna",
-      "uri": "spotify:track:5FMeLrcoOH6iwTS5QD7aLR"
+      "uri": "spotify:track:5FMeLrcoOH6iwTS5QD7aLR",
+      "pinnedVideoId": "yvk4_gfZLRA",
+      "pinnedTitle": "Tenno - Luna (3 AM. Study Session)",
+      "pinnedChannel": "Tenno",
+      "pinnedDuration": "2:35"
     },
     {
       "artist": "FEEL",
       "album": "A State Of Trance Episode 841",
       "track": "Born To Love (ASOT 841)",
-      "uri": "spotify:track:1RSgpJm636JPiLjOHNpaCf"
+      "uri": "spotify:track:1RSgpJm636JPiLjOHNpaCf",
+      "pinnedVideoId": "DkXeuUQFzV8",
+      "pinnedTitle": "FEEL & Alexandra Badoi - Born To Love [#ASOT841]",
+      "pinnedChannel": "A State Of Trance",
+      "pinnedDuration": "3:25"
     },
     {
       "artist": "Boris Brejcha",
       "album": "Ginger",
       "track": "Ginger",
-      "uri": "spotify:track:16lQpZjF3WfsPOo7tJJ8rF"
+      "uri": "spotify:track:16lQpZjF3WfsPOo7tJJ8rF",
+      "pinnedVideoId": "hqKp8p17Z4M",
+      "pinnedTitle": "Boris Brejcha - Ginger",
+      "pinnedChannel": "Boris Brejcha",
+      "pinnedDuration": "7:35"
     },
     {
       "artist": "Serge Devant",
       "album": "Take Me With You (feat. Emma Hewitt)",
       "track": "Take Me With You - Easy Way Out Radio Edit",
-      "uri": "spotify:track:20QnjAls5Pb5NROLD4I6nB"
+      "uri": "spotify:track:20QnjAls5Pb5NROLD4I6nB",
+      "pinnedVideoId": "MxKpvfmAwt4",
+      "pinnedTitle": "Serge Devant ft. Emma Hewitt - Take me with you (Easy way out Radio edit)",
+      "pinnedChannel": "������",
+      "pinnedDuration": "4:33"
     },
     {
       "artist": "The Weeknd",
       "album": "After Hours",
       "track": "Blinding Lights",
-      "uri": "spotify:track:0VjIjW4GlUZAMYd2vXMi3b"
+      "uri": "spotify:track:0VjIjW4GlUZAMYd2vXMi3b",
+      "pinnedVideoId": "fHI8X4OXluQ",
+      "pinnedTitle": "The Weeknd - Blinding Lights (Official Audio)",
+      "pinnedChannel": "The Weeknd",
+      "pinnedDuration": "3:23"
     },
     {
       "artist": "Deftones",
       "album": "White Pony",
       "track": "Passenger",
-      "uri": "spotify:track:7IoK6jZBxY7NMoQPoPXZCF"
+      "uri": "spotify:track:7IoK6jZBxY7NMoQPoPXZCF",
+      "pinnedVideoId": "IjainiB8mk4",
+      "pinnedTitle": "Deftones - Passenger [Official Visualizer]",
+      "pinnedChannel": "Deftones",
+      "pinnedDuration": "6:27"
     },
     {
       "artist": "In Flames",
       "album": "Clayman",
       "track": "Only for the Weak",
-      "uri": "spotify:track:0JBQnLKfLXmlkquabLtAgd"
+      "uri": "spotify:track:0JBQnLKfLXmlkquabLtAgd",
+      "pinnedVideoId": "q86owGQzaG0",
+      "pinnedTitle": "Only for the Weak",
+      "pinnedChannel": "In Flames",
+      "pinnedDuration": "4:55"
     },
     {
       "artist": "xander.",
       "album": "Daydreaming",
       "track": "Cabin In The Forest",
-      "uri": "spotify:track:2DVlEqfna6wRYNwOwy5YK7"
+      "uri": "spotify:track:2DVlEqfna6wRYNwOwy5YK7",
+      "pinnedVideoId": "eDi6WaCCoUQ",
+      "pinnedTitle": "Cabin In A Forest",
+      "pinnedChannel": "xander. - Topic",
+      "pinnedDuration": "3:13"
     },
     {
       "artist": "Michael Jackson",
       "album": "Dangerous",
       "track": "Black or White",
-      "uri": "spotify:track:7EsjkelQuoUlJXEw7SeVV4"
+      "uri": "spotify:track:7EsjkelQuoUlJXEw7SeVV4",
+      "pinnedVideoId": "YP3W-E0OamU",
+      "pinnedTitle": "Black or White (Single Version)",
+      "pinnedChannel": "Michael Jackson",
+      "pinnedDuration": "3:19"
     },
     {
       "artist": "The Birthday Massacre",
       "album": "Under Your Spell",
       "track": "Under Your Spell",
-      "uri": "spotify:track:5VAZxxmwARQ6bMmNUYBong"
+      "uri": "spotify:track:5VAZxxmwARQ6bMmNUYBong",
+      "pinnedVideoId": "a9fkG1X46a4",
+      "pinnedTitle": "Under Your Spell",
+      "pinnedChannel": "The Birthday Massacre",
+      "pinnedDuration": "4:31"
     },
     {
       "artist": "Daniel Ortgiess",
       "album": "106 Miles To Chicago",
       "track": "106 Miles To Chicago",
-      "uri": "spotify:track:3NiTRRrkEWR8eKk8YNKqpy"
+      "uri": "spotify:track:3NiTRRrkEWR8eKk8YNKqpy",
+      "pinnedVideoId": "MxpPp_Mo6-E",
+      "pinnedTitle": "106 Miles To Chicago",
+      "pinnedChannel": "Daniel Ortgiess - Topic",
+      "pinnedDuration": "5:03"
     },
     {
       "artist": "Josh Gabriel",
       "album": "Josh Gabriel presents Winter Kills",
       "track": "Forward Facing - Album Mix",
-      "uri": "spotify:track:3VtTsRN6XphnxPUANdwuIN"
+      "uri": "spotify:track:3VtTsRN6XphnxPUANdwuIN",
+      "pinnedVideoId": "FtjH_Uur32o",
+      "pinnedTitle": "Josh Gabriel presents Winter Kills - Forward Facing (Acoustic Mix)",
+      "pinnedChannel": "aura music official",
+      "pinnedDuration": "5:34"
     },
     {
       "artist": "Andy Panda",
       "album": "Billboard",
       "track": "Billboard",
-      "uri": "spotify:track:3wjDQzeKQ11go26ycUhOMd"
+      "uri": "spotify:track:3wjDQzeKQ11go26ycUhOMd",
+      "pinnedVideoId": "QrFz3wEzqrQ",
+      "pinnedTitle": "Andy Panda, ����������, 104, TumaniYO, Miyagi - Billboard (Official Audio)",
+      "pinnedChannel": "Hajime",
+      "pinnedDuration": "5:00"
     },
     {
       "artist": "Asura",
       "album": "360",
       "track": "Altered State - Album Edit",
-      "uri": "spotify:track:1uFpEPeZHj0uWOwFpHtDxM"
+      "uri": "spotify:track:1uFpEPeZHj0uWOwFpHtDxM",
+      "pinnedVideoId": "qMRCn9ev4vE",
+      "pinnedTitle": "Asura - Altered State (Album Edit) (HD)",
+      "pinnedChannel": "Transmutagenic",
+      "pinnedDuration": "8:27"
     },
     {
       "artist": "Lil Jon & The East Side Boyz",
       "album": "Crunk Juice",
       "track": "Da Blow",
-      "uri": "spotify:track:3eW3brBXFNI992RsCy3cRo"
+      "uri": "spotify:track:3eW3brBXFNI992RsCy3cRo",
+      "pinnedVideoId": "lUF-jH4gA28",
+      "pinnedTitle": "Da Blow (feat. Gangsta Boo)",
+      "pinnedChannel": "Lil Jon & The East Side Boyz - Topic",
+      "pinnedDuration": "6:00"
     },
     {
       "artist": "Neelix",
       "album": "There Was A Time",
       "track": "There Was A Time",
-      "uri": "spotify:track:6f9X4NeJ9TofyaKKqYcWl3"
+      "uri": "spotify:track:6f9X4NeJ9TofyaKKqYcWl3",
+      "pinnedVideoId": "-PClwzRXzAU",
+      "pinnedTitle": "Neelix, Caroline Harrison - There Was A Time (Official Audio)",
+      "pinnedChannel": "SpinTwistRecords",
+      "pinnedDuration": "5:08"
     },
     {
       "artist": "SAINt JHN",
       "album": "Roses",
       "track": "Roses - Imanbek Remix",
-      "uri": "spotify:track:24Yi9hE78yPEbZ4kxyoXAI"
+      "uri": "spotify:track:24Yi9hE78yPEbZ4kxyoXAI",
+      "pinnedVideoId": "ele2DMU49Jk",
+      "pinnedTitle": "SAINt JHN - \"Roses\" Imanbek Remix (Official Audio)",
+      "pinnedChannel": "SAINt JHN",
+      "pinnedDuration": "2:50"
     },
     {
       "artist": "Rammstein",
       "album": "Herzeleid",
       "track": "Asche zu Asche",
-      "uri": "spotify:track:72FYliCNWAriQ9P45MC9zI"
+      "uri": "spotify:track:72FYliCNWAriQ9P45MC9zI",
+      "pinnedVideoId": "phMw2TUAooM",
+      "pinnedTitle": "Asche Zu Asche (Studio Version)",
+      "pinnedChannel": "Rammstein Official",
+      "pinnedDuration": "3:51"
     },
     {
       "artist": "Rammstein",
       "album": "Mutter",
       "track": "Sonne",
-      "uri": "spotify:track:3gVhsZtseYtY1fMuyYq06F"
+      "uri": "spotify:track:3gVhsZtseYtY1fMuyYq06F",
+      "pinnedVideoId": "v7GMG1aLyPw",
+      "pinnedTitle": "Sonne",
+      "pinnedChannel": "Rammstein Official",
+      "pinnedDuration": "4:06"
     },
     {
       "artist": "AL-90",
       "album": "Hibernation",
       "track": "Vchera",
-      "uri": "spotify:track:0E5kJzyQhf4m02ooeO9tTy"
+      "uri": "spotify:track:0E5kJzyQhf4m02ooeO9tTy",
+      "pinnedVideoId": "ncltfECeBqI",
+      "pinnedTitle": "al-90 vchera slowed (sad guy in sunglasses)",
+      "pinnedChannel": "hate wave",
+      "pinnedDuration": "6:00"
     },
     {
       "artist": "Jimi Hendrix",
       "album": "Are You Experienced",
       "track": "Foxey Lady",
-      "uri": "spotify:track:23MrkN7g6Q5U7GLIxNHN1B"
+      "uri": "spotify:track:23MrkN7g6Q5U7GLIxNHN1B",
+      "pinnedVideoId": "ThkRVTd-tPc",
+      "pinnedTitle": "Foxey Lady",
+      "pinnedChannel": "Jimi Hendrix",
+      "pinnedDuration": "3:19"
     },
     {
       "artist": "Steve Dekay",
       "album": "Neutrino & Case",
       "track": "Case",
-      "uri": "spotify:track:5f3GWkBt9hHYC41dPDAje8"
+      "uri": "spotify:track:5f3GWkBt9hHYC41dPDAje8",
+      "pinnedVideoId": "Kk-LLB8_kEY",
+      "pinnedTitle": "Steve Dekay presents Skender - Case",
+      "pinnedChannel": "Coldharbour Recordings",
+      "pinnedDuration": "3:58"
     },
     {
       "artist": "Gorillaz",
       "album": "Demon Days",
       "track": "Kids with Guns",
-      "uri": "spotify:track:0eEgMbSzOHmkOeVuNC3E0k"
+      "uri": "spotify:track:0eEgMbSzOHmkOeVuNC3E0k",
+      "pinnedVideoId": "VCkFSe3voRc",
+      "pinnedTitle": "Gorillaz - Kids With Guns (Official Video)",
+      "pinnedChannel": "Gorillaz",
+      "pinnedDuration": "3:46"
     },
     {
       "artist": "Gareth Emery",
       "album": "Northern Lights",
       "track": "Arrival",
-      "uri": "spotify:track:3DaUyfDJ3kQTXfPYc559g5"
+      "uri": "spotify:track:3DaUyfDJ3kQTXfPYc559g5",
+      "pinnedVideoId": "Yp2zINOCE0E",
+      "pinnedTitle": "Gareth Emery - Arrival (Ft. Brute Force)",
+      "pinnedChannel": "PENSAMIENTOS y REFLEXIONES",
+      "pinnedDuration": "5:32"
     },
     {
       "artist": "Krovostok",
       "album": "Сквозное",
       "track": "Сдавать говно",
-      "uri": "spotify:track:5vi6P55oySHYBZ8zzxBkRP"
+      "uri": "spotify:track:5vi6P55oySHYBZ8zzxBkRP",
+      "pinnedVideoId": "3Ned7DeQuX0",
+      "pinnedTitle": "��������� - ������� ����� (right Version, gachi remix)",
+      "pinnedChannel": "Seroror",
+      "pinnedDuration": "3:18"
     },
     {
       "artist": "Judas Priest",
       "album": "British Steel",
       "track": "Breaking the Law",
-      "uri": "spotify:track:2RaA6kIcvomt77qlIgGhCT"
+      "uri": "spotify:track:2RaA6kIcvomt77qlIgGhCT",
+      "pinnedVideoId": "AMfG3sMo34s",
+      "pinnedTitle": "Breaking the Law",
+      "pinnedChannel": "Judas Priest",
+      "pinnedDuration": "2:34"
     },
     {
       "artist": "Tiësto",
       "album": "10:35 (feat. Tate McRae)",
       "track": "10:35 (feat. Tate McRae) - Joel Corry Remix",
-      "uri": "spotify:track:5b9DCQzPV6KEg9b6WB8v4e"
+      "uri": "spotify:track:5b9DCQzPV6KEg9b6WB8v4e",
+      "pinnedVideoId": "KGdrhWp34Hk",
+      "pinnedTitle": "Tisto - 10:35 (feat. Tate McRae) [Joel Corry Remix] [Official Visualizer]",
+      "pinnedChannel": "Tisto",
+      "pinnedDuration": "3:01"
     },
     {
       "artist": "Daft Punk",
       "album": "Discovery",
       "track": "Harder, Better, Faster, Stronger",
-      "uri": "spotify:track:5W3cjX2J3tjhG8zb6u0qHn"
+      "uri": "spotify:track:5W3cjX2J3tjhG8zb6u0qHn",
+      "pinnedVideoId": "yydNF8tuVmU",
+      "pinnedTitle": "Daft Punk - Harder, Better, Faster, Stronger (Official Audio)",
+      "pinnedChannel": "Daft Punk",
+      "pinnedDuration": "3:45"
     },
     {
       "artist": "Lady Gaga",
       "album": "The Fame",
       "track": "Poker Face",
-      "uri": "spotify:track:1QV6tiMFM6fSOKOGLMHYYg"
+      "uri": "spotify:track:1QV6tiMFM6fSOKOGLMHYYg",
+      "pinnedVideoId": "s1A3X_VA-us",
+      "pinnedTitle": "Lady Gaga - Poker Face (Audio)",
+      "pinnedChannel": "GagaTube GagaTube",
+      "pinnedDuration": "3:57"
     },
     {
       "artist": "softy",
       "album": "Overnight",
       "track": "Lazy Afternoon",
-      "uri": "spotify:track:382b1ksiXzDrk23b81Qrs8"
+      "uri": "spotify:track:382b1ksiXzDrk23b81Qrs8",
+      "pinnedVideoId": "KmqR-PTD6KM",
+      "pinnedTitle": "softy x Lucid Green   Lazy Afternoon",
+      "pinnedChannel": "Youtube Premium 1993 - Leo",
+      "pinnedDuration": "2:35"
     },
     {
       "artist": "Placebo",
       "album": "Without You I'm Nothing",
       "track": "Every You Every Me",
-      "uri": "spotify:track:3tRv4ZYZimrL27flnjgeR6"
+      "uri": "spotify:track:3tRv4ZYZimrL27flnjgeR6",
+      "pinnedVideoId": "4YR_Mft7yIM",
+      "pinnedTitle": "Placebo - Every You Every Me (Official Audio)",
+      "pinnedChannel": "PLACEBO",
+      "pinnedDuration": "3:34"
     },
     {
       "artist": "prvrln",
       "album": "TOTO",
       "track": "TOTO",
-      "uri": "spotify:track:1RJzA1EDIQlKuNMpVWWBdd"
+      "uri": "spotify:track:1RJzA1EDIQlKuNMpVWWBdd",
+      "pinnedVideoId": "Q3ETeml06hw",
+      "pinnedTitle": "TOTO",
+      "pinnedChannel": "prvrln",
+      "pinnedDuration": "1:19"
     },
     {
       "artist": "HAAi",
       "album": "HUMANiSE",
       "track": "Can't Stand To Lose",
-      "uri": "spotify:track:3RcHbUxNKu2rv1phft6pgw"
+      "uri": "spotify:track:3RcHbUxNKu2rv1phft6pgw",
+      "pinnedVideoId": "od_KY_hjdtI",
+      "pinnedTitle": "HAAi - Can�t Stand To Lose",
+      "pinnedChannel": "HAAi",
+      "pinnedDuration": "4:56"
     },
     {
       "artist": "Armin van Buuren",
       "album": "Balance",
       "track": "La Résistance De L'Amour",
-      "uri": "spotify:track:0wNl0JDRupTEnCrfH7KwDs"
+      "uri": "spotify:track:0wNl0JDRupTEnCrfH7KwDs",
+      "pinnedVideoId": "BUOXnv0tono",
+      "pinnedTitle": "Armin van Buuren vs Shapov - La Rsistance De L'Amour (Official Video)",
+      "pinnedChannel": "Armin van Buuren",
+      "pinnedDuration": "4:45"
     },
     {
       "artist": "Krovostok",
       "album": "Студень",
       "track": "Куртец",
-      "uri": "spotify:track:3ty70Q6EroVkAf3ZTzBzTf"
+      "uri": "spotify:track:3ty70Q6EroVkAf3ZTzBzTf",
+      "pinnedVideoId": "Mu9G2zm1PhE",
+      "pinnedTitle": "������",
+      "pinnedChannel": "���������",
+      "pinnedDuration": "4:01"
     },
     {
       "artist": "Ed Sheeran",
       "album": "÷",
       "track": "Shape of You",
-      "uri": "spotify:track:7qiZfU4dY1lWllzX7mPBI3"
+      "uri": "spotify:track:7qiZfU4dY1lWllzX7mPBI3",
+      "pinnedVideoId": "JGwWNGJdvx8",
+      "pinnedTitle": "Ed Sheeran - Shape of You (Official Music Video)",
+      "pinnedChannel": "Ed Sheeran",
+      "pinnedDuration": "4:23"
     },
     {
       "artist": "Krovostok",
       "album": "Студень",
       "track": "Ребята",
-      "uri": "spotify:track:20VlSAdN2dfVycxY3KI5Yz"
+      "uri": "spotify:track:20VlSAdN2dfVycxY3KI5Yz",
+      "pinnedVideoId": "5DCQMhfiK9g",
+      "pinnedTitle": "������",
+      "pinnedChannel": "���������",
+      "pinnedDuration": "2:22"
     },
     {
       "artist": "Abballe",
       "album": "Amazonia",
       "track": "If There's No Tomorrow",
-      "uri": "spotify:track:1uNTmKtnvKBeYVeTKp878I"
+      "uri": "spotify:track:1uNTmKtnvKBeYVeTKp878I",
+      "pinnedVideoId": "XRzAoR0IyZs",
+      "pinnedTitle": "Abballe - If Theres No Tomorrow",
+      "pinnedChannel": "Enormous Vision",
+      "pinnedDuration": "4:09"
     },
     {
       "artist": "Duke Dumont",
       "album": "Ocean Drive",
       "track": "Ocean Drive",
-      "uri": "spotify:track:0b6wdul3A5sQNpIOv03OxP"
+      "uri": "spotify:track:0b6wdul3A5sQNpIOv03OxP",
+      "pinnedVideoId": "6cAZ6FVduxo",
+      "pinnedTitle": "Duke Dumont - Ocean Drive (Extended Mix)",
+      "pinnedChannel": "Duke Dumont",
+      "pinnedDuration": "4:40"
     },
     {
       "artist": "Sia",
       "album": "Floating Through Space",
       "track": "Floating Through Space",
-      "uri": "spotify:track:2AceGjiX9isUbXmMZa0Dl1"
+      "uri": "spotify:track:2AceGjiX9isUbXmMZa0Dl1",
+      "pinnedVideoId": "7Xfwu8NH1iI",
+      "pinnedTitle": "Sia and David Guetta - Floating Through Space (Official)",
+      "pinnedChannel": "Sia",
+      "pinnedDuration": "2:58"
     },
     {
       "artist": "CamelPhat",
       "album": "Unique Moment",
       "track": "Unique Moment - Extended Mix",
-      "uri": "spotify:track:0motf5PzILBQql4FgMjq9Z"
+      "uri": "spotify:track:0motf5PzILBQql4FgMjq9Z",
+      "pinnedVideoId": "PfHBhjOegeI",
+      "pinnedTitle": "Unique Moment (Extended Mix)",
+      "pinnedChannel": "CamelPhat",
+      "pinnedDuration": "6:00"
     },
     {
       "artist": "Ferry Corsten",
       "album": "1997",
       "track": "1997",
-      "uri": "spotify:track:43Jlt98oxvktveK59kvw2X"
+      "uri": "spotify:track:43Jlt98oxvktveK59kvw2X",
+      "pinnedVideoId": "q4YKSuYUgnE",
+      "pinnedTitle": "Ferry Corsten & BT - 1997",
+      "pinnedChannel": "Ferry Corsten",
+      "pinnedDuration": "4:11"
     },
     {
       "artist": "FUTURECODE",
       "album": "Dancing In The Rain",
       "track": "Dancing In The Rain",
-      "uri": "spotify:track:1cE406IG2wWhKfS1BTBUI9"
+      "uri": "spotify:track:1cE406IG2wWhKfS1BTBUI9",
+      "pinnedVideoId": "J_5AmU_kTSk",
+      "pinnedTitle": "Dancing In The Rain (Craig Connelly Extended Remix)",
+      "pinnedChannel": "FUTURECODE - Topic",
+      "pinnedDuration": "6:31"
     },
     {
       "artist": "Katy Perry",
       "album": "Teenage Dream",
       "track": "Teenage Dream",
-      "uri": "spotify:track:5jzKL4BDMClWqRguW5qZvh"
+      "uri": "spotify:track:5jzKL4BDMClWqRguW5qZvh",
+      "pinnedVideoId": "4-4lclep19A",
+      "pinnedTitle": "Katy Perry - Teenage Dream (Audio)",
+      "pinnedChannel": "KatvPerryMusic",
+      "pinnedDuration": "3:48"
     },
     {
       "artist": "maslo chernogo tmina",
       "album": "что для тебя красота",
       "track": "что для тебя красота",
-      "uri": "spotify:track:5ZZO3xeGlJ3rtDc8wgrlAk"
+      "uri": "spotify:track:5ZZO3xeGlJ3rtDc8wgrlAk",
+      "pinnedVideoId": "dqkIpP0PqVA",
+      "pinnedTitle": "����� ������� ����� - ��� ��� ���� �������",
+      "pinnedChannel": "Valdemar Maklive",
+      "pinnedDuration": "1:44"
     },
     {
       "artist": "Alex C.",
       "album": "Euphorie",
       "track": "Du hast den schönsten Arsch der Welt",
-      "uri": "spotify:track:4ltpEffX5XJa8kqH8bqWna"
+      "uri": "spotify:track:4ltpEffX5XJa8kqH8bqWna",
+      "pinnedVideoId": "CQian1hYNaA",
+      "pinnedTitle": "Alex C., Yass - Du hast den schnsten Arsch der Welt",
+      "pinnedChannel": "AlexCVEVO",
+      "pinnedDuration": "3:34"
     },
     {
       "artist": "Godsmack",
       "album": "Awake",
       "track": "Awake",
-      "uri": "spotify:track:6xXlurslWqFuyqTCBlErzX"
+      "uri": "spotify:track:6xXlurslWqFuyqTCBlErzX",
+      "pinnedVideoId": "e7SoHWoOrrQ",
+      "pinnedTitle": "Godsmack - Awake (Audio)",
+      "pinnedChannel": "Godsmack",
+      "pinnedDuration": "5:04"
     },
     {
       "artist": "WYS",
       "album": "The Way Back",
       "track": "Spanish Castle",
-      "uri": "spotify:track:4D8rro15FXZa9dKCubcVbH"
+      "uri": "spotify:track:4D8rro15FXZa9dKCubcVbH",
+      "pinnedVideoId": "lqZi1g7rH88",
+      "pinnedTitle": "WYS X Sweet Medicine - Spanish Castle (Slowed N Reverb) [432Hz]",
+      "pinnedChannel": "LoFi Frequencies",
+      "pinnedDuration": "3:15"
     },
     {
       "artist": "Queen",
       "album": "The Game",
       "track": "Another One Bites The Dust - Remastered 2011",
-      "uri": "spotify:track:5vdp5UmvTsnMEMESIF2Ym7"
+      "uri": "spotify:track:5vdp5UmvTsnMEMESIF2Ym7",
+      "pinnedVideoId": "1tLYYSofs3U",
+      "pinnedTitle": "Another One Bites The Dust (Remastered 2011)",
+      "pinnedChannel": "This Is Queen",
+      "pinnedDuration": "3:35"
     },
     {
       "artist": "Binary Finary",
       "album": "Salvation",
       "track": "Salvation",
-      "uri": "spotify:track:41horrNag7H4e4U3vq4a18"
+      "uri": "spotify:track:41horrNag7H4e4U3vq4a18",
+      "pinnedVideoId": "Atf4jsYRGK8",
+      "pinnedTitle": "Binary Finary - \"Salvation\" (Original Mix) HQ010",
+      "pinnedChannel": "HQ Recordings",
+      "pinnedDuration": "3:01"
     },
     {
       "artist": "D DA DIS",
       "album": "Don't Fuck Wit Us",
       "track": "Don't Fuck Wit Us",
-      "uri": "spotify:track:3ujwqveZdoI1PQ4pIPF41f"
+      "uri": "spotify:track:3ujwqveZdoI1PQ4pIPF41f",
+      "pinnedVideoId": "YGNkEPc-7bU",
+      "pinnedTitle": "King Von - Exposing me ( Official Music Video) Feat. Memo600",
+      "pinnedChannel": "GreedyGass",
+      "pinnedDuration": "2:37"
     },
     {
       "artist": "Dub FX",
       "album": "Thinking Clear",
       "track": "Birds and the Bees",
-      "uri": "spotify:track:3HNKkKPTw2knCE0KRDvUTZ"
+      "uri": "spotify:track:3HNKkKPTw2knCE0KRDvUTZ",
+      "pinnedVideoId": "T_8rOLsXFvE",
+      "pinnedTitle": "Birds and the Bees",
+      "pinnedChannel": "Dub FX",
+      "pinnedDuration": "5:49"
     },
     {
       "artist": "Paul Sabin",
       "album": "Stalk 2",
       "track": "711",
-      "uri": "spotify:track:5r2Rbf1RxKG5ge8wbzzqOF"
+      "uri": "spotify:track:5r2Rbf1RxKG5ge8wbzzqOF",
+      "pinnedVideoId": "grRXm_LV3ks",
+      "pinnedTitle": "711",
+      "pinnedChannel": "Paul Sabin - Topic",
+      "pinnedDuration": "3:30"
     },
     {
       "artist": "Black Label Society",
       "album": "Mafia",
       "track": "In This River",
-      "uri": "spotify:track:7K7myvEifM0qZ4e7dnUAmn"
+      "uri": "spotify:track:7K7myvEifM0qZ4e7dnUAmn",
+      "pinnedVideoId": "5OWC7OxqYvg",
+      "pinnedTitle": "In This River",
+      "pinnedChannel": "Zakk Wylde",
+      "pinnedDuration": "3:55"
     },
     {
       "artist": "Mirage",
       "album": "Снова вместе",
       "track": "Музыка нас связала",
-      "uri": "spotify:track:3LE7DE70XpEDQI4lQluFth"
+      "uri": "spotify:track:3LE7DE70XpEDQI4lQluFth",
+      "pinnedVideoId": "AEwTnmIM1YM",
+      "pinnedTitle": "������ ��� ������� (Remastered 1994)",
+      "pinnedChannel": "������ �����",
+      "pinnedDuration": "4:29"
     },
     {
       "artist": "фото и напитки",
       "album": "фото и напитки",
       "track": "тёплый стан",
-      "uri": "spotify:track:23Cya0mWJyVrs3kS3sZvJt"
+      "uri": "spotify:track:23Cya0mWJyVrs3kS3sZvJt",
+      "pinnedVideoId": "b1wyfILl7-0",
+      "pinnedTitle": "���� � ������� (photos & drinks) � ������ ���� [Official Lyric Video]",
+      "pinnedChannel": "Photos & Drinks",
+      "pinnedDuration": "4:42"
     },
     {
       "artist": "Armin van Buuren",
       "album": "Love We Lost (with R3HAB)",
       "track": "Love We Lost (with R3HAB)",
-      "uri": "spotify:track:2ayyzfxamdoNRDI0au3wva"
+      "uri": "spotify:track:2ayyzfxamdoNRDI0au3wva",
+      "pinnedVideoId": "v-ecBV7C0PQ",
+      "pinnedTitle": "Armin van Buuren & R3HAB feat. Simon Ward - Love We Lost (Official Music Video)",
+      "pinnedChannel": "Armada Music TV",
+      "pinnedDuration": "2:25"
     },
     {
       "artist": "Twenty One Pilots",
       "album": "Blurryface",
       "track": "Stressed Out",
-      "uri": "spotify:track:3CRDbSIZ4r5MsZ0YwxuEkn"
+      "uri": "spotify:track:3CRDbSIZ4r5MsZ0YwxuEkn",
+      "pinnedVideoId": "Gc4sY98Jn9I",
+      "pinnedTitle": "twenty one pilots - Stressed Out (Audio)",
+      "pinnedChannel": "Valmir Ibrahimi",
+      "pinnedDuration": "3:22"
     },
     {
       "artist": "NVDIINE",
       "album": "Февраль",
       "track": "Февраль",
-      "uri": "spotify:track:2a36Rgm6YW21br5RWZQAfM"
+      "uri": "spotify:track:2a36Rgm6YW21br5RWZQAfM",
+      "pinnedVideoId": "ecWk8eBjyMg",
+      "pinnedTitle": "NVDIINE � �������",
+      "pinnedChannel": "AURORA MUSIC",
+      "pinnedDuration": "3:05"
     },
     {
       "artist": "Madonna",
       "album": "Confessions on a Dance Floor",
       "track": "Sorry",
-      "uri": "spotify:track:55whbebR4olz2HHcRQa2kx"
+      "uri": "spotify:track:55whbebR4olz2HHcRQa2kx",
+      "pinnedVideoId": "qkzUYq9z9qo",
+      "pinnedTitle": "Sorry",
+      "pinnedChannel": "Madonna",
+      "pinnedDuration": "3:59"
     },
     {
       "artist": "Rufus Wainwright",
       "album": "Vibrate: The Best Of",
       "track": "Hallelujah",
-      "uri": "spotify:track:2u6fRGcaBhpI4uNBHpGv0b"
+      "uri": "spotify:track:2u6fRGcaBhpI4uNBHpGv0b",
+      "pinnedVideoId": "LQK4YfiPj1Q",
+      "pinnedTitle": "Rufus Wainwright - Hallelujah (Live At The Fillmore)",
+      "pinnedChannel": "Rufus Wainwright",
+      "pinnedDuration": "4:19"
     },
     {
       "artist": "Skryptonite",
       "album": "Уроборос: Улица 36",
       "track": "Интро / Время возвращаться",
-      "uri": "spotify:track:7eLyNFj78bYlgVvamPPZ9p"
+      "uri": "spotify:track:7eLyNFj78bYlgVvamPPZ9p",
+      "pinnedVideoId": "lChxD3bnClg",
+      "pinnedTitle": "����� / ����� ������������",
+      "pinnedChannel": "Skryptonite",
+      "pinnedDuration": "5:30"
     },
     {
       "artist": "Giuseppe Ottaviani",
       "album": "Synergy",
       "track": "Synergy",
-      "uri": "spotify:track:4dFoPcwivudDdqVZKYDnkg"
+      "uri": "spotify:track:4dFoPcwivudDdqVZKYDnkg",
+      "pinnedVideoId": "0YUZSZS1DeI",
+      "pinnedTitle": "Synergy (Mixed)",
+      "pinnedChannel": "Giuseppe Ottaviani",
+      "pinnedDuration": "6:35"
     },
     {
       "artist": "Airbase",
       "album": "Lachrymose",
       "track": "Lachrymose",
-      "uri": "spotify:track:3nB1sC71GCT4emczf9oouj"
+      "uri": "spotify:track:3nB1sC71GCT4emczf9oouj",
+      "pinnedVideoId": "fkIsq9ddbRE",
+      "pinnedTitle": "Lachrymose",
+      "pinnedChannel": "Airbase",
+      "pinnedDuration": "3:17"
     },
     {
       "artist": "Linkin Park",
       "album": "Hybrid Theory",
       "track": "Papercut",
-      "uri": "spotify:track:1Vej0qeQ3ioKwpI6FUbRv1"
+      "uri": "spotify:track:1Vej0qeQ3ioKwpI6FUbRv1",
+      "pinnedVideoId": "2K-evRnwcSc",
+      "pinnedTitle": "Papercut",
+      "pinnedChannel": "Linkin Park",
+      "pinnedDuration": "3:06"
     },
     {
       "artist": "Lynnic",
       "album": "Why Don't You Stay",
       "track": "Why Don't You Stay - Melodic Techno Remix",
-      "uri": "spotify:track:3RQqQjemYsDcWIWS92jETl"
+      "uri": "spotify:track:3RQqQjemYsDcWIWS92jETl",
+      "pinnedVideoId": "S2XM2B2FVME",
+      "pinnedTitle": "Lynnic, ItsArius & Dinia - Why Don't You Stay (Melodic Techno Extended Remix)",
+      "pinnedChannel": "Lynnic",
+      "pinnedDuration": "4:26"
     },
     {
       "artist": "Hel:sløwed",
       "album": "Flashed",
       "track": "Flashed",
-      "uri": "spotify:track:21o1FgYwlLqVBf0pagBdQZ"
+      "uri": "spotify:track:21o1FgYwlLqVBf0pagBdQZ",
+      "pinnedVideoId": "FFbl9eJP8xo",
+      "pinnedTitle": "Flashed (WYM422)",
+      "pinnedChannel": "Hel:slwed",
+      "pinnedDuration": "5:02"
     },
     {
       "artist": "Party Favor",
       "album": "RESET",
       "track": "Too Much",
-      "uri": "spotify:track:2fBImyKfTG6MTIZwqGhnpo"
+      "uri": "spotify:track:2fBImyKfTG6MTIZwqGhnpo",
+      "pinnedVideoId": "_HiexelwIRE",
+      "pinnedTitle": "Party Favor - Too Much (Visualizer) [Ultra Records]",
+      "pinnedChannel": "Ultra Records",
+      "pinnedDuration": "3:41"
     },
     {
       "artist": "Ferry Corsten",
       "album": "Twice In A Blue Moon",
       "track": "Twice In A Blue Moon",
-      "uri": "spotify:track:3gO3aAggDOMXJA5phc55NZ"
+      "uri": "spotify:track:3gO3aAggDOMXJA5phc55NZ",
+      "pinnedVideoId": "4uwG0LWtzQ4",
+      "pinnedTitle": "Ferry Corsten - Twice In A Blue Moon.mp4",
+      "pinnedChannel": "Jdrek Ka",
+      "pinnedDuration": "3:18"
     },
     {
       "artist": "Gorillaz",
       "album": "Humanz",
       "track": "Strobelite (feat. Peven Everett)",
-      "uri": "spotify:track:6XGddj522FQRHXEhBtjiJu"
+      "uri": "spotify:track:6XGddj522FQRHXEhBtjiJu",
+      "pinnedVideoId": "nP_8njrDjA8",
+      "pinnedTitle": "Strobelite (feat. Peven Everett)",
+      "pinnedChannel": "Gorillaz",
+      "pinnedDuration": "3:24"
     },
     {
       "artist": "Flume",
       "album": "Skin Companion EP II",
       "track": "Weekend",
-      "uri": "spotify:track:797cARXs5UuXT7anWuILTP"
+      "uri": "spotify:track:797cARXs5UuXT7anWuILTP",
+      "pinnedVideoId": "DT9BrbtKdTM",
+      "pinnedTitle": "Flume - Weekend feat. Moses Sumney",
+      "pinnedChannel": "Flume",
+      "pinnedDuration": "4:19"
     },
     {
       "artist": "Charles Oliver",
       "album": "Hesitate",
       "track": "Hesitate",
-      "uri": "spotify:track:4UrMvNPX4q5QZHuWP9ijd8"
+      "uri": "spotify:track:4UrMvNPX4q5QZHuWP9ijd8",
+      "pinnedVideoId": "I2G6BBVx6j4",
+      "pinnedTitle": "Charles Oliver - Hesitate",
+      "pinnedChannel": "Charles Oliver",
+      "pinnedDuration": "5:18"
     },
     {
       "artist": "Super8 & Tab",
       "album": "Past, Present & Future",
       "track": "Trigger",
-      "uri": "spotify:track:0i6hO6wY9ddQ22w5oejzbc"
+      "uri": "spotify:track:0i6hO6wY9ddQ22w5oejzbc",
+      "pinnedVideoId": "0kTyunYWS3A",
+      "pinnedTitle": "Super8 & Tab - Trigger [A State Of Trance Tune Of The Week]",
+      "pinnedChannel": "super8andtab",
+      "pinnedDuration": "3:12"
     },
     {
       "artist": "ZHU",
       "album": "DREAMLAND 2021",
       "track": "Zhudio54",
-      "uri": "spotify:track:1YyOwwRXCi40ZpL72Ap1fJ"
+      "uri": "spotify:track:1YyOwwRXCi40ZpL72Ap1fJ",
+      "pinnedVideoId": "eTdeMXcwu7c",
+      "pinnedTitle": "ZHU, partywithray - Zhudio54 (Visualizer)",
+      "pinnedChannel": "ZHU",
+      "pinnedDuration": "3:49"
     },
     {
       "artist": "Queen",
       "album": "A Day At The Races",
       "track": "Somebody To Love - Remastered 2011",
-      "uri": "spotify:track:4rDbp1vnvEhieiccprPMdI"
+      "uri": "spotify:track:4rDbp1vnvEhieiccprPMdI",
+      "pinnedVideoId": "EKpHL483Bzw",
+      "pinnedTitle": "Somebody to Love (Remastered 2011)",
+      "pinnedChannel": "This Is Queen",
+      "pinnedDuration": "4:59"
     },
     {
       "artist": "nobody.one",
       "album": "Head Movies",
       "track": "Soul",
-      "uri": "spotify:track:5gsnQKy8ZBdbWxk1CDlRvh"
+      "uri": "spotify:track:5gsnQKy8ZBdbWxk1CDlRvh",
+      "pinnedVideoId": "hza6CTzMUiw",
+      "pinnedTitle": "Jb",
+      "pinnedChannel": "������ ����������",
+      "pinnedDuration": "5:07"
     },
     {
       "artist": "Ultimate Heroes",
       "album": "Music from Daredevil & Ghost Rider",
       "track": "Ghost Riders in the Sky",
-      "uri": "spotify:track:7IMbZa5hkMWRHs12TX5GxN"
+      "uri": "spotify:track:7IMbZa5hkMWRHs12TX5GxN",
+      "pinnedVideoId": "2a7VEFsIMSM",
+      "pinnedTitle": "(Ghost) Riders In the Sky (Digitally Remastered, 1996)",
+      "pinnedChannel": "OutlawsVideo",
+      "pinnedDuration": "5:51"
     },
     {
       "artist": "Перемотка",
       "album": "Ночь эпохи",
       "track": "Встречная",
-      "uri": "spotify:track:7FlOiDVejbWWNn4RIv3TX1"
+      "uri": "spotify:track:7FlOiDVejbWWNn4RIv3TX1",
+      "pinnedVideoId": "16jGexNi7Kc",
+      "pinnedTitle": "���������  � ��������� (Peremotka � Vstrechnaya)",
+      "pinnedChannel": "��������� / Peremotka",
+      "pinnedDuration": "3:52"
     },
     {
       "artist": "Rihanna",
       "album": "Loud",
       "track": "S&M",
-      "uri": "spotify:track:7ySUcLPVX7KudhnmNcgY2D"
+      "uri": "spotify:track:7ySUcLPVX7KudhnmNcgY2D",
+      "pinnedVideoId": "Ce2_k0LaE7E",
+      "pinnedTitle": "Rihanna - S&M (Audio)",
+      "pinnedChannel": "RihannaForVEVO",
+      "pinnedDuration": "4:04"
     },
     {
       "artist": "Aly & Fila",
       "album": "It's All About The Melody",
       "track": "It's All About The Melody - Extended Mix",
-      "uri": "spotify:track:1heFfoLp6clLgTwis8BXR1"
+      "uri": "spotify:track:1heFfoLp6clLgTwis8BXR1",
+      "pinnedVideoId": "2R3z6Ydg1qM",
+      "pinnedTitle": "Aly & Fila - It's All About The Melody (Extended Mix)",
+      "pinnedChannel": "CAHDZR Electro",
+      "pinnedDuration": "8:58"
     },
     {
       "artist": "Omnia",
       "album": "Omnia Music Podcast #049",
       "track": "Ultra (Mix Cut)",
-      "uri": "spotify:track:2sX2jRO9WDv010nrPWo4LD"
+      "uri": "spotify:track:2sX2jRO9WDv010nrPWo4LD",
+      "pinnedVideoId": "iqi59v7YPis",
+      "pinnedTitle": "Audiosurf HD - Omnia & IRA - The Fusion (Mix Cut) (Armin van Buuren's Intro Edit)",
+      "pinnedChannel": "Feintyy",
+      "pinnedDuration": "5:47"
     },
     {
       "artist": "Metallica",
       "album": "Metallica",
       "track": "Enter Sandman",
-      "uri": "spotify:track:5sICkBXVmaCQk5aISGR3x1"
+      "uri": "spotify:track:5sICkBXVmaCQk5aISGR3x1",
+      "pinnedVideoId": "XZuM4zFg-60",
+      "pinnedTitle": "Enter Sandman (Remastered)",
+      "pinnedChannel": "Metallica",
+      "pinnedDuration": "5:32"
     },
     {
       "artist": "Gorillaz",
       "album": "Orange County (feat. Bizarrap, Kara Jackson and Anoushka Shankar)",
       "track": "Orange County (feat. Bizarrap, Kara Jackson and Anoushka Shankar)",
-      "uri": "spotify:track:5l4Gq3UC0dHKSExIf5xD9N"
+      "uri": "spotify:track:5l4Gq3UC0dHKSExIf5xD9N",
+      "pinnedVideoId": "X70VHzox6uA",
+      "pinnedTitle": "Gorillaz - Orange County ft Bizarrap, Kara Jackson, Anoushka Shankar",
+      "pinnedChannel": "Gorillaz",
+      "pinnedDuration": "3:29"
     },
     {
       "artist": "Linkin Park",
       "album": "Meteora",
       "track": "Somewhere I Belong",
-      "uri": "spotify:track:3fjmSxt0PskST13CSdBUFx"
+      "uri": "spotify:track:3fjmSxt0PskST13CSdBUFx",
+      "pinnedVideoId": "GEGieUB4b3c",
+      "pinnedTitle": "Linkin Park - Somewhere I Belong (Audio)",
+      "pinnedChannel": "YOUMUSIC",
+      "pinnedDuration": "3:33"
     },
     {
       "artist": "Lilly Palmer",
       "album": "Ayi Giri / Dopamine Machine",
       "track": "Ayi Giri",
-      "uri": "spotify:track:5xqjH87yvNSUWHN8ezvlpb"
+      "uri": "spotify:track:5xqjH87yvNSUWHN8ezvlpb",
+      "pinnedVideoId": "akc_jR_lzKw",
+      "pinnedTitle": "Ayi Giri (Extended Mix)",
+      "pinnedChannel": "Lilly Palmer",
+      "pinnedDuration": "6:08"
     },
     {
       "artist": "KADI",
       "album": "Kopfkino",
       "track": "Prayers",
-      "uri": "spotify:track:6A0Nh0HVvhfrRNQfGJYoe0"
+      "uri": "spotify:track:6A0Nh0HVvhfrRNQfGJYoe0",
+      "pinnedVideoId": "s_b3lJDacoY",
+      "pinnedTitle": "KADI feat. Miyagi - Prayers (Official Audio)",
+      "pinnedChannel": "Hajime",
+      "pinnedDuration": "4:14"
     },
     {
       "artist": "TOOL",
       "album": "Fear Inoculum",
       "track": "Pneuma",
-      "uri": "spotify:track:03sEzk1VyrUZSgyhoQR0LZ"
+      "uri": "spotify:track:03sEzk1VyrUZSgyhoQR0LZ",
+      "pinnedVideoId": "5ClCaPmAA7s",
+      "pinnedTitle": "TOOL - Pneuma (Official Audio)",
+      "pinnedChannel": "TOOL",
+      "pinnedDuration": "11:55"
     },
     {
       "artist": "Celldweller",
       "album": "The Complete Cellout",
       "track": "Frozen - Celldweller vs. Blue Stahli",
-      "uri": "spotify:track:7kZfyhlbMsSk9dUxzoWCQ7"
+      "uri": "spotify:track:7kZfyhlbMsSk9dUxzoWCQ7",
+      "pinnedVideoId": "cvBrSAzvxCo",
+      "pinnedTitle": "Celldweller - Frozen (Celldweller vs Blue Stahli) ft. Blue Stahli",
+      "pinnedChannel": "celldweller",
+      "pinnedDuration": "5:00"
     },
     {
       "artist": "Bobina",
       "album": "Rising Tide",
       "track": "Rising Tide",
-      "uri": "spotify:track:4dXycwmEWAbuftNADpMJH3"
+      "uri": "spotify:track:4dXycwmEWAbuftNADpMJH3",
+      "pinnedVideoId": "lNPDnRPdi0Y",
+      "pinnedTitle": "Bobina & Roxanne Emery - Rising Tide",
+      "pinnedChannel": "Black Hole Recordings",
+      "pinnedDuration": "3:19"
     },
     {
       "artist": "The Chemical Brothers",
       "album": "Born In The Echoes",
       "track": "Go",
-      "uri": "spotify:track:2cNjgoSh1TBHFQIhfzRJUE"
+      "uri": "spotify:track:2cNjgoSh1TBHFQIhfzRJUE",
+      "pinnedVideoId": "AKZ1oa-LbjQ",
+      "pinnedTitle": "Go",
+      "pinnedChannel": "The Chemical Brothers",
+      "pinnedDuration": "4:21"
     },
     {
       "artist": "Josh Gabriel",
       "album": "Josh Gabriel presents Winter Kills",
       "track": "Hot As Hades - Original Edit",
-      "uri": "spotify:track:1MKw1UOwA5vgs1kEtO5Gt8"
+      "uri": "spotify:track:1MKw1UOwA5vgs1kEtO5Gt8",
+      "pinnedVideoId": "mejokEJbe0U",
+      "pinnedTitle": "Hot As Hades (Original Edit)",
+      "pinnedChannel": "Josh Gabriel - Topic",
+      "pinnedDuration": "4:15"
     },
     {
       "artist": "Tommy Baynen",
       "album": "Laminar Flow / Photograph",
       "track": "Photograph",
-      "uri": "spotify:track:7My5LhS9AtIoOtkFpKAGdy"
+      "uri": "spotify:track:7My5LhS9AtIoOtkFpKAGdy",
+      "pinnedVideoId": "4bMjJ7J1zZI",
+      "pinnedTitle": "Tommy Baynen - Photograph",
+      "pinnedChannel": "Colorize",
+      "pinnedDuration": "3:50"
     },
     {
       "artist": "Boris Brejcha",
       "album": "Club Vibes Part 06",
       "track": "Parallax",
-      "uri": "spotify:track:5NR0Kyk5YRBPtaI33hivZx"
+      "uri": "spotify:track:5NR0Kyk5YRBPtaI33hivZx",
+      "pinnedVideoId": "zowp_c4Cr6s",
+      "pinnedTitle": "Boris Brejcha - Parallax",
+      "pinnedChannel": "George Sadunishvili",
+      "pinnedDuration": "6:04"
     },
     {
       "artist": "Thug Life",
       "album": "Thug Life: Volume 1",
       "track": "Under Pressure",
-      "uri": "spotify:track:3URCEz3axo6lHuDBhg59jz"
+      "uri": "spotify:track:3URCEz3axo6lHuDBhg59jz",
+      "pinnedVideoId": "JnZZzM-30xE",
+      "pinnedTitle": "Under Pressure",
+      "pinnedChannel": "Thug Life - Topic",
+      "pinnedDuration": "4:32"
     },
     {
       "artist": "Jonas Steur",
       "album": "Solis",
       "track": "Solis - Estuera Remix",
-      "uri": "spotify:track:6gsHCBvNCupXk3XU2oiq6X"
+      "uri": "spotify:track:6gsHCBvNCupXk3XU2oiq6X",
+      "pinnedVideoId": "pyINQlHGj3U",
+      "pinnedTitle": "Solis (Estuera Mix)",
+      "pinnedChannel": "Jonas Steur - Topic",
+      "pinnedDuration": "3:32"
     },
     {
       "artist": "Big Pun",
       "album": "Capital Punishment",
       "track": "Beware",
-      "uri": "spotify:track:0fpVsdhxofrLCZL1CWETxa"
+      "uri": "spotify:track:0fpVsdhxofrLCZL1CWETxa",
+      "pinnedVideoId": "Lwjo9t33sKA",
+      "pinnedTitle": "Big Pun - Beware (Official Audio)",
+      "pinnedChannel": "Certified",
+      "pinnedDuration": "3:17"
     },
     {
       "artist": "Måns Zelmerlöw",
       "album": "Heroes",
       "track": "Heroes",
-      "uri": "spotify:track:4ciaNqHWA2IzHphZaVRzHI"
+      "uri": "spotify:track:4ciaNqHWA2IzHphZaVRzHI",
+      "pinnedVideoId": "-4XD6nNtVsc",
+      "pinnedTitle": "Mns Zelmerlw: Heroes (Audio)",
+      "pinnedChannel": "Cadince MasterDrop 9837",
+      "pinnedDuration": "3:11"
     },
     {
       "artist": "Emilíana Torrini",
       "album": "Sucker Punch (Original Motion Picture Soundtrack)",
       "track": "White Rabbit - Sucker Punch: Original Motion Picture Soundtrack",
-      "uri": "spotify:track:2X4VRRHDYSuS7ey5d1QOht"
+      "uri": "spotify:track:2X4VRRHDYSuS7ey5d1QOht",
+      "pinnedVideoId": "olEM3hsj-FU",
+      "pinnedTitle": "White Rabbit",
+      "pinnedChannel": "Emiliana Torrini",
+      "pinnedDuration": "5:07"
     },
     {
       "artist": "Sabaton",
       "album": "Bismarck",
       "track": "Bismarck",
-      "uri": "spotify:track:39m87lOMd5ccENPVvAT7gH"
+      "uri": "spotify:track:39m87lOMd5ccENPVvAT7gH",
+      "pinnedVideoId": "oVWEb-At8yc",
+      "pinnedTitle": "SABATON - Bismarck (Official Music Video)",
+      "pinnedChannel": "Sabaton",
+      "pinnedDuration": "6:10"
     },
     {
       "artist": "Chimaira",
       "album": "The Infection",
       "track": "The Heart of It All",
-      "uri": "spotify:track:4seA4A5OrqA5QljVifXMet"
+      "uri": "spotify:track:4seA4A5OrqA5QljVifXMet",
+      "pinnedVideoId": "_5nTOU-ZWoE",
+      "pinnedTitle": "The Heart of It All",
+      "pinnedChannel": "chimairatube",
+      "pinnedDuration": "14:52"
     },
     {
       "artist": "2Pac",
       "album": "Me Against The World",
       "track": "Old School",
-      "uri": "spotify:track:4GGbJ60q5HIN8wKOp9Xabz"
+      "uri": "spotify:track:4GGbJ60q5HIN8wKOp9Xabz",
+      "pinnedVideoId": "t_yc4i8f6xU",
+      "pinnedTitle": "Old School",
+      "pinnedChannel": "2Pac",
+      "pinnedDuration": "4:39"
     },
     {
       "artist": "Oxxxymiron",
       "album": "miXXXtape II: Долгий путь домой",
       "track": "Неваляшка",
-      "uri": "spotify:track:6RBKPllSiDLF8u6mn9NJzx"
+      "uri": "spotify:track:6RBKPllSiDLF8u6mn9NJzx",
+      "pinnedVideoId": "7zZFQfBaweQ",
+      "pinnedTitle": "8.��������� (Oxxxymiron)",
+      "pinnedChannel": "Hip-Hop Tracks news",
+      "pinnedDuration": "4:17"
     },
     {
       "artist": "FUTURECODE",
       "album": "The Connection",
       "track": "The Connection",
-      "uri": "spotify:track:7ha6l7zkheXs39VApSMPKB"
+      "uri": "spotify:track:7ha6l7zkheXs39VApSMPKB",
+      "pinnedVideoId": "eDayxwrNX74",
+      "pinnedTitle": "FUTURECODE - The Connection",
+      "pinnedChannel": "A State Of Trance",
+      "pinnedDuration": "3:07"
     },
     {
       "artist": "Newtone",
       "album": "No Copyrights",
       "track": "Run!!!!",
-      "uri": "spotify:track:2WpHeYutDbLUeXAkSAhs5a"
+      "uri": "spotify:track:2WpHeYutDbLUeXAkSAhs5a",
+      "pinnedVideoId": "v581Y50-bow",
+      "pinnedTitle": "How to make non-Newtonian fluid from starch and water (home experiment)",
+      "pinnedChannel": "MEL Science",
+      "pinnedDuration": "1:22"
     },
     {
       "artist": "Jerome Isma-Ae",
       "album": "Timelapse",
       "track": "Timelapse",
-      "uri": "spotify:track:1n3BFceaLwnT78G5lfmGbL"
+      "uri": "spotify:track:1n3BFceaLwnT78G5lfmGbL",
+      "pinnedVideoId": "D3cexLozv4Q",
+      "pinnedTitle": "Timelapse (Martin Roth Extended Remix)",
+      "pinnedChannel": "Jerome Isma-Ae - Topic",
+      "pinnedDuration": "7:56"
     },
     {
       "artist": "Miyagi & Andy Panda",
       "album": "YAMAKASI",
       "track": "Мало нам",
-      "uri": "spotify:track:55vXkxeNVpWJgwvEIlsJpU"
+      "uri": "spotify:track:55vXkxeNVpWJgwvEIlsJpU",
+      "pinnedVideoId": "zJXMqnpc_j0",
+      "pinnedTitle": "Miyagi & Andy Panda - ���� ��� (Official Audio)",
+      "pinnedChannel": "Hajime",
+      "pinnedDuration": "3:48"
     },
     {
       "artist": "Loafy Building",
       "album": "High Flying",
       "track": "Timeless",
-      "uri": "spotify:track:0AJikwKnKiE41PdZQLzyzK"
+      "uri": "spotify:track:0AJikwKnKiE41PdZQLzyzK",
+      "pinnedVideoId": "fRBU8yGHnYA",
+      "pinnedTitle": "Timeless (Loafy Building & Ayzic) - [peaceful lofi hip-hop for study & relaxation]",
+      "pinnedChannel": "Loafy Building Music",
+      "pinnedDuration": "2:19"
     },
     {
       "artist": "Markus Schulz",
       "album": "Far",
       "track": "Far - Fisherman Festival Mix",
-      "uri": "spotify:track:7tgZ8pexjhabaRusjWEZ3M"
+      "uri": "spotify:track:7tgZ8pexjhabaRusjWEZ3M",
+      "pinnedVideoId": "8WsABK-dRXg",
+      "pinnedTitle": "Far (Fisherman Festival Mix)",
+      "pinnedChannel": "Markus Schulz",
+      "pinnedDuration": "3:15"
     },
     {
       "artist": "Ann Clue",
       "album": "Trip",
       "track": "Calling It",
-      "uri": "spotify:track:1k2R3w9Wpy0Qeo1Noq9Fyf"
+      "uri": "spotify:track:1k2R3w9Wpy0Qeo1Noq9Fyf",
+      "pinnedVideoId": "TQpqpgCZUc4",
+      "pinnedTitle": "Ann Clue @ Big Bang Festival - 15-10-2016",
+      "pinnedChannel": "sambelh",
+      "pinnedDuration": "5:45"
     },
     {
       "artist": "Sia",
       "album": "Never Give Up (From \"Lion\" Soundtrack)",
       "track": "Never Give Up (From \"Lion\" Soundtrack)",
-      "uri": "spotify:track:1ssmjAYSU5PbmsjLq5yrNH"
+      "uri": "spotify:track:1ssmjAYSU5PbmsjLq5yrNH",
+      "pinnedVideoId": "h6Ol3eprKiw",
+      "pinnedTitle": "Sia - Never Give Up (from the Lion Soundtrack) [Lyric Video]",
+      "pinnedChannel": "Sia",
+      "pinnedDuration": "3:42"
     },
     {
       "artist": "Living Room",
       "album": "Rituals",
       "track": "Rituals",
-      "uri": "spotify:track:4O2HZH0psbxijFPOQHgi2a"
+      "uri": "spotify:track:4O2HZH0psbxijFPOQHgi2a",
+      "pinnedVideoId": "VuXlKdfKS80",
+      "pinnedTitle": "Sleepmodee",
+      "pinnedChannel": "Living Room",
+      "pinnedDuration": "2:05"
     },
     {
       "artist": "NEMIGA",
       "album": "Ты так далеко",
       "track": "Ты так далеко",
-      "uri": "spotify:track:4kWzjAzNHzxxeAmhE8Zxyg"
+      "uri": "spotify:track:4kWzjAzNHzxxeAmhE8Zxyg",
+      "pinnedVideoId": "Apl2-vMX7S0",
+      "pinnedTitle": "NEMIGA - �� ��� ������ (Official video)",
+      "pinnedChannel": "NEMIGA music",
+      "pinnedDuration": "3:34"
     },
     {
       "artist": "Nora En Pure",
       "album": "Aquatic",
       "track": "Aquatic",
-      "uri": "spotify:track:4PJaGVVVYNSN9EZJmMLtfK"
+      "uri": "spotify:track:4PJaGVVVYNSN9EZJmMLtfK",
+      "pinnedVideoId": "sTzQ6PU7o4o",
+      "pinnedTitle": "Nora En Pure - Aquatic",
+      "pinnedChannel": "Nora En Pure",
+      "pinnedDuration": "3:46"
     },
     {
       "artist": "DaniSogen",
       "album": "In Search of Peace",
       "track": "Lifu",
-      "uri": "spotify:track:0I99LMgOnrB7NEEXIMEcQS"
+      "uri": "spotify:track:0I99LMgOnrB7NEEXIMEcQS",
+      "pinnedVideoId": "kgktnbpX-nI",
+      "pinnedTitle": "Lifu",
+      "pinnedChannel": "DaniSogen Music",
+      "pinnedDuration": "1:54"
     },
     {
       "artist": "Bon Jovi",
       "album": "Crush",
       "track": "It's My Life",
-      "uri": "spotify:track:0v1XpBHnsbkCn7iJ9Ucr1l"
+      "uri": "spotify:track:0v1XpBHnsbkCn7iJ9Ucr1l",
+      "pinnedVideoId": "o9YyEeHSC4U",
+      "pinnedTitle": "Bon Jovi - It's My Life (Lyrics)",
+      "pinnedChannel": "Cactus Rock",
+      "pinnedDuration": "3:45"
     },
     {
       "artist": "Orkidea",
       "album": "Mind Rave",
       "track": "Mind Rave",
-      "uri": "spotify:track:6ihpDKxvousBaROEhvkNEx"
+      "uri": "spotify:track:6ihpDKxvousBaROEhvkNEx",
+      "pinnedVideoId": "zjgzLNek6Po",
+      "pinnedTitle": "Mind Rave (Extended)",
+      "pinnedChannel": "Orkidea",
+      "pinnedDuration": "6:20"
     },
     {
       "artist": "Boris Brejcha",
       "album": "Club Vibes Part 05",
       "track": "Sit Back And Take It Down",
-      "uri": "spotify:track:5Tb0TQ1eaLuzour8Ymp6wo"
+      "uri": "spotify:track:5Tb0TQ1eaLuzour8Ymp6wo",
+      "pinnedVideoId": "fk-yXehXXCU",
+      "pinnedTitle": "Boris Brejcha - Sit Back and Take it Down (Original Mix)",
+      "pinnedChannel": "Boris PL (Boris)",
+      "pinnedDuration": "10:28"
     },
     {
       "artist": "Armin van Buuren",
       "album": "The Greater Light To Rule The Night",
       "track": "The Greater Light To Rule The Night",
-      "uri": "spotify:track:3cfMvE8xePwTp2L7gZyZqN"
+      "uri": "spotify:track:3cfMvE8xePwTp2L7gZyZqN",
+      "pinnedVideoId": "Ca076sVE3Xk",
+      "pinnedTitle": "The Greater Light To Rule The Night (Extended Mix)",
+      "pinnedChannel": "Armin van Buuren",
+      "pinnedDuration": "6:40"
     },
     {
       "artist": "Roman Messer",
       "album": "Frozen (Full Fire Mix)",
       "track": "Frozen - Full Fire Mix",
-      "uri": "spotify:track:2ZWdUSlnSgHv2pxqMieKWM"
+      "uri": "spotify:track:2ZWdUSlnSgHv2pxqMieKWM",
+      "pinnedVideoId": "I6tvhdOUX38",
+      "pinnedTitle": "Christina Novelli, Roman Messer - Frozen (Extended Full Fire Mix)",
+      "pinnedChannel": "PUREENERGY Official",
+      "pinnedDuration": "6:59"
     },
     {
       "artist": "NOTHING MORE",
       "album": "Nothing More",
       "track": "This Is The Time (Ballast)",
-      "uri": "spotify:track:1X34xjRBPeBVm2UNqL4KXO"
+      "uri": "spotify:track:1X34xjRBPeBVm2UNqL4KXO",
+      "pinnedVideoId": "znvAJ5d_7ZM",
+      "pinnedTitle": "NOTHING MORE - This Is The Time (Ballast)",
+      "pinnedChannel": "NOTHING MORE",
+      "pinnedDuration": "3:49"
     },
     {
       "artist": "Godsmack",
       "album": "Godsmack",
       "track": "Voodoo",
-      "uri": "spotify:track:5uGsG0LfotfWDq6hql4h53"
+      "uri": "spotify:track:5uGsG0LfotfWDq6hql4h53",
+      "pinnedVideoId": "9SSUQxGjZZ4",
+      "pinnedTitle": "Godsmack - Voodoo (Official Music Video)",
+      "pinnedChannel": "Godsmack",
+      "pinnedDuration": "4:17"
     },
     {
       "artist": "Dub FX",
       "album": "So Are You",
       "track": "So Are You",
-      "uri": "spotify:track:1ij6LeHiwLZjjJkBK5wM0l"
+      "uri": "spotify:track:1ij6LeHiwLZjjJkBK5wM0l",
+      "pinnedVideoId": "Bd1CUTrcy5U",
+      "pinnedTitle": "Dub FX - So Are You [Official Video 2016]",
+      "pinnedChannel": "Reggaeville",
+      "pinnedDuration": "4:54"
     },
     {
       "artist": "Flo Rida",
       "album": "R.O.O.T.S. (Route of Overcoming the Struggle)",
       "track": "Right Round",
-      "uri": "spotify:track:3GpbwCm3YxiWDvy29Uo3vP"
+      "uri": "spotify:track:3GpbwCm3YxiWDvy29Uo3vP",
+      "pinnedVideoId": "WUu0YvPX69E",
+      "pinnedTitle": "Right Round (feat. Ke$ha)",
+      "pinnedChannel": "Flo Rida",
+      "pinnedDuration": "3:27"
     },
     {
       "artist": "Jason Ross",
       "album": "The Accord",
       "track": "The Accord",
-      "uri": "spotify:track:1MtMS9I9lA07uKGha6fYZk"
+      "uri": "spotify:track:1MtMS9I9lA07uKGha6fYZk",
+      "pinnedVideoId": "iraZjP7bU3o",
+      "pinnedTitle": "Jason Ross - The Accord (Official Visualiser)",
+      "pinnedChannel": "Anjunabeats",
+      "pinnedDuration": "3:54"
     },
     {
       "artist": "Gorillaz",
       "album": "Humanz",
       "track": "Ascension (feat. Vince Staples)",
-      "uri": "spotify:track:2bBMODHVTXGwE2aZYfbgCt"
+      "uri": "spotify:track:2bBMODHVTXGwE2aZYfbgCt",
+      "pinnedVideoId": "hBA0PUQCvIA",
+      "pinnedTitle": "Gorillaz - Ascension (Official Visualiser)",
+      "pinnedChannel": "Gorillaz",
+      "pinnedDuration": "2:36"
     },
     {
       "artist": "Rebūke",
       "album": "Portal / Echoes",
       "track": "Portal",
-      "uri": "spotify:track:0HgxhNKiQy2LYxExwyZMWI"
+      "uri": "spotify:track:0HgxhNKiQy2LYxExwyZMWI",
+      "pinnedVideoId": "gdJNmALNHw8",
+      "pinnedTitle": "Portal",
+      "pinnedChannel": "Rebke",
+      "pinnedDuration": "3:28"
     },
     {
       "artist": "Keanu Silva",
       "album": "Best Radio Tracks, Vol. 16",
       "track": "King of My Castle (Don Diablo Edit)",
-      "uri": "spotify:track:6JjtGQQfPyECH08emLcbYI"
+      "uri": "spotify:track:6JjtGQQfPyECH08emLcbYI",
+      "pinnedVideoId": "FPOEOq59ONo",
+      "pinnedTitle": "Keanu Silva - King Of My Castle (Don Diablo Edit) (Official Audio)",
+      "pinnedChannel": "HEXAGON",
+      "pinnedDuration": "2:53"
     },
     {
       "artist": "Metallica",
       "album": "Ride The Lightning",
       "track": "Creeping Death - Remastered",
-      "uri": "spotify:track:4CLRLdxUDPNeO1xCW0U2zC"
+      "uri": "spotify:track:4CLRLdxUDPNeO1xCW0U2zC",
+      "pinnedVideoId": "X8OeBZQn3_w",
+      "pinnedTitle": "Creeping Death (Remastered)",
+      "pinnedChannel": "Metallica",
+      "pinnedDuration": "6:36"
     },
     {
       "artist": "Tiësto",
       "album": "Echo Sax Finale",
       "track": "Echo Sax Finale",
-      "uri": "spotify:track:5r87pH2ofTqx375POjVKtc"
+      "uri": "spotify:track:5r87pH2ofTqx375POjVKtc",
+      "pinnedVideoId": "bfozW-EWEtg",
+      "pinnedTitle": "Tisto, Caleb Arredondo - Echo Sax Finale (Official Visualizer)",
+      "pinnedChannel": "Tisto",
+      "pinnedDuration": "3:56"
     },
     {
       "artist": "Akon",
       "album": "Konvicted",
       "track": "Smack That",
-      "uri": "spotify:track:3qKGvSu1inEZKwYQnMavNA"
+      "uri": "spotify:track:3qKGvSu1inEZKwYQnMavNA",
+      "pinnedVideoId": "RsrR0l76i_4",
+      "pinnedTitle": "Smack That (Clean)",
+      "pinnedChannel": "Akon",
+      "pinnedDuration": "3:32"
     },
     {
       "artist": "Skryptonite",
       "album": "Уроборос: Улица 36",
       "track": "Животные",
-      "uri": "spotify:track:3a7g2znpwe4DUEAsZXkWHw"
+      "uri": "spotify:track:3a7g2znpwe4DUEAsZXkWHw",
+      "pinnedVideoId": "R87Pm5oKVzE",
+      "pinnedTitle": "���������� - �������� (flac)",
+      "pinnedChannel": "Skrypto gramma",
+      "pinnedDuration": "3:03"
     },
     {
       "artist": "NBSPLV",
       "album": "Lunar Snow",
       "track": "Lunar Snow",
-      "uri": "spotify:track:6oTuHfsJuYc5k5npUM23yb"
+      "uri": "spotify:track:6oTuHfsJuYc5k5npUM23yb",
+      "pinnedVideoId": "OAmYV4xxgkM",
+      "pinnedTitle": "Lunar Snow",
+      "pinnedChannel": "NBSPLV",
+      "pinnedDuration": "3:02"
     },
     {
       "artist": "Miyagi & Andy Panda",
       "album": "YAMAKASI",
       "track": "Tantra",
-      "uri": "spotify:track:5K6DVd7s3JrLjQOx4ttOMw"
+      "uri": "spotify:track:5K6DVd7s3JrLjQOx4ttOMw",
+      "pinnedVideoId": "j5wVGQQ5e5A",
+      "pinnedTitle": "Miyagi & Andy Panda - Tantra (Official Audio)",
+      "pinnedChannel": "Hajime",
+      "pinnedDuration": "4:15"
     },
     {
       "artist": "Skryptonite",
       "album": "PVL is back",
       "track": "Nice Guy",
-      "uri": "spotify:track:1dQ32IL15vMx214sNNBaJI"
+      "uri": "spotify:track:1dQ32IL15vMx214sNNBaJI",
+      "pinnedVideoId": "PDvLwa3d9yk",
+      "pinnedTitle": "����������, Niman - Nice Guy (SHEKER)",
+      "pinnedChannel": "beyne",
+      "pinnedDuration": "3:10"
     },
     {
       "artist": "Obie Trice",
       "album": "8 Mile",
       "track": "Adrenaline Rush - From \"8 Mile\" Soundtrack",
-      "uri": "spotify:track:0bFkF5KKQWU7mFZIWCofXI"
+      "uri": "spotify:track:0bFkF5KKQWU7mFZIWCofXI",
+      "pinnedVideoId": "3TRYW7vzneo",
+      "pinnedTitle": "Adrenaline Rush",
+      "pinnedChannel": "Obie Trice",
+      "pinnedDuration": "3:49"
     },
     {
       "artist": "Lady Gaga",
       "album": "The Fame Monster",
       "track": "Bad Romance",
-      "uri": "spotify:track:0SiywuOBRcynK0uKGWdCnn"
+      "uri": "spotify:track:0SiywuOBRcynK0uKGWdCnn",
+      "pinnedVideoId": "NlK9u6a69Dg",
+      "pinnedTitle": "Bad Romance",
+      "pinnedChannel": "Lady Gaga",
+      "pinnedDuration": "4:54"
     },
     {
       "artist": "Pascal Letoublon",
       "album": "Friendships",
       "track": "Friendships",
-      "uri": "spotify:track:0ztqey3VhIZ3WINFu8kCo1"
+      "uri": "spotify:track:0ztqey3VhIZ3WINFu8kCo1",
+      "pinnedVideoId": "mPmoojB54xI",
+      "pinnedTitle": "Friendships",
+      "pinnedChannel": "Pascal Letoublon",
+      "pinnedDuration": "4:02"
     },
     {
       "artist": "All That Remains",
       "album": "A War You Cannot Win",
       "track": "A War You Cannot Win",
-      "uri": "spotify:track:3TRNoCpF4VmgSS1PYMThRz"
+      "uri": "spotify:track:3TRNoCpF4VmgSS1PYMThRz",
+      "pinnedVideoId": "V5YeS-3lRIg",
+      "pinnedTitle": "A War You Cannot Win",
+      "pinnedChannel": "All That Remains",
+      "pinnedDuration": "3:42"
     },
     {
       "artist": "Spaceouters",
       "album": "Veter",
       "track": "Lost",
-      "uri": "spotify:track:4MUo9dXwmPGAIOVgZfX0GG"
+      "uri": "spotify:track:4MUo9dXwmPGAIOVgZfX0GG",
+      "pinnedVideoId": "Cos6TZa-dv8",
+      "pinnedTitle": "Spaceouters - Lost",
+      "pinnedChannel": "dynmk",
+      "pinnedDuration": "3:59"
     },
     {
       "artist": "Inward Universe",
       "album": "Anchored",
       "track": "Anchored",
-      "uri": "spotify:track:0Lpu3VaWSdNKDIFlMI2g65"
+      "uri": "spotify:track:0Lpu3VaWSdNKDIFlMI2g65",
+      "pinnedVideoId": "B5dNZv6I3FA",
+      "pinnedTitle": "Inward Universe & Alex Spite - Fading Away",
+      "pinnedChannel": "Inward Universe",
+      "pinnedDuration": "3:57"
     },
     {
       "artist": "Linkin Park",
       "album": "Hybrid Theory",
       "track": "A Place for My Head",
-      "uri": "spotify:track:5rAxhWcgFng3s570sGO2F8"
+      "uri": "spotify:track:5rAxhWcgFng3s570sGO2F8",
+      "pinnedVideoId": "NlHnq7illkA",
+      "pinnedTitle": "Linkin Park - A Place for My Head (Live In Texas)",
+      "pinnedChannel": "Linkin Park",
+      "pinnedDuration": "4:32"
     },
     {
       "artist": "Deep Chill Project",
       "album": "Travel",
       "track": "3000 B.C.",
-      "uri": "spotify:track:4sPeDM5DuVgrDm9q4LDgqc"
+      "uri": "spotify:track:4sPeDM5DuVgrDm9q4LDgqc",
+      "pinnedVideoId": "QUcTsFe1PVs",
+      "pinnedTitle": "The Epic Of Gilgamesh In Sumerian",
+      "pinnedChannel": "Peter Pringle",
+      "pinnedDuration": "3:55"
     },
     {
       "artist": "Tim Schaufert",
       "album": "Behind Clouds",
       "track": "Behind Clouds",
-      "uri": "spotify:track:4D5vlbdfdGDLOu0juIIIPR"
+      "uri": "spotify:track:4D5vlbdfdGDLOu0juIIIPR",
+      "pinnedVideoId": "rHsjtvaAXvQ",
+      "pinnedTitle": "Behind Clouds",
+      "pinnedChannel": "Tim Schaufert",
+      "pinnedDuration": "2:51"
     },
     {
       "artist": "Akon",
       "album": "Konvicted",
       "track": "I Wanna Love You",
-      "uri": "spotify:track:6NncjnSD7JLEetWb9KqMRY"
+      "uri": "spotify:track:6NncjnSD7JLEetWb9KqMRY",
+      "pinnedVideoId": "jOiqV38fyKM",
+      "pinnedTitle": "I Wanna Love You",
+      "pinnedChannel": "Akon",
+      "pinnedDuration": "4:07"
     },
     {
       "artist": "chief.",
       "album": "Time Remembered",
       "track": "message in a bottle",
-      "uri": "spotify:track:5aA0xSImWgFb92UoWNrbYu"
+      "uri": "spotify:track:5aA0xSImWgFb92UoWNrbYu",
+      "pinnedVideoId": "X-hLWgcdieY",
+      "pinnedTitle": "chief. - message in a bottle",
+      "pinnedChannel": "Collected Compositions",
+      "pinnedDuration": "2:03"
     },
     {
       "artist": "SICK PUPPIES",
       "album": "Tri-Polar",
       "track": "You're Going Down",
-      "uri": "spotify:track:5FQXMRDSTkn9fowDJ3kZo8"
+      "uri": "spotify:track:5FQXMRDSTkn9fowDJ3kZo8",
+      "pinnedVideoId": "eRqIbk9VDwo",
+      "pinnedTitle": "You're Going Down By Sick Puppies Explicit",
+      "pinnedChannel": "Mocking Burgh Studios",
+      "pinnedDuration": "3:15"
     },
     {
       "artist": "Envotion",
       "album": "Aero",
       "track": "Aero",
-      "uri": "spotify:track:0KRFFXoO8AxYKOsSNdhElz"
+      "uri": "spotify:track:0KRFFXoO8AxYKOsSNdhElz",
+      "pinnedVideoId": "7KjK16e7nWU",
+      "pinnedTitle": "Aero (Original Mix)",
+      "pinnedChannel": "Envotion - Topic",
+      "pinnedDuration": "7:37"
     },
     {
       "artist": "Cypress Hill",
       "album": "Black Sunday",
       "track": "Hits from the Bong",
-      "uri": "spotify:track:0cfqYhY6B8PbGF9vaVNUeG"
+      "uri": "spotify:track:0cfqYhY6B8PbGF9vaVNUeG",
+      "pinnedVideoId": "eMK4cfXj5c0",
+      "pinnedTitle": "Cypress Hill - Hits from the Bong (Official Audio)",
+      "pinnedChannel": "Cypress Hill",
+      "pinnedDuration": "2:42"
     },
     {
       "artist": "Thousand Foot Krutch",
       "album": "Phenomenon",
       "track": "Phenomenon",
-      "uri": "spotify:track:3b6uenXXbpCRxXyzFzWi3J"
+      "uri": "spotify:track:3b6uenXXbpCRxXyzFzWi3J",
+      "pinnedVideoId": "x4EpbuqJcRw",
+      "pinnedTitle": "Phenomenon",
+      "pinnedChannel": "Thousand Foot Krutch",
+      "pinnedDuration": "2:59"
     },
     {
       "artist": "Orjan Nilsen",
       "album": "Cabin Fever",
       "track": "Cabin Fever",
-      "uri": "spotify:track:7JA66jFO1hY4Y1sLxRvZIY"
+      "uri": "spotify:track:7JA66jFO1hY4Y1sLxRvZIY",
+      "pinnedVideoId": "TAIv5hoUoBA",
+      "pinnedTitle": "Cabin Fever (Extended Mix)",
+      "pinnedChannel": "rjan Nilsen",
+      "pinnedDuration": "6:42"
     },
     {
       "artist": "Blue October",
       "album": "Approaching Normal",
       "track": "Say It",
-      "uri": "spotify:track:3qGWX7JjOuxaXr7J1k8utJ"
+      "uri": "spotify:track:3qGWX7JjOuxaXr7J1k8utJ",
+      "pinnedVideoId": "GbLP8jNdR9k",
+      "pinnedTitle": "Blue October - Say It",
+      "pinnedChannel": "Blue October",
+      "pinnedDuration": "3:37"
     },
     {
       "artist": "Scratch Massive",
       "album": "Nuit de Rêve",
       "track": "Closer - Doeld Remix",
-      "uri": "spotify:track:0gWjkSj7SBiCcbq9R4oSJI"
+      "uri": "spotify:track:0gWjkSj7SBiCcbq9R4oSJI",
+      "pinnedVideoId": "rfZPh9zivxs",
+      "pinnedTitle": "Scratch Massive - Closer Feat Chloe Live Version",
+      "pinnedChannel": "Pschent",
+      "pinnedDuration": "4:42"
     },
     {
       "artist": "Eminem",
       "album": "The Marshall Mathers LP",
       "track": "Stan",
-      "uri": "spotify:track:3UmaczJpikHgJFyBTAJVoz"
+      "uri": "spotify:track:3UmaczJpikHgJFyBTAJVoz",
+      "pinnedVideoId": "7u1Jj6aRIec",
+      "pinnedTitle": "Stan",
+      "pinnedChannel": "EminemMusic",
+      "pinnedDuration": "6:43"
     },
     {
       "artist": "Gareth Emery",
       "album": "Into The Light (Bigfett Remix)",
       "track": "Into The Light - Bigfett Remix",
-      "uri": "spotify:track:7GifX9oQOqWHjtpKiYJW0A"
+      "uri": "spotify:track:7GifX9oQOqWHjtpKiYJW0A",
+      "pinnedVideoId": "o5KImUeWUG0",
+      "pinnedTitle": "Gareth Emery feat Mark Frisch - Into The Light (Alex M.O.R.P.H. Remix) [Garuda]",
+      "pinnedChannel": "Gareth Emery",
+      "pinnedDuration": "4:17"
     },
     {
       "artist": "Luperkal",
       "album": "Зимородок",
       "track": "Зимняя Сказка",
-      "uri": "spotify:track:0SvtygZBwKuBJCvZtJiUw6"
+      "uri": "spotify:track:0SvtygZBwKuBJCvZtJiUw6",
+      "pinnedVideoId": "v_IST-q_NKY",
+      "pinnedTitle": "��������� - ������ ������ (Official audio)",
+      "pinnedChannel": "Horus1613",
+      "pinnedDuration": "2:46"
     },
     {
       "artist": "Intelligency",
       "album": "The Fall",
       "track": "The Fall",
-      "uri": "spotify:track:2ff65G3S67gJqqTsUhSB2B"
+      "uri": "spotify:track:2ff65G3S67gJqqTsUhSB2B",
+      "pinnedVideoId": "XWdTKZUSLVQ",
+      "pinnedTitle": "Intelligency - The Fall",
+      "pinnedChannel": "INTELLIGENCY",
+      "pinnedDuration": "3:56"
     },
     {
       "artist": "deadmau5",
       "album": "Hyperlandia",
       "track": "Hyperlandia - Vocal Mix",
-      "uri": "spotify:track:4Vd53EHIw4lEfe7rqHSctN"
+      "uri": "spotify:track:4Vd53EHIw4lEfe7rqHSctN",
+      "pinnedVideoId": "6p0m8iLdLaA",
+      "pinnedTitle": "deadmau5 - Hyperlandia (feat. Foster the People) [Vocal Mix]",
+      "pinnedChannel": "deadmau5",
+      "pinnedDuration": "5:50"
     },
     {
       "artist": "Disarmonia Mundi",
       "album": "Mind Tricks (Extended Version)",
       "track": "Celestial Furnace",
-      "uri": "spotify:track:2NM3ydi7uBrhux2mYK2lrI"
+      "uri": "spotify:track:2NM3ydi7uBrhux2mYK2lrI",
+      "pinnedVideoId": "XdNtzLAbN1k",
+      "pinnedTitle": "Celestial Furnace (Acoustic Version)",
+      "pinnedChannel": "Disarmonia Mundi - Topic",
+      "pinnedDuration": "1:59"
     },
     {
       "artist": "Luperkal",
       "album": "Sarcasm",
       "track": "Гонзо",
-      "uri": "spotify:track:7mGN1TNGGRXk4U2O2frrrm"
+      "uri": "spotify:track:7mGN1TNGGRXk4U2O2frrrm",
+      "pinnedVideoId": "aT8ycRPQK0g",
+      "pinnedTitle": "�����",
+      "pinnedChannel": "��������� - Topic",
+      "pinnedDuration": "2:52"
     },
     {
       "artist": "Envotion",
       "album": "The Best Of",
       "track": "Alive - Unterberg Remix - Mixed",
-      "uri": "spotify:track:4PdAwe1t8kdjI9gRvjdT3z"
+      "uri": "spotify:track:4PdAwe1t8kdjI9gRvjdT3z",
+      "pinnedVideoId": "8GRa_yQS350",
+      "pinnedTitle": "Alive (Unterberg Remix)",
+      "pinnedChannel": "Envotion - Topic",
+      "pinnedDuration": "5:47"
     },
     {
       "artist": "Arnej",
       "album": "10 Years Armada",
       "track": "They Always Come Back",
-      "uri": "spotify:track:0upw9zlcdPw6hzWA1YzqOI"
+      "uri": "spotify:track:0upw9zlcdPw6hzWA1YzqOI",
+      "pinnedVideoId": "ndIy37uvq_o",
+      "pinnedTitle": "Arnej - They Always Come Back (Original Mix)",
+      "pinnedChannel": "Armada Classics",
+      "pinnedDuration": "7:12"
     },
     {
       "artist": "Hollywood Undead",
       "album": "Swan Songs",
       "track": "Everywhere I Go",
-      "uri": "spotify:track:1czaCgWLWgqp0eRIZ0BcXh"
+      "uri": "spotify:track:1czaCgWLWgqp0eRIZ0BcXh",
+      "pinnedVideoId": "A7XDFstVaHA",
+      "pinnedTitle": "Hollywood Undead - Everywhere I Go (Uncensored Official Video)",
+      "pinnedChannel": "Hollywood Undead",
+      "pinnedDuration": "4:04"
     },
     {
       "artist": "Michael Cassette",
       "album": "Anjunadeep pres. Michael Cassette",
       "track": "Pangaea - Envotion Remix",
-      "uri": "spotify:track:4qdhAliPT7AMr7o8EyIt3B"
+      "uri": "spotify:track:4qdhAliPT7AMr7o8EyIt3B",
+      "pinnedVideoId": "Lp19QuMr5ok",
+      "pinnedTitle": "Michael Cassette - Pangaea (Envotion Remix)",
+      "pinnedChannel": "Anjunadeep",
+      "pinnedDuration": "5:10"
     },
     {
       "artist": "Lady Gaga",
       "album": "Born This Way",
       "track": "Judas",
-      "uri": "spotify:track:7F25roCtYi55JouckaayPC"
+      "uri": "spotify:track:7F25roCtYi55JouckaayPC",
+      "pinnedVideoId": "UaozB9_ufa8",
+      "pinnedTitle": "Lady Gaga - Judas (Audio)",
+      "pinnedChannel": "GagaTube GagaTube",
+      "pinnedDuration": "4:09"
     },
     {
       "artist": "Boris Brejcha",
       "album": "Matrix EP",
       "track": "Matrix",
-      "uri": "spotify:track:0HpX5K49KxO7HrtWcwGou3"
+      "uri": "spotify:track:0HpX5K49KxO7HrtWcwGou3",
+      "pinnedVideoId": "lG9sPcOViaM",
+      "pinnedTitle": "Boris Brejcha - Matrix (Original Mix)",
+      "pinnedChannel": "PASHA LUTYJ",
+      "pinnedDuration": "8:15"
     },
     {
       "artist": "Dr. Dre",
       "album": "2001",
       "track": "Still D.R.E.",
-      "uri": "spotify:track:503OTo2dSqe7qk76rgsbep"
+      "uri": "spotify:track:503OTo2dSqe7qk76rgsbep",
+      "pinnedVideoId": "_CL6n0FJZpk",
+      "pinnedTitle": "Dr. Dre - Still D.R.E. ft. Snoop Dogg",
+      "pinnedChannel": "Dr. Dre",
+      "pinnedDuration": "4:50"
     },
     {
       "artist": "Megadeth",
       "album": "Countdown To Extinction",
       "track": "Countdown To Extinction",
-      "uri": "spotify:track:1Mt6BsusgJJln2FMyGFLg1"
+      "uri": "spotify:track:1Mt6BsusgJJln2FMyGFLg1",
+      "pinnedVideoId": "bNVcktiS6C4",
+      "pinnedTitle": "Countdown To Extinction",
+      "pinnedChannel": "Megadeth",
+      "pinnedDuration": "4:19"
     },
     {
       "artist": "Omnia",
       "album": "U",
       "track": "U",
-      "uri": "spotify:track:55sNiPEcFbcPubGg4Mrga5"
+      "uri": "spotify:track:55sNiPEcFbcPubGg4Mrga5",
+      "pinnedVideoId": "9qFuc62_ZHI",
+      "pinnedTitle": "U (Mixed)",
+      "pinnedChannel": "Omnia",
+      "pinnedDuration": "3:16"
     },
     {
       "artist": "Bugzy Malone",
       "album": "Boxes Of Bush",
       "track": "Boxes Of Bush",
-      "uri": "spotify:track:7khLT5h97FlHyYk79QRHNn"
+      "uri": "spotify:track:7khLT5h97FlHyYk79QRHNn",
+      "pinnedVideoId": "NAdiBZ_KI74",
+      "pinnedTitle": "Boxes Of Bush",
+      "pinnedChannel": "Bugzy Malone",
+      "pinnedDuration": "2:48"
     },
     {
       "artist": "Lorde",
       "album": "Pure Heroine",
       "track": "Royals",
-      "uri": "spotify:track:2dLLR6qlu5UJ5gk0dKz0h3"
+      "uri": "spotify:track:2dLLR6qlu5UJ5gk0dKz0h3",
+      "pinnedVideoId": "ncgsL1GCFms",
+      "pinnedTitle": "Lorde - Royals (Audio)",
+      "pinnedChannel": "Lorde",
+      "pinnedDuration": "3:10"
     },
     {
       "artist": "Lisa Miskovsky",
       "album": "Still Alive (The Theme from Mirror's Edge) [The Remixes]",
       "track": "Still Alive",
-      "uri": "spotify:track:3I7QUVT2NW552oZZeqrIkg"
+      "uri": "spotify:track:3I7QUVT2NW552oZZeqrIkg",
+      "pinnedVideoId": "YP3M9_gICsc",
+      "pinnedTitle": "Mirror's Edge Theme Song HQ",
+      "pinnedChannel": "Griser",
+      "pinnedDuration": "4:20"
     },
     {
       "artist": "Kirin J Callinan",
       "album": "Big Enough",
       "track": "Big Enough",
-      "uri": "spotify:track:01u01w4wPZ4eYzm23cKmev"
+      "uri": "spotify:track:01u01w4wPZ4eYzm23cKmev",
+      "pinnedVideoId": "rvrZJ5C_Nwg",
+      "pinnedTitle": "Kirin J Callinan - Big Enough (Official Video) ft. Alex Cameron, Molly Lewis, Jimmy Barnes",
+      "pinnedChannel": "Kirin J Callinan",
+      "pinnedDuration": "6:00"
     },
     {
       "artist": "Chris Isaak",
       "album": "Best of Chris Isaak",
       "track": "Wicked Game",
-      "uri": "spotify:track:390AWnOn2rfe9FzQjYmxIH"
+      "uri": "spotify:track:390AWnOn2rfe9FzQjYmxIH",
+      "pinnedVideoId": "20UpB7XwQv4",
+      "pinnedTitle": "Wicked Game",
+      "pinnedChannel": "Chris Isaak",
+      "pinnedDuration": "4:47"
     },
     {
       "artist": "Primus",
       "album": "Sailing The Seas Of Cheese",
       "track": "Jerry Was A Race Car Driver",
-      "uri": "spotify:track:19C0LKY3DCcQtuviPJNy5d"
+      "uri": "spotify:track:19C0LKY3DCcQtuviPJNy5d",
+      "pinnedVideoId": "_oanJVP5Tg8",
+      "pinnedTitle": "Jerry Was A Race Car Driver",
+      "pinnedChannel": "officialprimus",
+      "pinnedDuration": "3:11"
     },
     {
       "artist": "5'nizza",
       "album": "Пятница",
       "track": "Ты кидал",
-      "uri": "spotify:track:1IAJP2FjW687fQCS1pANln"
+      "uri": "spotify:track:1IAJP2FjW687fQCS1pANln",
+      "pinnedVideoId": "86_-FEOz0vo",
+      "pinnedTitle": "5'nizza - �� �����",
+      "pinnedChannel": "2000X-50X",
+      "pinnedDuration": "3:07"
     },
     {
       "artist": "Rylan Taggart",
       "album": "Adrift",
       "track": "Adrift",
-      "uri": "spotify:track:0Cps3ZxBwSqX2L5QiLys9A"
+      "uri": "spotify:track:0Cps3ZxBwSqX2L5QiLys9A",
+      "pinnedVideoId": "3NFzUfQLO5E",
+      "pinnedTitle": "Rylan Taggart & Lumynesynth - Adrift (Extended Mix)",
+      "pinnedChannel": "Unfeatured",
+      "pinnedDuration": "5:03"
     },
     {
       "artist": "KLOUD",
       "album": "HUMANS",
       "track": "HUMANS - Far Out Remix",
-      "uri": "spotify:track:2HDE7gJUAf4FTH1ubzM042"
+      "uri": "spotify:track:2HDE7gJUAf4FTH1ubzM042",
+      "pinnedVideoId": "anZNLUuqjdw",
+      "pinnedTitle": "KLOUD - Humans (Far Out Remix)",
+      "pinnedChannel": "Trap Nation",
+      "pinnedDuration": "4:45"
     },
     {
       "artist": "Lange",
       "album": "ASOT 1084 - A State Of Trance Episode 1084",
       "track": "Sincere (Mixed) - Tomac Remix",
-      "uri": "spotify:track:0dPLzZ8zMxcefmQgjJgC2e"
+      "uri": "spotify:track:0dPLzZ8zMxcefmQgjJgC2e",
+      "pinnedVideoId": "CSMdKbiShZE",
+      "pinnedTitle": "Sincere For You (Radio Mix)",
+      "pinnedChannel": "Lange - Topic",
+      "pinnedDuration": "3:54"
     },
     {
       "artist": "Metallica",
       "album": "Ride The Lightning",
       "track": "Ride The Lightning - Remastered",
-      "uri": "spotify:track:4d50VgYqfw1Rd0knRRL3qv"
+      "uri": "spotify:track:4d50VgYqfw1Rd0knRRL3qv",
+      "pinnedVideoId": "We_DLCYDaYw",
+      "pinnedTitle": "Metallica - Ride The Lightning (HD)",
+      "pinnedChannel": "MegaHermansen",
+      "pinnedDuration": "6:38"
     },
     {
       "artist": "AVIRA",
       "album": "Group Therapy 666 (DJ Mix)",
       "track": "Born Again (ABGT666) - Mixed",
-      "uri": "spotify:track:1JZ1ETtmACwAf7RiFLlmTB"
+      "uri": "spotify:track:1JZ1ETtmACwAf7RiFLlmTB",
+      "pinnedVideoId": "TbtteCI3xHE",
+      "pinnedTitle": "Born Again",
+      "pinnedChannel": "AVIRA - Topic",
+      "pinnedDuration": "3:30"
     },
     {
       "artist": "Michael Jackson",
       "album": "Thriller 25 Super Deluxe Edition",
       "track": "Billie Jean",
-      "uri": "spotify:track:5ChkMS8OtdzJeqyybCc9R5"
+      "uri": "spotify:track:5ChkMS8OtdzJeqyybCc9R5",
+      "pinnedVideoId": "Kr4EQDVETuA",
+      "pinnedTitle": "Billie Jean",
+      "pinnedChannel": "Michael Jackson",
+      "pinnedDuration": "4:54"
     },
     {
       "artist": "Krovostok",
       "album": "ЧБ",
       "track": "Душ",
-      "uri": "spotify:track:5DxbY7I2rXtjDi4ZHNFOvF"
+      "uri": "spotify:track:5DxbY7I2rXtjDi4ZHNFOvF",
+      "pinnedVideoId": "Mu9G2zm1PhE",
+      "pinnedTitle": "������",
+      "pinnedChannel": "���������",
+      "pinnedDuration": "4:01"
     },
     {
       "artist": "Done Again",
       "album": "Can't Stop Loving You (In the Style of Van Halen) [Performance Track with Demonstration Vocals]",
       "track": "Can't Stop Loving You (In the Style of Van Halen) [Performance Track with Demonstration Vocals]",
-      "uri": "spotify:track:7KNvezS5Lw4jgZZQm6aEYH"
+      "uri": "spotify:track:7KNvezS5Lw4jgZZQm6aEYH",
+      "pinnedVideoId": "mEnUhjmwjlI",
+      "pinnedTitle": "Phil Collins - Can't Stop Loving You (Official Music Video)",
+      "pinnedChannel": "Phil Collins",
+      "pinnedDuration": "4:15"
     },
     {
       "artist": "I'm Blue",
       "album": "Blue (Da Ba Dee)",
       "track": "Blue (Da Ba Dee) [Originally Performed By Eiffel 65] [Karaoke Version]",
-      "uri": "spotify:track:3MRKhuqjWhGrmNDmGkvLWp"
+      "uri": "spotify:track:3MRKhuqjWhGrmNDmGkvLWp",
+      "pinnedVideoId": "FNIhj6DQtgk",
+      "pinnedTitle": "Eiffel 65 - Blue Da Ba Dee (Karaoke Version)",
+      "pinnedChannel": "Sing King",
+      "pinnedDuration": "4:44"
     },
     {
       "artist": "Dua Lipa",
       "album": "Dance The Night (From Barbie The Album)",
       "track": "Dance The Night - From Barbie The Album",
-      "uri": "spotify:track:1vYXt7VSjH9JIM5oRRo7vA"
+      "uri": "spotify:track:1vYXt7VSjH9JIM5oRRo7vA",
+      "pinnedVideoId": "hCLkVrp_4CE",
+      "pinnedTitle": "Dua Lipa - Dance The Night (From Barbie The Album) [Official Lyric Video]",
+      "pinnedChannel": "Dua Lipa",
+      "pinnedDuration": "2:58"
     },
     {
       "artist": "twocolors",
       "album": "Break Up",
       "track": "Break Up",
-      "uri": "spotify:track:6oCdAXZVWCaGfHlhRidpAM"
+      "uri": "spotify:track:6oCdAXZVWCaGfHlhRidpAM",
+      "pinnedVideoId": "sWwW1cuyX5k",
+      "pinnedTitle": "twocolors x Pascal Letoublon - Break Up [Lyric Video]",
+      "pinnedChannel": "Tropical House Records",
+      "pinnedDuration": "2:38"
     },
     {
       "artist": "Vintage",
       "album": "Плохая Девочка",
       "track": "Плохая Девочка",
-      "uri": "spotify:track:0B1rCA4jxosOrIQFDqdE8A"
+      "uri": "spotify:track:0B1rCA4jxosOrIQFDqdE8A",
+      "pinnedVideoId": "gvCE8s6RsUs",
+      "pinnedTitle": "������ �������",
+      "pinnedChannel": "Vintazh - Topic",
+      "pinnedDuration": "3:35"
     },
     {
       "artist": "nobody.one",
       "album": "Does",
       "track": "Sunday",
-      "uri": "spotify:track:0btcKiIkjsenssUbidV1ds"
+      "uri": "spotify:track:0btcKiIkjsenssUbidV1ds",
+      "pinnedVideoId": "KNedt--wXHU",
+      "pinnedTitle": "nobody.one - sunday",
+      "pinnedChannel": "Darth Craft Studio",
+      "pinnedDuration": "2:54"
     },
     {
       "artist": "Black Sabbath",
       "album": "Paranoid",
       "track": "Iron Man (2012 Remaster)",
-      "uri": "spotify:track:0vJYFKg9z1IvZiQUyX19cD"
+      "uri": "spotify:track:0vJYFKg9z1IvZiQUyX19cD",
+      "pinnedVideoId": "qaacVsGramo",
+      "pinnedTitle": "Metallica with Ozzy Osbourne - Iron Man and Paranoid",
+      "pinnedChannel": "³���� �����",
+      "pinnedDuration": "7:39"
     },
     {
       "artist": "Andain",
       "album": "Pure Bliss Vocals - Trance Classics Edition",
       "track": "Beautiful Things - Radio Edit",
-      "uri": "spotify:track:4RtFj0bkyns7yLBUg1imVl"
+      "uri": "spotify:track:4RtFj0bkyns7yLBUg1imVl",
+      "pinnedVideoId": "LatAo9Srfko",
+      "pinnedTitle": "Beautiful Things (Radio Edit)",
+      "pinnedChannel": "Andain",
+      "pinnedDuration": "3:17"
     },
     {
       "artist": "John Summit",
       "album": "Where You Are",
       "track": "Where You Are",
-      "uri": "spotify:track:4qDpLaFGf5ampf2DXD2TMA"
+      "uri": "spotify:track:4qDpLaFGf5ampf2DXD2TMA",
+      "pinnedVideoId": "5BqjhUmldDc",
+      "pinnedTitle": "John Summit & Hayla - Where You Are (Lyric Visualizer)",
+      "pinnedChannel": "John Summit",
+      "pinnedDuration": "3:56"
     },
     {
       "artist": "Ferry Corsten",
       "album": "Check It Out",
       "track": "Check It Out - Radio Edit",
-      "uri": "spotify:track:4xM7w6iTKdyScJo6DnvqrA"
+      "uri": "spotify:track:4xM7w6iTKdyScJo6DnvqrA",
+      "pinnedVideoId": "UYkuML08Bmg",
+      "pinnedTitle": "Ferry Corsten - Check it out (Radio Edit)",
+      "pinnedChannel": "Angel Colon",
+      "pinnedDuration": "3:07"
     },
     {
       "artist": "Paul Oakenfold",
       "album": "We Are Planet Perfecto, Vol. 4 - #FullOnFluoro (Unmixed)",
       "track": "Hypnotized - Markus Schulz Remix",
-      "uri": "spotify:track:7LqPl7MdisuncuQevaFCIq"
+      "uri": "spotify:track:7LqPl7MdisuncuQevaFCIq",
+      "pinnedVideoId": "NPahA_JtSMk",
+      "pinnedTitle": "Paul Oakenfold ft. Tiff Lacey - Hypnotized (Markus Schulz Remix)",
+      "pinnedChannel": "Perfecto Records",
+      "pinnedDuration": "3:36"
     },
     {
       "artist": "deadmau5",
       "album": "Not Exactly (Rinzen Remix)",
       "track": "Not Exactly - Rinzen Remix",
-      "uri": "spotify:track:44iQc1rBKQc9nZVyWE3txD"
+      "uri": "spotify:track:44iQc1rBKQc9nZVyWE3txD",
+      "pinnedVideoId": "G0uujQpPJnw",
+      "pinnedTitle": "deadmau5, Rinzen - Not Exactly (Rinzen Remix)",
+      "pinnedChannel": "deadmau5",
+      "pinnedDuration": "4:34"
     },
     {
       "artist": "Lilly Wood and The Prick",
       "album": "Prayer in C",
       "track": "Prayer in C - Robin Schulz Remix",
-      "uri": "spotify:track:3k9FFXVPn3ua8dlpkxlCvZ"
+      "uri": "spotify:track:3k9FFXVPn3ua8dlpkxlCvZ",
+      "pinnedVideoId": "fiore9Z5iUg",
+      "pinnedTitle": "Lilly Wood & The Prick and Robin Schulz - Prayer In C (Robin Schulz Remix) (Official)",
+      "pinnedChannel": "Robin Schulz",
+      "pinnedDuration": "3:14"
     },
     {
       "artist": "Obie Trice",
       "album": "8 Mile",
       "track": "Love Me - From \"8 Mile\" Soundtrack",
-      "uri": "spotify:track:1HGJibP8gAObODICRNWPAe"
+      "uri": "spotify:track:1HGJibP8gAObODICRNWPAe",
+      "pinnedVideoId": "47X_hh4WYLA",
+      "pinnedTitle": "Love Me",
+      "pinnedChannel": "Obie Trice",
+      "pinnedDuration": "4:31"
     },
     {
       "artist": "Alex Yarmak",
       "album": "Hotline Miami Goes Metal",
       "track": "Future Club",
-      "uri": "spotify:track:2Bk5oSl2SaY14wIsyV4xUw"
+      "uri": "spotify:track:2Bk5oSl2SaY14wIsyV4xUw",
+      "pinnedVideoId": "s-OlQbhkt-8",
+      "pinnedTitle": "Alex Yarmak - No King Rules Forever (Official Audio)",
+      "pinnedChannel": "Alex Yarmak",
+      "pinnedDuration": "3:12"
     }
   ],
   "albums": [

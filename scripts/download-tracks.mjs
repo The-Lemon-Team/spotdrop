@@ -117,7 +117,31 @@ function loadOrCreateManifest() {
   }
 
   const libData = JSON.parse(fs.readFileSync(LIBRARY_FILE, 'utf8'));
-  const rawTracks = libData.tracks || [];
+  const rawTracks = [...(libData.tracks || [])];
+
+  const PLAYLIST_FILE = path.resolve(DEFAULTS_DIR, 'Playlist1.json');
+  if (fs.existsSync(PLAYLIST_FILE)) {
+    try {
+      const plData = JSON.parse(fs.readFileSync(PLAYLIST_FILE, 'utf8'));
+      const existingUris = new Set(rawTracks.map((t) => t.uri));
+      for (const pl of plData.playlists || []) {
+        for (const item of pl.items || []) {
+          const t = item.track;
+          if (t && t.trackUri && !existingUris.has(t.trackUri)) {
+            existingUris.add(t.trackUri);
+            rawTracks.push({
+              uri: t.trackUri,
+              artist: t.artistName || 'Unknown Artist',
+              track: t.trackName || 'Unknown Track',
+              album: t.albumName || '',
+            });
+          }
+        }
+      }
+    } catch (err) {
+      console.warn(`[WARN] Could not parse Playlist1.json: ${err.message}`);
+    }
+  }
 
   let manifest = [];
   if (fs.existsSync(MANIFEST_FILE)) {
@@ -313,7 +337,7 @@ async function downloadTrack(item, options) {
 
     if (res.success) {
       // Validate: full song must be >= 40s and >= 400KB
-      if (res.durationSec < 40 || res.fileSizeBytes < 400000) {
+      if (res.durationSec < 40 || (!options.dryRun && res.fileSizeBytes < 400000)) {
         console.warn(`[WARN] Трек "${res.videoTitle}" подозрительно короткий/маленький (${res.durationSec}s, ${formatBytes(res.fileSizeBytes)}), пробуем альтернативный поиск...`);
         if (res.localFile) {
           try {
@@ -600,8 +624,10 @@ async function main() {
     queue = manifest.slice(start, end).filter((m) => m.status !== 'downloaded');
     console.log(`[INFO] Выбрана пачка #${options.batchIndex} (индексы ${start}..${end - 1}, к загрузке: ${queue.length})`);
   } else {
-    // Pick pending or failed items starting from offset
-    const available = manifest.slice(options.offset).filter((m) => m.status !== 'downloaded');
+    // Pick pending or single-attempt failed items starting from offset
+    const available = manifest.slice(options.offset).filter(
+      (m) => m.status === 'pending' || (m.status === 'failed' && (m.attempts || 0) < 2)
+    );
     const take = options.limit ? options.limit : options.batchSize;
     queue = available.slice(0, take);
   }
@@ -618,7 +644,9 @@ async function main() {
     console.log(`[BATCH-RUNNER] Запуск загрузки ${totalToProcess === Infinity ? 'всех оставшихся' : totalToProcess} треков пачками по ${options.batchSize} с кулдауном ${options.cooldown}s.`);
 
     while (processedCount < totalToProcess) {
-      const pendingItems = manifest.filter((m) => m.status !== 'downloaded');
+      const pendingItems = manifest.filter(
+        (m) => m.status === 'pending' || (m.status === 'failed' && (m.attempts || 0) < 2)
+      );
       if (pendingItems.length === 0) {
         console.log('🎉 Поздравляем! Все доступные треки успешно скачаны!');
         break;

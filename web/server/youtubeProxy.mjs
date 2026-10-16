@@ -5,6 +5,7 @@ import fs from 'node:fs';
 import { spawn } from 'node:child_process';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { findOfflineCandidateByQuery } from './offlineAudio.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const localExe = path.resolve(__dirname, '../bin/yt-dlp.exe');
@@ -16,6 +17,7 @@ export const ytDlpPath =
 
 export const DEFAULT_HTTP_PROXY = process.env.HTTP_PROXY || 'http://127.0.0.1:10809';
 export const DEFAULT_SOCKS_PROXY = process.env.SOCKS_PROXY || 'socks5://127.0.0.1:10808';
+export const DEFAULT_BACKUP_PROXY = process.env.BACKUP_PROXY || 'http://127.0.0.1:20808';
 
 export function resolveProxyUrl(proxyUrl) {
   if (!proxyUrl || typeof proxyUrl !== 'string') return proxyUrl;
@@ -52,6 +54,8 @@ export async function searchYouTube(query, proxyUrl = DEFAULT_HTTP_PROXY, limit 
     return cached.candidates;
   }
 
+  const offlineMatch = findOfflineCandidateByQuery(query);
+
   const doFetch = (activeProxy) =>
     new Promise((resolve, reject) => {
       const agent = createProxyAgent(activeProxy);
@@ -76,6 +80,7 @@ export async function searchYouTube(query, proxyUrl = DEFAULT_HTTP_PROXY, limit 
             'Content-Type': 'application/json',
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
           },
+          timeout: 8000,
         },
         (res) => {
           let data = '';
@@ -123,25 +128,61 @@ export async function searchYouTube(query, proxyUrl = DEFAULT_HTTP_PROXY, limit 
         }
       );
 
+      req.on('timeout', () => {
+        req.destroy(new Error('Search request timed out (8s)'));
+      });
       req.on('error', reject);
       req.write(payload);
       req.end();
     });
 
-  let candidates;
-  try {
-    candidates = await doFetch(targetProxy);
-  } catch (err) {
-    const fallbackProxy = resolveProxyUrl(DEFAULT_SOCKS_PROXY);
-    if (fallbackProxy && fallbackProxy !== targetProxy) {
-      console.warn(`[searchYouTube] Primary proxy ${targetProxy} failed (${err.message}), retrying via fallback ${fallbackProxy}...`);
-      try {
-        candidates = await doFetch(fallbackProxy);
-      } catch (fallbackErr) {
-        throw new Error(`YouTube search failed on primary (${err.message}) and fallback (${fallbackErr.message})`);
+  const proxiesToTry = [
+    targetProxy,
+    resolveProxyUrl(DEFAULT_SOCKS_PROXY),
+    resolveProxyUrl(DEFAULT_BACKUP_PROXY),
+  ].filter((p, idx, arr) => p && arr.indexOf(p) === idx);
+
+  let candidates = [];
+  let lastErr = null;
+
+  for (let i = 0; i < proxiesToTry.length; i++) {
+    const active = proxiesToTry[i];
+    try {
+      candidates = await doFetch(active);
+      lastErr = null;
+      break;
+    } catch (err) {
+      lastErr = err;
+      if (i < proxiesToTry.length - 1) {
+        console.warn(`[searchYouTube] Proxy ${active} failed (${err.message}), retrying via fallback ${proxiesToTry[i + 1]}...`);
       }
+    }
+  }
+
+  if (lastErr) {
+    if (offlineMatch) {
+      console.warn(`[searchYouTube] All YouTube proxies failed, serving offline match for "${query}"`);
+      candidates = [];
     } else {
-      throw err;
+      throw lastErr;
+    }
+  }
+
+  // Prepend offline match if available and not already in candidates
+  if (offlineMatch) {
+    const existingIdx = candidates.findIndex((c) => c.videoId === offlineMatch.videoId);
+    if (existingIdx > 0) {
+      candidates.splice(existingIdx, 1);
+    }
+    if (existingIdx !== 0) {
+      candidates.unshift({
+        videoId: offlineMatch.videoId,
+        title: offlineMatch.title,
+        channel: offlineMatch.channel,
+        durationText: offlineMatch.durationText,
+        thumbnailUrl: offlineMatch.thumbnailUrl,
+        isPinned: true,
+      });
     }
   }
 
@@ -166,43 +207,77 @@ export async function resolveStreamUrl(videoId, proxyUrl = DEFAULT_HTTP_PROXY) {
     return cached.url;
   }
 
-  const targetProxy = resolveProxyUrl(proxyUrl);
+  const proxiesToTry = [
+    targetProxy,
+    resolveProxyUrl(DEFAULT_SOCKS_PROXY),
+    resolveProxyUrl(DEFAULT_BACKUP_PROXY),
+  ].filter((p, idx, arr) => p && arr.indexOf(p) === idx);
 
-  return new Promise((resolve, reject) => {
-    const proc = spawn(ytDlpPath, [
-      '--proxy',
-      targetProxy,
-      '-g',
-      '-f',
-      'ba/b',
-      `https://www.youtube.com/watch?v=${videoId}`,
-    ]);
+  const executeOnce = (activeProxy) =>
+    new Promise((resolve, reject) => {
+      const proc = spawn(ytDlpPath, [
+        '--proxy',
+        activeProxy,
+        '--no-playlist',
+        '--no-warnings',
+        '--no-check-certificates',
+        '--socket-timeout',
+        '10',
+        '--js-runtimes',
+        'node',
+        '-g',
+        '-f',
+        'ba/b',
+        `https://www.youtube.com/watch?v=${videoId}`,
+      ]);
 
-    let stdout = '';
-    let stderr = '';
+      let stdout = '';
+      let stderr = '';
 
-    proc.stdout.on('data', (data) => (stdout += data));
-    proc.stderr.on('data', (data) => (stderr += data));
+      proc.stdout.on('data', (data) => (stdout += data));
+      proc.stderr.on('data', (data) => (stderr += data));
 
-    proc.on('close', (code) => {
-      const url = stdout.trim().split('\n')[0]?.trim();
-      if (url && url.startsWith('http')) {
-        streamCache.set(videoId, {
-          url,
-          expires: Date.now() + 1000 * 60 * 90, // cache for 1.5h
-        });
-        resolve(url);
-      } else {
-        reject(new Error(`yt-dlp error (code ${code}): ${stderr}`));
-      }
+      proc.on('close', (code) => {
+        const url = stdout.trim().split('\n')[0]?.trim();
+        if (url && url.startsWith('http')) {
+          resolve(url);
+        } else {
+          const detail = stderr.trim().split('\n').pop() || `exit code ${code}`;
+          reject(new Error(`yt-dlp error: ${detail}`));
+        }
+      });
+
+      proc.on('error', (err) => {
+        reject(new Error(`Failed to spawn yt-dlp: ${err.message}`));
+      });
     });
-  });
+
+  let lastErr = null;
+  for (let i = 0; i < proxiesToTry.length; i++) {
+    const active = proxiesToTry[i];
+    try {
+      const url = await executeOnce(active);
+      streamCache.set(videoId, {
+        url,
+        expires: Date.now() + 1000 * 60 * 90, // cache for 1.5h
+      });
+      return url;
+    } catch (err) {
+      lastErr = err;
+      if (i < proxiesToTry.length - 1) {
+        console.warn(`[resolveStreamUrl] Proxy ${active} failed for ${videoId} (${err.message}), retrying via ${proxiesToTry[i + 1]}...`);
+      }
+    }
+  }
+
+  throw lastErr || new Error(`yt-dlp stream resolution failed for ${videoId}`);
 }
 
 /**
  * Pipes audio stream from YouTube directly to client with HTTP 206 Partial Content support
+ * and automatic 301/302/307 redirect following.
  */
-export async function proxyAudioStream(req, res, videoId, proxyUrl = DEFAULT_HTTP_PROXY) {
+export async function proxyAudioStream(req, res, videoId, proxyUrl = DEFAULT_HTTP_PROXY, retryCount = 0) {
   try {
     const streamUrl = await resolveStreamUrl(videoId, proxyUrl);
     const agent = createProxyAgent(proxyUrl);
@@ -214,44 +289,86 @@ export async function proxyAudioStream(req, res, videoId, proxyUrl = DEFAULT_HTT
       headers['Range'] = req.headers.range;
     }
 
-    const gReq = https.request(
-      streamUrl,
-      {
-        method: 'GET',
-        agent,
-        headers,
-      },
-      (gRes) => {
-        const responseHeaders = {
-          'Content-Type': gRes.headers['content-type'] || 'audio/webm',
-          'Accept-Ranges': 'bytes',
-          'Cache-Control': 'no-cache',
-          'Access-Control-Allow-Origin': '*',
-        };
-        if (gRes.headers['content-length']) {
-          responseHeaders['Content-Length'] = gRes.headers['content-length'];
+    const requestStream = (currentUrl, redirectCount = 0) => {
+      if (redirectCount > 3) {
+        if (!res.headersSent) {
+          res.writeHead(502, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ error: 'Too many redirects from stream source' }));
         }
-        if (gRes.headers['content-range']) {
-          responseHeaders['Content-Range'] = gRes.headers['content-range'];
+        return;
+      }
+
+      let parsedUrl;
+      try {
+        parsedUrl = new URL(currentUrl);
+      } catch (err) {
+        if (!res.headersSent) {
+          res.writeHead(500, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ error: 'Invalid stream URL', details: err.message }));
         }
-
-        res.writeHead(gRes.statusCode || 200, responseHeaders);
-        gRes.pipe(res);
+        return;
       }
-    );
 
-    gReq.on('error', (err) => {
-      if (!res.headersSent) {
-        res.writeHead(502, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({ error: err.message }));
-      }
-    });
+      const gReq = https.request(
+        parsedUrl,
+        {
+          method: 'GET',
+          agent,
+          headers,
+        },
+        (gRes) => {
+          // Handle 301 / 302 / 307 / 308 redirects automatically
+          if (
+            gRes.statusCode &&
+            gRes.statusCode >= 300 &&
+            gRes.statusCode < 400 &&
+            gRes.headers.location
+          ) {
+            gRes.resume(); // drain response
+            const nextLocation = new URL(gRes.headers.location, currentUrl).toString();
+            return requestStream(nextLocation, redirectCount + 1);
+          }
 
-    req.on('close', () => {
-      gReq.destroy();
-    });
+          // Handle expired token or link (403 Forbidden / 410 Gone) -> retry with fresh yt-dlp URL once
+          if ((gRes.statusCode === 403 || gRes.statusCode === 410) && retryCount === 0) {
+            gRes.resume();
+            streamCache.delete(videoId);
+            return proxyAudioStream(req, res, videoId, proxyUrl, retryCount + 1);
+          }
 
-    gReq.end();
+          const responseHeaders = {
+            'Content-Type': gRes.headers['content-type'] || 'audio/webm',
+            'Accept-Ranges': 'bytes',
+            'Cache-Control': 'no-cache',
+            'Access-Control-Allow-Origin': '*',
+          };
+          if (gRes.headers['content-length']) {
+            responseHeaders['Content-Length'] = gRes.headers['content-length'];
+          }
+          if (gRes.headers['content-range']) {
+            responseHeaders['Content-Range'] = gRes.headers['content-range'];
+          }
+
+          res.writeHead(gRes.statusCode || 200, responseHeaders);
+          gRes.pipe(res);
+        }
+      );
+
+      gReq.on('error', (err) => {
+        if (!res.headersSent) {
+          res.writeHead(502, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ error: err.message }));
+        }
+      });
+
+      req.on('close', () => {
+        gReq.destroy();
+      });
+
+      gReq.end();
+    };
+
+    requestStream(streamUrl, 0);
   } catch (err) {
     if (!res.headersSent) {
       res.writeHead(500, { 'Content-Type': 'application/json' });

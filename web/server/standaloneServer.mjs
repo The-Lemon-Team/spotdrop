@@ -64,65 +64,11 @@ function sendJson(res, statusCode, data, extraHeaders = {}) {
   res.end(JSON.stringify(data));
 }
 
-const MASTER_AUDIO_DIR = path.resolve(DEFAULTS_DIR, 'default/audio');
-
-export function getLocalAudioFile(videoId) {
-  if (!videoId || typeof videoId !== 'string') return null;
-  const safeId = path.basename(videoId.trim());
-  const extensions = ['.webm', '.m4a', '.mp3', '.ogg', '.opus'];
-  for (const ext of extensions) {
-    const candidate = path.join(MASTER_AUDIO_DIR, `${safeId}${ext}`);
-    if (fs.existsSync(candidate) && fs.statSync(candidate).isFile()) {
-      return candidate;
-    }
-  }
-  return null;
-}
-
-export function serveLocalAudioStream(req, res, filePath) {
-  try {
-    const stat = fs.statSync(filePath);
-    const total = stat.size;
-    const ext = path.extname(filePath).toLowerCase();
-    const contentType = MIME_TYPES[ext] || 'audio/webm';
-    const range = req.headers.range;
-
-    if (range) {
-      const parts = range.replace(/bytes=/, '').split('-');
-      const start = parseInt(parts[0], 10);
-      const end = parts[1] ? parseInt(parts[1], 10) : total - 1;
-
-      if (isNaN(start) || start >= total || (parts[1] && end >= total)) {
-        res.writeHead(416, { 'Content-Range': `bytes */${total}` });
-        return res.end();
-      }
-
-      const chunksize = end - start + 1;
-      const file = fs.createReadStream(filePath, { start, end });
-      res.writeHead(206, {
-        'Content-Range': `bytes ${start}-${end}/${total}`,
-        'Accept-Ranges': 'bytes',
-        'Content-Length': chunksize,
-        'Content-Type': contentType,
-        'Access-Control-Allow-Origin': '*',
-        'Cache-Control': 'public, max-age=31536000',
-      });
-      file.pipe(res);
-    } else {
-      res.writeHead(200, {
-        'Content-Length': total,
-        'Content-Type': contentType,
-        'Accept-Ranges': 'bytes',
-        'Access-Control-Allow-Origin': '*',
-        'Cache-Control': 'public, max-age=31536000',
-      });
-      fs.createReadStream(filePath).pipe(res);
-    }
-  } catch (err) {
-    res.writeHead(500, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({ error: 'Failed to stream local audio', details: err.message }));
-  }
-}
+import {
+  getLocalAudioFile,
+  serveLocalAudioStream,
+  getOfflineCacheStatus,
+} from './offlineAudio.mjs';
 
 const server = http.createServer(async (req, res) => {
   const hostHeader = req.headers.host || 'localhost';
@@ -180,24 +126,18 @@ const server = http.createServer(async (req, res) => {
   }
 
   // 4. Audio Stream API
-  // Policy:
-  // - If profileId is 'bandita' or 'default', check local audio cache first.
-  // - All other profiles stream directly from YouTube proxy (zero disk writes).
   if (url.pathname === '/api/stream') {
     const videoId = url.searchParams.get('videoId');
-    const profileId = (url.searchParams.get('profileId') || '').toLowerCase().trim();
     const proxy = url.searchParams.get('proxy') || DEFAULT_HTTP_PROXY;
 
     if (!videoId) {
       return sendJson(res, 400, { error: 'Missing videoId parameter' });
     }
 
-    // Master profile: check offline audio cache on host
-    if (profileId === 'bandita' || profileId === 'default' || profileId === 'profile_default') {
-      const localFile = getLocalAudioFile(videoId);
-      if (localFile) {
-        return serveLocalAudioStream(req, res, localFile);
-      }
+    // Check offline audio cache on host first (zero latency)
+    const localFile = getLocalAudioFile(videoId);
+    if (localFile) {
+      return serveLocalAudioStream(req, res, localFile);
     }
 
     // Direct streaming from YouTube (Fallback & Guest profiles)
@@ -207,37 +147,7 @@ const server = http.createServer(async (req, res) => {
 
   // 5. Offline Status API
   if (url.pathname === '/api/offline-status') {
-    let audioFiles = [];
-    let totalBytes = 0;
-    if (fs.existsSync(MASTER_AUDIO_DIR)) {
-      const allowedExts = new Set(['.webm', '.m4a', '.mp3', '.ogg', '.opus']);
-      for (const f of fs.readdirSync(MASTER_AUDIO_DIR)) {
-        const ext = path.extname(f).toLowerCase();
-        if (allowedExts.has(ext)) {
-          const fullPath = path.join(MASTER_AUDIO_DIR, f);
-          try {
-            const st = fs.statSync(fullPath);
-            if (st.isFile()) {
-              audioFiles.push({
-                videoId: path.basename(f, ext),
-                filename: f,
-                size: st.size,
-              });
-              totalBytes += st.size;
-            }
-          } catch {
-            // ignore
-          }
-        }
-      }
-    }
-
-    return sendJson(res, 200, {
-      totalCached: audioFiles.length,
-      totalBytes,
-      audioDir: MASTER_AUDIO_DIR,
-      cachedVideoIds: audioFiles.map((a) => a.videoId),
-    });
+    return sendJson(res, 200, getOfflineCacheStatus());
   }
 
   // 6. Profiles API
@@ -422,6 +332,36 @@ const server = http.createServer(async (req, res) => {
         return sendJson(res, 404, { error: 'Playlists not uploaded for this profile' });
       }
     }
+  }
+
+  // Save updated playlists to disk
+  if (profileMatch && (req.method === 'POST' || req.method === 'PUT') && profileMatch[2] === 'playlists') {
+    const pId = decodeURIComponent(profileMatch[1]).toLowerCase();
+    const isMaster = pId === 'bandita' || pId === 'default' || pId === 'profile_default';
+    const targetFile = isMaster
+      ? path.resolve(DEFAULTS_DIR, 'default/Playlist1.json')
+      : path.join(PROFILES_DIR, pId, 'Playlist1.json');
+
+    let body = '';
+    req.on('data', (chunk) => {
+      body += chunk;
+      if (body.length > 50 * 1024 * 1024) {
+        res.writeHead(413, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: 'Payload too large' }));
+        req.destroy();
+      }
+    });
+
+    req.on('end', () => {
+      try {
+        fs.mkdirSync(path.dirname(targetFile), { recursive: true });
+        fs.writeFileSync(targetFile, body, 'utf-8');
+        return sendJson(res, 200, { success: true, message: 'Playlists saved successfully' });
+      } catch (err) {
+        return sendJson(res, 500, { error: 'Failed to save playlists', details: err.message });
+      }
+    });
+    return;
   }
 
   // 7. Config API

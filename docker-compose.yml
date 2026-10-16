@@ -16,6 +16,7 @@ services:
       - HOST=0.0.0.0
       - HTTP_PROXY=${SPOTDROP_HTTP_PROXY:-http://host.docker.internal:10809}
       - SOCKS_PROXY=${SPOTDROP_SOCKS_PROXY:-socks5://host.docker.internal:10808}
+      - BACKUP_PROXY=${SPOTDROP_BACKUP_PROXY:-http://host.docker.internal:20808}
     extra_hosts:
       - "host.docker.internal:host-gateway"
     volumes:
