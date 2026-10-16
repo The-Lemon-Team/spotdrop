@@ -9,12 +9,17 @@
     "start": "node server/standaloneServer.mjs",
     "serve": "node server/standaloneServer.mjs",
     "preview": "vite preview",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "tauri:exe": "tauri build --no-bundle",
+    "tauri:build": "tauri build",
     "download:status": "node ../scripts/download-tracks.mjs --status",
     "download:test": "node ../scripts/download-tracks.mjs --limit 5 --sync-library",
     "download:batch": "node ../scripts/download-tracks.mjs --batch-size 25 --sync-library",
     "download:auto": "node ../scripts/download-tracks.mjs --batch-size 25 --auto-loop --cooldown 120 --sync-library"
   },
   "devDependencies": {
+    "@tauri-apps/cli": "^2.12.3",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
@@ -24,6 +29,8 @@
   "dependencies": {
     "@distube/ytdl-core": "^4.16.12",
     "@tailwindcss/vite": "^4.3.3",
+    "@tauri-apps/api": "^2.12.4",
+    "@tauri-apps/plugin-dialog": "^2.8.3",
     "dexie": "^4.4.6",
     "dexie-react-hooks": "^4.4.0",
     "https-proxy-agent": "^9.1.0",

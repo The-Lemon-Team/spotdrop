@@ -1,5 +1,5 @@
 import React, { memo, useState } from 'react';
-import { User, Music, Share2, Check, Sparkles, Network } from 'lucide-react';
+import { User, Music, Share2, Check, Sparkles, Network, HardDrive } from 'lucide-react';
 import type { MusicProfile } from '../types';
 
 interface HeaderProps {
@@ -7,6 +7,7 @@ interface HeaderProps {
   trackCount: number;
   onOpenProfileModal: () => void;
   onOpenTailscaleModal: () => void;
+  onOpenDesktopSettingsModal?: () => void;
   onOpenLanding: () => void;
 }
 
@@ -15,6 +16,7 @@ export const Header: React.FC<HeaderProps> = memo(function Header({
   trackCount,
   onOpenProfileModal,
   onOpenTailscaleModal,
+  onOpenDesktopSettingsModal,
   onOpenLanding,
 }) {
   const [copied, setCopied] = useState(false);
@@ -104,6 +106,18 @@ export const Header: React.FC<HeaderProps> = memo(function Header({
           <Network className="w-3.5 h-3.5 text-emerald-400 hidden xs:block" />
           <span className="text-emerald-300 font-semibold text-[11px] hidden sm:inline">Online</span>
         </button>
+
+        {/* Desktop Cache & Settings Button */}
+        {onOpenDesktopSettingsModal && (
+          <button
+            onClick={onOpenDesktopSettingsModal}
+            className="flex items-center space-x-1.5 px-2.5 sm:px-3 py-1.5 rounded-full bg-[#161822] hover:bg-[#212433] border border-[#2B2F42] hover:border-[#00E5FF]/50 transition-all text-xs text-[#B2B9C8] cursor-pointer"
+            title="Десктоп Настройки & Кэш"
+          >
+            <HardDrive className="w-3.5 h-3.5 text-[#00E5FF]" />
+            <span className="text-xs text-[#B2B9C8] hidden md:inline">Кэш</span>
+          </button>
+        )}
 
         {/* Profile Switcher Button */}
         <button
