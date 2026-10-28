@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { Play, Pause, SkipBack, SkipForward, Shuffle, Volume2, VolumeX, Pin, ListMusic, ChevronDown, ChevronUp, Share2, FolderPlus, Heart } from 'lucide-react';
+import { Play, Pause, SkipBack, SkipForward, Shuffle, Volume2, VolumeX, Pin, ListMusic, ChevronDown, ChevronUp, FolderPlus, Heart } from 'lucide-react';
 import { usePlayer, usePlayerTime } from '../player/playerContext';
 import type { TrackCell } from '../types';
 
@@ -10,7 +10,6 @@ interface BottomPlayerBarProps {
 }
 
 export const BottomPlayerBar: React.FC<BottomPlayerBarProps> = memo(function BottomPlayerBar({
-  onShareTrack,
   onAddToPlaylist,
   onToggleFavorite,
 }) {
@@ -75,60 +74,65 @@ export const BottomPlayerBar: React.FC<BottomPlayerBarProps> = memo(function Bot
         </div>
       </div>
 
-      <div className="px-4 py-2.5 flex items-center justify-between max-w-7xl mx-auto">
-        {/* Left: Track Info & Artwork (Click to expand/collapse playlist) */}
-        <div
-          onClick={toggleQueueView}
-          className="flex items-center space-x-3 min-w-0 max-w-[40%] sm:max-w-xs cursor-pointer group select-none"
-          title={isQueueView ? 'Свернуть плейлист' : 'Открыть плейлист'}
-        >
-          <div className="relative w-12 h-12 rounded-xl overflow-hidden shrink-0 border border-[#2B2F42] group-hover:border-[#00E5FF]/60 bg-[#0D0E15] transition-colors">
-            {activeCandidate?.thumbnailUrl ? (
-              <img
-                src={activeCandidate.thumbnailUrl}
-                alt=""
-                className="w-full h-full object-cover transition-transform group-hover:scale-105"
-                loading="lazy"
-              />
-            ) : (
-              <div className="w-full h-full flex items-center justify-center text-xl">🎵</div>
-            )}
-            {isBuffering && (
-              <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
-                <div className="w-4 h-4 border-2 border-[#00E5FF] border-t-transparent rounded-full animate-spin" />
-              </div>
-            )}
-            {/* Subtle expand indicator icon on hover */}
-            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity text-[#00E5FF]">
-              {isQueueView ? <ChevronDown className="w-4 h-4" /> : <ChevronUp className="w-4 h-4" />}
-            </div>
-          </div>
-
-          <div className="min-w-0 flex-1">
-            <h4 className="text-sm font-semibold text-[#F3F4F6] group-hover:text-[#00E5FF] transition-colors truncate">
-              {currentTrack.title}
-            </h4>
-            <div className="flex items-center space-x-1.5 text-xs text-[#B2B9C8]">
-              <span className="truncate">{currentTrack.artist}</span>
-              <span className="text-[#8E95A5]">•</span>
-              {currentTrack.pinnedVideoId ? (
-                <span className="text-[#00E5FF] font-medium shrink-0 flex items-center space-x-0.5">
-                  <Pin className="w-2.5 h-2.5 fill-current" />
-                  <span>Pinned</span>
-                </span>
+      <div className="px-3 sm:px-4 py-2.5 flex items-center justify-between max-w-7xl mx-auto">
+        {/* Left: Track Info & Artwork (Click cover or title to expand/collapse playlist) */}
+        <div className="flex-1 min-w-0 flex items-center justify-start pr-2">
+          <div
+            onClick={toggleQueueView}
+            className="flex items-center space-x-2.5 sm:space-x-3 min-w-0 max-w-full sm:max-w-xs cursor-pointer group select-none"
+            title={isQueueView ? 'Свернуть треклист' : 'Открыть треклист (кликните на обложку)'}
+          >
+            <div className="relative w-11 h-11 sm:w-12 sm:h-12 rounded-xl overflow-hidden shrink-0 border border-[#2B2F42] group-hover:border-[#00E5FF]/60 bg-[#0D0E15] transition-colors">
+              {activeCandidate?.thumbnailUrl ? (
+                <img
+                  src={activeCandidate.thumbnailUrl}
+                  alt=""
+                  className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                  loading="lazy"
+                />
               ) : (
-                <span className="text-[#8E95A5] shrink-0">Auto</span>
+                <div className="w-full h-full flex items-center justify-center text-xl">🎵</div>
               )}
+              {isBuffering && (
+                <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
+                  <div className="w-4 h-4 border-2 border-[#00E5FF] border-t-transparent rounded-full animate-spin" />
+                </div>
+              )}
+              {/* Expand indicator icon on hover */}
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity text-[#00E5FF]">
+                {isQueueView ? <ChevronDown className="w-4 h-4" /> : <ChevronUp className="w-4 h-4" />}
+              </div>
+            </div>
+
+            <div className="min-w-0 flex-1">
+              <h4 className="text-sm font-semibold text-[#F3F4F6] group-hover:text-[#00E5FF] transition-colors truncate">
+                {currentTrack.title}
+              </h4>
+              <div className="flex items-center space-x-1.5 text-xs text-[#B2B9C8]">
+                <span className="truncate">{currentTrack.artist}</span>
+                {currentTrack.pinnedVideoId ? (
+                  <span className="text-[#00E5FF] font-medium shrink-0 hidden sm:flex items-center space-x-0.5">
+                    <span className="text-[#8E95A5] mr-1.5">•</span>
+                    <Pin className="w-2.5 h-2.5 fill-current" />
+                    <span>Pinned</span>
+                  </span>
+                ) : (
+                  <span className="text-[#8E95A5] shrink-0 hidden sm:inline">
+                    <span className="text-[#8E95A5] mr-1.5">•</span>
+                    Auto
+                  </span>
+                )}
+              </div>
             </div>
           </div>
         </div>
 
         {/* Center: Playback Controls */}
-        <div className="flex flex-col items-center space-y-1">
-          <div className="flex items-center space-x-3 sm:space-x-5">
+        <div className="shrink-0 flex flex-col items-center space-y-1 px-1 sm:px-2">
+          <div className="flex items-center space-x-2 sm:space-x-5">
             <button
               onClick={toggleShuffle}
-              className={`p-1.5 transition-all cursor-pointer hidden sm:flex items-center justify-center rounded-lg ${
+              className={`w-7 h-7 transition-all cursor-pointer hidden sm:flex items-center justify-center rounded-lg ${
                 isShuffle
                   ? 'text-[#00E5FF] bg-[#00E5FF]/15 shadow-[0_0_12px_rgba(0,229,255,0.25)]'
                   : 'text-[#8E95A5] hover:text-[#00E5FF]'
@@ -140,7 +144,7 @@ export const BottomPlayerBar: React.FC<BottomPlayerBarProps> = memo(function Bot
 
             <button
               onClick={playPrevious}
-              className="p-1.5 text-[#B2B9C8] hover:text-[#F3F4F6] transition-colors cursor-pointer"
+              className="w-8 h-8 flex items-center justify-center text-[#B2B9C8] hover:text-[#F3F4F6] transition-colors cursor-pointer shrink-0"
               title="Previous"
             >
               <SkipBack className="w-5 h-5 fill-current" />
@@ -148,7 +152,7 @@ export const BottomPlayerBar: React.FC<BottomPlayerBarProps> = memo(function Bot
 
             <button
               onClick={togglePlayPause}
-              className="w-10 h-10 rounded-full bg-[#00E5FF] hover:bg-[#00E5FF]/90 text-[#0D0E15] flex items-center justify-center shadow-lg shadow-[#00E5FF]/20 transition-transform active:scale-95 cursor-pointer"
+              className="w-10 h-10 rounded-full bg-[#00E5FF] hover:bg-[#00E5FF]/90 text-[#0D0E15] flex items-center justify-center shadow-lg shadow-[#00E5FF]/20 transition-transform active:scale-95 cursor-pointer shrink-0"
               title={isPlaying ? 'Pause' : 'Play'}
             >
               {isPlaying ? (
@@ -160,42 +164,35 @@ export const BottomPlayerBar: React.FC<BottomPlayerBarProps> = memo(function Bot
 
             <button
               onClick={playNext}
-              className="p-1.5 text-[#B2B9C8] hover:text-[#F3F4F6] transition-colors cursor-pointer"
+              className="w-8 h-8 flex items-center justify-center text-[#B2B9C8] hover:text-[#F3F4F6] transition-colors cursor-pointer shrink-0"
               title="Next"
             >
               <SkipForward className="w-5 h-5 fill-current" />
             </button>
+
+            {/* Balancing placeholder matching Shuffle button width (desktop only) */}
+            <div className="w-7 h-7 hidden sm:block pointer-events-none" aria-hidden="true" />
           </div>
 
           {audioError ? (
-            <div className="text-[11px] text-[#FF2E93] font-semibold truncate max-w-xs">
+            <div className="text-[11px] text-[#FF2E93] font-semibold truncate max-w-xs text-center">
               ⚠️ {audioError}
             </div>
           ) : (
-            <div className="text-[11px] font-mono text-[#8E95A5] hidden sm:block">
-              <span>{formatTime(currentTime)}</span>
-              <span className="mx-1">/</span>
-              <span>{formatTime(duration)}</span>
+            <div className="text-[11px] font-mono text-[#8E95A5] hidden sm:flex items-center justify-center tabular-nums select-none">
+              <span className="w-14 text-right">{formatTime(currentTime)}</span>
+              <span className="mx-1.5 text-[#8E95A5]/60">/</span>
+              <span className="w-14 text-left">{formatTime(duration)}</span>
             </div>
           )}
         </div>
 
         {/* Right: Actions, Volume & Queue (Desktop/Mobile) */}
-        <div className="flex items-center space-x-1 sm:space-x-2 shrink-0">
-          {onShareTrack && currentTrack && (
-            <button
-              onClick={() => onShareTrack(currentTrack)}
-              className="p-2 rounded-xl text-[#8E95A5] hover:text-[#00E5FF] hover:bg-[#2B2F42]/50 transition-colors cursor-pointer"
-              title="Поделиться треком"
-            >
-              <Share2 className="w-4 h-4" />
-            </button>
-          )}
-
+        <div className="shrink-0 sm:flex-1 sm:basis-0 min-w-0 flex items-center justify-end space-x-1 sm:space-x-2">
           {onAddToPlaylist && currentTrack && (
             <button
               onClick={() => onAddToPlaylist(currentTrack)}
-              className="p-2 rounded-xl text-[#8E95A5] hover:text-[#00E5FF] hover:bg-[#2B2F42]/50 transition-colors cursor-pointer"
+              className="p-2 rounded-xl text-[#8E95A5] hover:text-[#00E5FF] hover:bg-[#2B2F42]/50 transition-colors cursor-pointer shrink-0"
               title="Добавить в плейлист"
             >
               <FolderPlus className="w-4 h-4" />
@@ -205,7 +202,7 @@ export const BottomPlayerBar: React.FC<BottomPlayerBarProps> = memo(function Bot
           {onToggleFavorite && currentTrack && (
             <button
               onClick={() => onToggleFavorite(currentTrack.id)}
-              className={`p-2 rounded-xl transition-colors cursor-pointer ${
+              className={`p-2 rounded-xl transition-colors cursor-pointer hidden sm:flex shrink-0 ${
                 currentTrack.isFavorite
                   ? 'text-[#FF2E93] hover:text-[#FF2E93]/80'
                   : 'text-[#8E95A5] hover:text-white'
@@ -218,12 +215,12 @@ export const BottomPlayerBar: React.FC<BottomPlayerBarProps> = memo(function Bot
 
           <button
             onClick={toggleQueueView}
-            className={`p-2 rounded-xl transition-all cursor-pointer flex items-center space-x-1.5 ${
+            className={`p-2 rounded-xl transition-all cursor-pointer hidden sm:flex items-center space-x-1.5 shrink-0 ${
               isQueueView
                 ? 'text-[#00E5FF] bg-[#00E5FF]/20 border border-[#00E5FF]/40 shadow-[0_0_12px_rgba(0,229,255,0.25)]'
                 : 'text-[#8E95A5] hover:text-[#F3F4F6] hover:bg-[#2B2F42]/50'
             }`}
-            title={isQueueView ? 'Свернуть плейлист' : `Открыть плейлист (${queue.length} треков)`}
+            title={isQueueView ? 'Свернуть треклист' : `Открыть треклист (${queue.length} треков)`}
           >
             {isQueueView ? <ChevronDown className="w-4 h-4" /> : <ListMusic className="w-4 h-4" />}
             {queue.length > 0 && (

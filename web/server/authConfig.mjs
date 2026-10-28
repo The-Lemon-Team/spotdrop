@@ -59,13 +59,17 @@ export function getTailscaleIp() {
  */
 export function getLanIp() {
   const nets = os.networkInterfaces();
+  const candidates = [];
   for (const name of Object.keys(nets)) {
-    if (/tailscale|loopback|pseudo|vethernet/i.test(name)) continue;
+    if (/tailscale|loopback|pseudo|vethernet|virtual|vbox|vmware|happ|xray|tun|tap/i.test(name)) continue;
     for (const net of nets[name] || []) {
       if (net.family === 'IPv4' && !net.internal && !net.address.startsWith('127.')) {
-        return net.address;
+        if (!net.address.startsWith('192.168.56.')) {
+          return net.address;
+        }
+        candidates.push(net.address);
       }
     }
   }
-  return null;
+  return candidates[0] || null;
 }

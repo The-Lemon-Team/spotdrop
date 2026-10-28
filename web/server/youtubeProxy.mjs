@@ -207,6 +207,7 @@ export async function resolveStreamUrl(videoId, proxyUrl = DEFAULT_HTTP_PROXY) {
     return cached.url;
   }
 
+  const targetProxy = resolveProxyUrl(proxyUrl);
   const proxiesToTry = [
     targetProxy,
     resolveProxyUrl(DEFAULT_SOCKS_PROXY),
@@ -350,6 +351,12 @@ export async function proxyAudioStream(req, res, videoId, proxyUrl = DEFAULT_HTT
           }
 
           res.writeHead(gRes.statusCode || 200, responseHeaders);
+          gRes.on('error', () => {
+            if (!res.writableEnded) res.destroy();
+          });
+          res.on('error', () => {
+            gReq.destroy();
+          });
           gRes.pipe(res);
         }
       );

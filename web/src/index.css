@@ -37,25 +37,39 @@
   background: #00E5FF;
 }
 
-/* Spotify-like Equalizer Audio Soundwave Animation */
-@keyframes soundwave {
+/* Spotify-like Equalizer Audio Soundwave Animation - GPU accelerated with transform */
+@keyframes soundwave-gpu {
   0%, 100% {
-    height: 4px;
+    transform: scaleY(0.25);
   }
   50% {
-    height: 18px;
+    transform: scaleY(1);
   }
 }
 
 .animate-soundwave-1 {
-  animation: soundwave 0.8s ease-in-out infinite;
+  transform-origin: bottom;
+  animation: soundwave-gpu 0.8s ease-in-out infinite;
+  will-change: transform;
 }
 .animate-soundwave-2 {
-  animation: soundwave 1.2s ease-in-out 0.2s infinite;
+  transform-origin: bottom;
+  animation: soundwave-gpu 1.2s ease-in-out 0.2s infinite;
+  will-change: transform;
 }
 .animate-soundwave-3 {
-  animation: soundwave 0.9s ease-in-out 0.4s infinite;
+  transform-origin: bottom;
+  animation: soundwave-gpu 0.9s ease-in-out 0.4s infinite;
+  will-change: transform;
 }
 .animate-soundwave-4 {
-  animation: soundwave 1.1s ease-in-out 0.1s infinite;
+  transform-origin: bottom;
+  animation: soundwave-gpu 1.1s ease-in-out 0.1s infinite;
+  will-change: transform;
+}
+
+/* Off-screen rendering optimization for large track lists */
+.content-visibility-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 84px;
 }

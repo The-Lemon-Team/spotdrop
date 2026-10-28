@@ -20,7 +20,6 @@ import {
   Search,
   Sparkles,
   LocateFixed,
-  Share2,
   FolderPlus,
 } from 'lucide-react';
 import { usePlayer, usePlayerTime, parseDurationText } from '../player/playerContext';
@@ -614,20 +613,6 @@ export const PlaylistDrawer = memo<PlaylistDrawerProps>(function PlaylistDrawer(
                             <span className="text-xs font-mono text-[#8E95A5] mr-1 hidden sm:inline">
                               {track.pinnedDuration}
                             </span>
-                          )}
-
-                          {/* Share track */}
-                          {onShareTrack && (
-                            <button
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                onShareTrack(track);
-                              }}
-                              className="p-1.5 rounded-lg text-[#8E95A5] opacity-0 group-hover:opacity-100 hover:text-[#00E5FF] hover:bg-[#212433] transition-all cursor-pointer"
-                              title="Поделиться треком"
-                            >
-                              <Share2 className="w-3.5 h-3.5" />
-                            </button>
                           )}
 
                           {/* Add to playlist */}

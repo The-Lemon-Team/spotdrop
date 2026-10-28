@@ -44,43 +44,56 @@ export const ProfileModal: React.FC<ProfileModalProps> = React.memo(function Pro
 
   const handleSwitchProfile = async (id: string) => {
     await setCurrentProfile(id);
-    const slug = id === 'profile_default' ? 'bandita' : id;
+    const slug = id === 'profile_default' ? 'beta' : id;
     window.history.pushState({}, '', `/p/${slug}`);
     onProfilesChanged();
   };
 
   const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file || !currentProfile) return;
+    const files = e.target.files;
+    if (!files || files.length === 0 || !currentProfile) return;
 
     setIsImporting(true);
-    setImportMessage('Reading and parsing Spotify JSON...');
+    setImportMessage(`Чтение и парсинг ${files.length} файл(ов)...`);
 
     try {
-      const text = await file.text();
-      // Detect if it's playlists or library
-      const parsed = JSON.parse(text);
       let libJson: string | null = null;
-      let plJson: string | null = null;
+      const playlistInputs: Array<{ name: string; content: string }> = [];
 
-      if (parsed.playlists) {
-        plJson = text;
-      } else if (parsed.tracks) {
-        libJson = text;
-      } else {
-        // Fallback: try as both
-        libJson = text;
-        plJson = text;
+      for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        const text = await file.text();
+        const lowerName = file.name.toLowerCase();
+
+        if (lowerName.includes('yourlibrary') || lowerName.includes('library')) {
+          libJson = text;
+        } else if (lowerName.includes('playlist')) {
+          playlistInputs.push({ name: file.name, content: text });
+        } else {
+          // Check JSON structure
+          try {
+            const parsed = JSON.parse(text);
+            if (parsed.playlists) {
+              playlistInputs.push({ name: file.name, content: text });
+            } else if (parsed.tracks) {
+              libJson = text;
+            } else {
+              playlistInputs.push({ name: file.name, content: text });
+            }
+          } catch {
+            // skip malformed
+          }
+        }
       }
 
-      const result = await importSpotifyData(currentProfile.id, libJson, plJson);
+      const result = await importSpotifyData(currentProfile.id, libJson, playlistInputs.length > 0 ? playlistInputs : null);
       setImportMessage(
-        `Success! Imported ${result.tracksImported} tracks and ${result.playlistsImported} playlists.`
+        `Успешно! Импортировано ${result.tracksImported} треков и ${result.playlistsImported} плейлистов.`
       );
       onProfilesChanged();
     } catch (err: unknown) {
       const errorMsg = err instanceof Error ? err.message : 'Unknown error';
-      setImportMessage(`Import error: ${errorMsg}`);
+      setImportMessage(`Ошибка импорта: ${errorMsg}`);
     } finally {
       setIsImporting(false);
     }
@@ -88,14 +101,14 @@ export const ProfileModal: React.FC<ProfileModalProps> = React.memo(function Pro
 
   const handleReloadDefaults = async () => {
     setIsImporting(true);
-    setImportMessage('Reloading bundled library and playlists...');
+    setImportMessage('Загрузка тестового Beta-плейлиста...');
     try {
       await initializeDefaultsIfEmpty();
-      setImportMessage('Loaded default 1,600 tracks and playlists!');
+      setImportMessage('Успешно загружен тестовый Beta-плейлист (1,600+ треков)!');
       onProfilesChanged();
     } catch (err: unknown) {
       const errorMsg = err instanceof Error ? err.message : 'Unknown error';
-      setImportMessage(`Failed to reload defaults: ${errorMsg}`);
+      setImportMessage(`Не удалось загрузить Beta-плейлист: ${errorMsg}`);
     } finally {
       setIsImporting(false);
     }
@@ -200,21 +213,21 @@ export const ProfileModal: React.FC<ProfileModalProps> = React.memo(function Pro
               </span>
             </div>
             <p className="text-xs text-[#B2B9C8] leading-relaxed">
-              Import your downloaded <code className="text-[#00E5FF]">YourLibrary.json</code> or{' '}
-              <code className="text-[#00E5FF]">Playlist1.json</code> directly into this profile without
-              any server connection.
+              Импортируйте <code className="text-[#00E5FF]">YourLibrary.json</code> и файлы{' '}
+              <code className="text-[#00E5FF]">Playlist1.json, Playlist2.json...</code> прямо в этот профиль.
             </p>
 
             <label className="flex flex-col items-center justify-center p-5 border-2 border-dashed border-[#2B2F42] hover:border-[#00E5FF] rounded-xl bg-[#0D0E15]/50 hover:bg-[#0D0E15] cursor-pointer transition-all group">
               <Upload className="w-7 h-7 text-[#8E95A5] group-hover:text-[#00E5FF] mb-2 transition-colors" />
               <span className="text-xs font-semibold text-[#F3F4F6] group-hover:text-[#00E5FF]">
-                Click or Drop Spotify JSON here
+                Нажмите или перетащите файлы Spotify JSON сюда
               </span>
               <span className="text-[11px] text-[#8E95A5] mt-0.5">
-                Supports YourLibrary.json, Playlist.json, Playlist1.json
+                Поддерживаются YourLibrary.json и множественные Playlist*.json
               </span>
               <input
                 type="file"
+                multiple
                 accept=".json,application/json"
                 onChange={handleFileUpload}
                 disabled={isImporting}
@@ -231,14 +244,14 @@ export const ProfileModal: React.FC<ProfileModalProps> = React.memo(function Pro
 
           {/* Quick Actions / Reset defaults */}
           <div className="flex items-center justify-between pt-1 text-xs">
-            <span className="text-[#8E95A5]">Need sample data?</span>
+            <span className="text-[#8E95A5]">Нужен тестовый образец?</span>
             <button
               onClick={handleReloadDefaults}
               disabled={isImporting}
               className="text-[#00E5FF] hover:underline font-semibold flex items-center space-x-1 cursor-pointer"
             >
               <RefreshCw className="w-3.5 h-3.5" />
-              <span>Load Bundled 1,600 Tracks</span>
+              <span>Загрузить тестовый Beta-плейлист</span>
             </button>
           </div>
         </div>

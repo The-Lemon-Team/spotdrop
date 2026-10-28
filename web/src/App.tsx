@@ -7,9 +7,9 @@ import React, {
   useDeferredValue,
 } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
-import { Shuffle, ListMusic, Sparkles, Heart, Music, FolderPlus, Share2, Headphones } from 'lucide-react';
+import { Shuffle, ListMusic, Sparkles, Heart, Music, FolderPlus, Headphones, ArrowUpDown } from 'lucide-react';
 import { db, toggleFavoriteTrack, removeTrackFromPlaylist } from './db/banditaDb';
-import { loadProfileBySlug, ensurePlaylistsSynced } from './importer/spotifyImporter';
+import { loadProfileBySlug, ensurePlaylistsSynced, ensureSpotifyOrderSynced } from './importer/spotifyImporter';
 import { isTauriEnvironment } from './auth/authManager';
 import { Header } from './components/Header';
 import { SearchBar } from './components/SearchBar';
@@ -24,6 +24,9 @@ import { LandingScreen } from './components/LandingScreen';
 import { AddToPlaylistModal } from './components/AddToPlaylistModal';
 import { PlaylistsView } from './components/PlaylistsView';
 import { PlaylistDetailView } from './components/PlaylistDetailView';
+import { YouTubePlaylistView } from './components/YouTubePlaylistView';
+import { YouTubeIcon } from './components/YouTubeIcon';
+import { SpotifyIcon } from './components/SpotifyIcon';
 import { Toast, type ToastData } from './components/Toast';
 import { DesktopSettingsModal } from './components/DesktopSettingsModal';
 import { usePlayer } from './player/playerContext';
@@ -31,19 +34,114 @@ import type { TrackCell, Playlist } from './types';
 
 const PAGE_SIZE = 50;
 
-type NavTab = 'tracks' | 'playlists' | 'playlist_detail' | 'favorites';
+type NavTab = 'tracks' | 'spotify_order' | 'playlists' | 'playlist_detail' | 'favorites' | 'youtube_playlist';
 
-function getSlugFromUrl(): string | null {
-  if (typeof window === 'undefined') return null;
+export interface ParsedRoute {
+  slug: string | null;
+  tab: NavTab | null;
+  playlistId: string | null;
+  trackId: string | null;
+  tag: string | null;
+}
+
+export function parseRouteFromUrl(): ParsedRoute {
+  if (typeof window === 'undefined') {
+    return { slug: null, tab: null, playlistId: null, trackId: null, tag: null };
+  }
+
   const path = window.location.pathname;
-  const match = path.match(/^\/p\/([^/?#]+)/);
-  if (match) return decodeURIComponent(match[1]).toLowerCase();
-
   const params = new URLSearchParams(window.location.search);
-  const p = params.get('p') || params.get('profile');
-  if (p) return p.toLowerCase().trim();
 
-  return null;
+  let slug: string | null = null;
+  let tab: NavTab | null = null;
+
+  // Pattern 1: /p/:slug/youtube, /p/:slug/playlists etc.
+  const matchProfileWithSub = path.match(/^\/p\/([^/?#]+)\/([^/?#]+)/);
+  if (matchProfileWithSub) {
+    slug = decodeURIComponent(matchProfileWithSub[1]).toLowerCase();
+    const sub = decodeURIComponent(matchProfileWithSub[2]).toLowerCase();
+    if (sub === 'youtube' || sub === 'youtube_playlist') {
+      tab = 'youtube_playlist';
+    } else if (sub === 'playlists') {
+      tab = 'playlists';
+    } else if (sub === 'favorites') {
+      tab = 'favorites';
+    } else if (sub === 'spotify_order') {
+      tab = 'spotify_order';
+    }
+  } else {
+    // Pattern 2: /p/:slug
+    const matchProfile = path.match(/^\/p\/([^/?#]+)/);
+    if (matchProfile) {
+      slug = decodeURIComponent(matchProfile[1]).toLowerCase();
+    } else if (path === '/youtube' || path.startsWith('/youtube/')) {
+      tab = 'youtube_playlist';
+    }
+  }
+
+  // Query parameter overrides or fallbacks
+  const p = params.get('p') || params.get('profile');
+  if (p) {
+    slug = p.toLowerCase().trim();
+  }
+
+  const tabParam = params.get('tab') || params.get('view');
+  if (tabParam) {
+    const t = tabParam.toLowerCase().trim();
+    if (t === 'youtube' || t === 'youtube_playlist') {
+      tab = 'youtube_playlist';
+    } else if (t === 'playlists') {
+      tab = 'playlists';
+    } else if (t === 'favorites') {
+      tab = 'favorites';
+    } else if (t === 'spotify_order') {
+      tab = 'spotify_order';
+    } else if (t === 'tracks') {
+      tab = 'tracks';
+    }
+  }
+
+  const playlistId = params.get('playlist');
+  const trackId = params.get('track');
+  const rawTag = params.get('tag');
+  const tag = rawTag ? (rawTag.startsWith('#') ? rawTag : `#${rawTag}`) : null;
+
+  return { slug, tab, playlistId, trackId, tag };
+}
+
+export function buildRouteUrl(
+  slug: string | null,
+  tab: NavTab,
+  options?: { playlistId?: string | null; youtubeSourcePlaylistId?: string | null }
+): string {
+  const profileSlug = slug && slug !== 'profile_default' ? slug : 'beta';
+
+  if (tab === 'youtube_playlist') {
+    const base = `/p/${profileSlug}/youtube`;
+    if (options?.youtubeSourcePlaylistId && options.youtubeSourcePlaylistId !== 'all') {
+      return `${base}?playlist=${encodeURIComponent(options.youtubeSourcePlaylistId)}`;
+    }
+    return base;
+  }
+
+  if (tab === 'playlist_detail' && options?.playlistId) {
+    return `/p/${profileSlug}?playlist=${encodeURIComponent(options.playlistId)}`;
+  }
+
+  if (tab === 'playlists') {
+    return `/p/${profileSlug}?tab=playlists`;
+  }
+
+  if (tab === 'favorites') {
+    return `/p/${profileSlug}?tab=favorites`;
+  }
+
+  if (tab === 'spotify_order') {
+    return `/p/${profileSlug}?tab=spotify_order`;
+  }
+
+  // Default: tracks
+  return `/p/${profileSlug}`;
 }
 
 export function App() {
@@ -68,7 +166,9 @@ export function App() {
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   const [activeNavTab, setActiveNavTab] = useState<NavTab>('tracks');
+  const [spotifyOrderSortDesc, setSpotifyOrderSortDesc] = useState(false);
   const [selectedPlaylistId, setSelectedPlaylistId] = useState<string | null>(null);
+  const [youtubeSourcePlaylistId, setYoutubeSourcePlaylistId] = useState<string | null>(null);
   const [trackForPlaylistModal, setTrackForPlaylistModal] = useState<TrackCell | null>(null);
   const [toast, setToast] = useState<ToastData | null>(null);
 
@@ -101,11 +201,32 @@ export function App() {
 
   const selectedPlaylist = useMemo(() => {
     if (!selectedPlaylistId) return null;
-    return playlists.find((p) => p.id === selectedPlaylistId) || null;
+    const cleanTarget = selectedPlaylistId.toLowerCase().trim();
+    return (
+      playlists.find(
+        (p) =>
+          p.id === selectedPlaylistId ||
+          p.name.toLowerCase().trim() === cleanTarget ||
+          p.name.toLowerCase().includes(cleanTarget) ||
+          p.id.toLowerCase().includes(cleanTarget)
+      ) || null
+    );
   }, [playlists, selectedPlaylistId]);
 
   const favoritesCount = useMemo(() => {
     return rawTracks.filter((t) => t.isFavorite).length;
+  }, [rawTracks]);
+
+  const spotifyOrderCount = useMemo(() => {
+    return rawTracks.filter((t) => t.spotifyOrder !== undefined || t.isFavorite).length;
+  }, [rawTracks]);
+
+  const youtubePinnedCount = useMemo(() => {
+    let count = 0;
+    for (let i = 0; i < rawTracks.length; i++) {
+      if (rawTracks[i].pinnedVideoId) count++;
+    }
+    return count;
   }, [rawTracks]);
 
   // Toast notifier helper
@@ -113,14 +234,73 @@ export function App() {
     setToast({ id: Date.now(), message, type });
   }, []);
 
+  // Centralized tab/route navigation with browser history sync
+  const navigateToTab = useCallback(
+    (
+      tab: NavTab,
+      opts?: {
+        playlistId?: string | null;
+        youtubeSourcePlaylistId?: string | null;
+        replace?: boolean;
+      }
+    ) => {
+      const currentSlug = profileId === 'profile_default' ? 'beta' : profileId;
+      const targetPlId =
+        opts?.playlistId !== undefined
+          ? opts.playlistId
+          : tab === 'playlist_detail'
+          ? selectedPlaylistId
+          : null;
+      const targetYtPlId =
+        opts?.youtubeSourcePlaylistId !== undefined
+          ? opts.youtubeSourcePlaylistId
+          : tab === 'youtube_playlist'
+          ? youtubeSourcePlaylistId
+          : null;
+
+      const targetUrl = buildRouteUrl(currentSlug, tab, {
+        playlistId: targetPlId,
+        youtubeSourcePlaylistId: targetYtPlId,
+      });
+
+      if (opts?.replace) {
+        window.history.replaceState(
+          { tab, playlistId: targetPlId, youtubeSourcePlaylistId: targetYtPlId },
+          '',
+          targetUrl
+        );
+      } else {
+        window.history.pushState(
+          { tab, playlistId: targetPlId, youtubeSourcePlaylistId: targetYtPlId },
+          '',
+          targetUrl
+        );
+      }
+
+      setActiveNavTab(tab);
+      if (tab !== 'playlist_detail') {
+        setSelectedPlaylistId(null);
+      } else if (targetPlId) {
+        setSelectedPlaylistId(targetPlId);
+      }
+
+      if (tab === 'youtube_playlist' && targetYtPlId !== undefined) {
+        setYoutubeSourcePlaylistId(targetYtPlId);
+      }
+    },
+    [profileId, selectedPlaylistId, youtubeSourcePlaylistId]
+  );
+
   // Routing on mount & popstate
   useEffect(() => {
     const initApp = async () => {
-      const slug = getSlugFromUrl();
-      if (slug) {
+      const route = parseRouteFromUrl();
+      const activeSlug = route.slug;
+
+      if (activeSlug) {
         setIsLoadingProfile(true);
         try {
-          const success = await loadProfileBySlug(slug);
+          const success = await loadProfileBySlug(activeSlug);
           if (success) {
             setView('player');
           } else {
@@ -136,13 +316,14 @@ export function App() {
         const count = await db.tracks.count();
         if (count > 0) {
           setView('player');
-          // Also sync playlists if needed
+          // Also sync playlists and spotifyOrder if needed
           ensurePlaylistsSynced(profileId).catch(() => {});
-        } else if (isTauriEnvironment()) {
-          // Pre-installed Bandita Library on desktop!
+          ensureSpotifyOrderSynced(profileId).catch(() => {});
+        } else if (isTauriEnvironment() || route.tab === 'youtube_playlist') {
+          // Pre-installed SpotDrop Beta Library on desktop or direct /youtube route!
           setIsLoadingProfile(true);
           try {
-            const success = await loadProfileBySlug('bandita');
+            const success = await loadProfileBySlug('beta');
             if (success) {
               setView('player');
             } else {
@@ -158,18 +339,61 @@ export function App() {
           setView('landing');
         }
       }
+
+      // Restore view tab & playlist from URL route
+      if (route.tag) {
+        setSelectedTag(route.tag);
+      }
+      if (route.tag) {
+        setSelectedTag(route.tag);
+      }
+      if (route.tab === 'youtube_playlist') {
+        setActiveNavTab('youtube_playlist');
+        if (route.playlistId) {
+          setYoutubeSourcePlaylistId(route.playlistId);
+        }
+      } else if (route.playlistId) {
+        setSelectedPlaylistId(route.playlistId);
+        setActiveNavTab('playlist_detail');
+      } else if (route.tab) {
+        setActiveNavTab(route.tab);
+      }
     };
 
     initApp();
 
     // Handle browser back/forward buttons
     const onPopState = async () => {
-      const slug = getSlugFromUrl();
-      if (slug) {
-        await loadProfileBySlug(slug);
+      const route = parseRouteFromUrl();
+      if (route.slug) {
+        await loadProfileBySlug(route.slug);
         setView('player');
       } else {
-        setView('landing');
+        const count = await db.tracks.count();
+        if (count > 0 || isTauriEnvironment()) {
+          setView('player');
+        } else {
+          setView('landing');
+          return;
+        }
+      }
+
+      if (route.tag) {
+        setSelectedTag(route.tag);
+      }
+      if (route.tab === 'youtube_playlist') {
+        setActiveNavTab('youtube_playlist');
+        setYoutubeSourcePlaylistId(route.playlistId || null);
+        setSelectedPlaylistId(null);
+      } else if (route.playlistId) {
+        setSelectedPlaylistId(route.playlistId);
+        setActiveNavTab('playlist_detail');
+      } else if (route.tab) {
+        setActiveNavTab(route.tab);
+        setSelectedPlaylistId(null);
+      } else {
+        setActiveNavTab('tracks');
+        setSelectedPlaylistId(null);
       }
     };
 
@@ -177,21 +401,14 @@ export function App() {
     return () => window.removeEventListener('popstate', onPopState);
   }, [profileId]);
 
-  // Check URL parameters for shared track or shared playlist
+  // Check URL parameters for shared track
   useEffect(() => {
     if (hasCheckedSharedTrack.current || rawTracks.length === 0) return;
 
-    const params = new URLSearchParams(window.location.search);
-    const trackParam = params.get('track');
-    const playlistParam = params.get('playlist');
-
-    if (playlistParam) {
-      setSelectedPlaylistId(playlistParam);
-      setActiveNavTab('playlist_detail');
-      hasCheckedSharedTrack.current = true;
-    } else if (trackParam) {
+    const route = parseRouteFromUrl();
+    if (route.trackId) {
       const found = rawTracks.find(
-        (t) => t.id === trackParam || t.id.toLowerCase().includes(trackParam.toLowerCase())
+        (t) => t.id === route.trackId || t.id.toLowerCase().includes(route.trackId!.toLowerCase())
       );
       if (found) {
         hasCheckedSharedTrack.current = true;
@@ -204,7 +421,7 @@ export function App() {
   const handleOpenProfileFromLanding = async (slug: string) => {
     setIsLoadingProfile(true);
     try {
-      const targetSlug = slug === 'profile_default' ? 'bandita' : slug;
+      const targetSlug = slug === 'profile_default' ? 'beta' : slug;
       window.history.pushState({}, '', `/p/${targetSlug}`);
       const success = await loadProfileBySlug(targetSlug);
       if (success) {
@@ -252,12 +469,29 @@ export function App() {
     });
   }, [rawTracks]);
 
-  // Filtered tracks based on search query, active tag, or favorites tab
+  // Filtered tracks based on search query, active tag, favorites tab, or spotify order tab
   const filteredTracks = useMemo(() => {
     let result = rawTracks;
 
-    if (activeNavTab === 'favorites') {
-      result = result.filter((t) => t.isFavorite);
+    if (activeNavTab === 'spotify_order') {
+      result = rawTracks
+        .filter((t) => t.spotifyOrder !== undefined || t.isFavorite)
+        .slice()
+        .sort((a, b) => {
+          const orderA = a.spotifyOrder ?? 999999;
+          const orderB = b.spotifyOrder ?? 999999;
+          const diff = orderA - orderB;
+          return spotifyOrderSortDesc ? -diff : diff;
+        });
+    } else if (activeNavTab === 'favorites') {
+      result = result
+        .filter((t) => t.isFavorite)
+        .slice()
+        .sort((a, b) => {
+          const orderA = a.spotifyOrder ?? 999999;
+          const orderB = b.spotifyOrder ?? 999999;
+          return orderA - orderB;
+        });
     } else if (selectedTag && selectedTag !== '#all') {
       result = result.filter((t) => t.tags && t.tags.includes(selectedTag));
     }
@@ -271,12 +505,12 @@ export function App() {
     }
 
     return result;
-  }, [rawTracks, activeNavTab, selectedTag, deferredSearchQuery, searchIndex]);
+  }, [rawTracks, activeNavTab, selectedTag, deferredSearchQuery, searchIndex, spotifyOrderSortDesc]);
 
   // Reset pagination when filter or search changes
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
-  }, [selectedTag, deferredSearchQuery, activeNavTab]);
+  }, [selectedTag, deferredSearchQuery, activeNavTab, spotifyOrderSortDesc]);
 
   // Infinite scrolling observer
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -307,14 +541,35 @@ export function App() {
   currentTrackRef.current = currentTrack;
   const filteredTracksRef = useRef(filteredTracks);
   filteredTracksRef.current = filteredTracks;
+  const queueRef = useRef(queue);
+  queueRef.current = queue;
 
   const handlePlayTrack = useCallback(
-    (track: TrackCell) => {
-      if (currentTrackRef.current?.id === track.id) {
-        togglePlayPause();
-      } else {
-        playTrack(track, filteredTracksRef.current);
+    (track: TrackCell, newQueue?: TrackCell[], startIndex?: number) => {
+      const targetQueue = newQueue || filteredTracksRef.current;
+      const isSameTrack = currentTrackRef.current?.id === track.id;
+
+      if (isSameTrack) {
+        if (newQueue) {
+          const isSameQueue =
+            queueRef.current.length === newQueue.length &&
+            (queueRef.current === newQueue ||
+              newQueue.every(
+                (t, i) =>
+                  queueRef.current[i]?.id === t.id ||
+                  queueRef.current.some((q) => q.id === t.id)
+              ));
+          if (isSameQueue) {
+            togglePlayPause();
+            return;
+          }
+        } else {
+          togglePlayPause();
+          return;
+        }
       }
+
+      playTrack(track, targetQueue, startIndex);
     },
     [playTrack, togglePlayPause]
   );
@@ -330,7 +585,7 @@ export function App() {
   // Share Track Action
   const handleShareTrack = useCallback(
     async (track: TrackCell) => {
-      const currentSlug = profileId === 'profile_default' ? 'bandita' : profileId;
+      const currentSlug = profileId === 'profile_default' ? 'beta' : profileId;
       const shareUrl = `${window.location.origin}/p/${currentSlug}?track=${encodeURIComponent(track.id)}`;
 
       if (navigator.share) {
@@ -360,7 +615,7 @@ export function App() {
   // Share Playlist Action
   const handleSharePlaylist = useCallback(
     async (playlist: Playlist) => {
-      const currentSlug = profileId === 'profile_default' ? 'bandita' : profileId;
+      const currentSlug = profileId === 'profile_default' ? 'beta' : profileId;
       const shareUrl = `${window.location.origin}/p/${currentSlug}?playlist=${encodeURIComponent(playlist.id)}`;
 
       if (navigator.share) {
@@ -430,6 +685,42 @@ export function App() {
     [selectedPlaylistId, showToast]
   );
 
+  const handleOpenAddToPlaylistModal = useCallback((t: TrackCell) => {
+    setTrackForPlaylistModal(t);
+  }, []);
+
+  const handleShareYouTubePlaylist = useCallback(
+    async (playlistTitle: string, sourcePlaylistId: string | null) => {
+      const currentSlug = profileId === 'profile_default' ? 'beta' : profileId;
+      let shareUrl = `${window.location.origin}/p/${currentSlug}/youtube`;
+      if (sourcePlaylistId && sourcePlaylistId !== 'all') {
+        shareUrl += `?playlist=${encodeURIComponent(sourcePlaylistId)}`;
+      }
+
+      if (navigator.share) {
+        try {
+          await navigator.share({
+            title: `YouTube Плейлист: ${playlistTitle}`,
+            text: `Послушай плейлист «${playlistTitle}» на YouTube через SpotDrop`,
+            url: shareUrl,
+          });
+          showToast('Ссылка на YouTube-плейлист отправлена!', 'info');
+          return;
+        } catch (err: any) {
+          if (err.name === 'AbortError') return;
+        }
+      }
+
+      try {
+        await navigator.clipboard.writeText(shareUrl);
+        showToast('Ссылка на YouTube-плейлист скопирована!', 'success');
+      } catch {
+        showToast('Не удалось скопировать ссылку', 'error');
+      }
+    },
+    [profileId, showToast]
+  );
+
   // Loading Splash Screen (e.g. initial setup of pre-bundled Bandita library)
   if (isLoadingProfile && view === 'landing') {
     return (
@@ -474,10 +765,7 @@ export function App() {
         {/* Navigation Switch Tabs */}
         <div className="flex items-center space-x-2 border-b border-[#2B2F42]/60 pb-3 overflow-x-auto scrollbar-none no-scrollbar">
           <button
-            onClick={() => {
-              setActiveNavTab('tracks');
-              setSelectedPlaylistId(null);
-            }}
+            onClick={() => navigateToTab('tracks')}
             className={`flex items-center space-x-2 px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap ${
               activeNavTab === 'tracks'
                 ? 'bg-[#00E5FF] text-[#0D0E15] shadow-lg shadow-[#00E5FF]/20'
@@ -490,10 +778,20 @@ export function App() {
           </button>
 
           <button
-            onClick={() => {
-              setActiveNavTab('playlists');
-              setSelectedPlaylistId(null);
-            }}
+            onClick={() => navigateToTab('spotify_order')}
+            className={`flex items-center space-x-2 px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap ${
+              activeNavTab === 'spotify_order'
+                ? 'bg-[#1ED760] text-[#0D0E15] shadow-lg shadow-[#1ED760]/20'
+                : 'bg-[#161822] hover:bg-[#212433] text-[#B2B9C8] hover:text-[#1ED760] border border-[#2B2F42]'
+            }`}
+          >
+            <SpotifyIcon className="w-4 h-4" />
+            <span>Порядок Spotify</span>
+            <span className="font-mono text-[11px] opacity-80">({spotifyOrderCount})</span>
+          </button>
+
+          <button
+            onClick={() => navigateToTab('playlists')}
             className={`flex items-center space-x-2 px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap ${
               activeNavTab === 'playlists' || activeNavTab === 'playlist_detail'
                 ? 'bg-[#00E5FF] text-[#0D0E15] shadow-lg shadow-[#00E5FF]/20'
@@ -506,10 +804,7 @@ export function App() {
           </button>
 
           <button
-            onClick={() => {
-              setActiveNavTab('favorites');
-              setSelectedPlaylistId(null);
-            }}
+            onClick={() => navigateToTab('favorites')}
             className={`flex items-center space-x-2 px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap ${
               activeNavTab === 'favorites'
                 ? 'bg-[#FF2E93] text-white shadow-lg shadow-[#FF2E93]/20'
@@ -520,19 +815,60 @@ export function App() {
             <span>Избранное</span>
             <span className="font-mono text-[11px] opacity-80">({favoritesCount})</span>
           </button>
+
+          <button
+            onClick={() => navigateToTab('youtube_playlist')}
+            className={`flex items-center space-x-2 px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap ${
+              activeNavTab === 'youtube_playlist'
+                ? 'bg-red-600 text-white shadow-lg shadow-red-600/30'
+                : 'bg-[#161822] hover:bg-[#212433] text-[#B2B9C8] hover:text-white border border-[#2B2F42]'
+            }`}
+          >
+            <YouTubeIcon className="w-4 h-4" />
+            <span>YouTube Плейлист</span>
+            <span className="font-mono text-[11px] opacity-80">
+              ({youtubePinnedCount})
+            </span>
+          </button>
         </div>
 
         {/* View Content Branching */}
-        {activeNavTab === 'playlists' ? (
+        {activeNavTab === 'youtube_playlist' ? (
+          <YouTubePlaylistView
+            tracks={rawTracks}
+            playlists={playlists}
+            currentTrack={currentTrack}
+            isPlaying={isPlaying}
+            profileSlug={profileId === 'profile_default' ? 'bandita' : profileId}
+            selectedPlaylistId={youtubeSourcePlaylistId}
+            onSelectPlaylistId={(newSource) => {
+              setYoutubeSourcePlaylistId(newSource);
+              navigateToTab('youtube_playlist', {
+                youtubeSourcePlaylistId: newSource,
+                replace: true,
+              });
+            }}
+            onPlayTrack={handlePlayTrack}
+            onShuffleAndPlay={shuffleAndPlay}
+            onOpenPicker={handleOpenPicker}
+            onToggleFavorite={handleToggleFavorite}
+            onAddToPlaylist={handleOpenAddToPlaylistModal}
+            onShareTrack={handleShareTrack}
+            onShareYouTubePlaylist={handleShareYouTubePlaylist}
+            onToast={showToast}
+          />
+        ) : activeNavTab === 'playlists' ? (
           <PlaylistsView
             profileId={profileId}
             onSelectPlaylist={(plId) => {
-              setSelectedPlaylistId(plId);
-              setActiveNavTab('playlist_detail');
+              navigateToTab('playlist_detail', { playlistId: plId });
             }}
             onPlayPlaylist={handlePlayPlaylist}
             onSharePlaylist={handleSharePlaylist}
             onToast={showToast}
+            onOpenAsYouTubePlaylist={(pl) => {
+              navigateToTab('youtube_playlist', { youtubeSourcePlaylistId: pl.id });
+            }}
           />
         ) : activeNavTab === 'playlist_detail' && selectedPlaylist ? (
           <PlaylistDetailView
@@ -541,17 +877,19 @@ export function App() {
             currentTrack={currentTrack}
             isPlaying={isPlaying}
             onBack={() => {
-              setActiveNavTab('playlists');
-              setSelectedPlaylistId(null);
+              navigateToTab('playlists');
             }}
             onPlayTrack={handlePlayTrack}
             onPlayAll={(shuffle) => handlePlayPlaylist(selectedPlaylist, shuffle)}
             onOpenPicker={handleOpenPicker}
             onToggleFavorite={handleToggleFavorite}
-            onAddToPlaylist={(t) => setTrackForPlaylistModal(t)}
+            onAddToPlaylist={handleOpenAddToPlaylistModal}
             onShareTrack={handleShareTrack}
             onSharePlaylist={handleSharePlaylist}
             onRemoveFromPlaylist={handleRemoveFromPlaylist}
+            onOpenAsYouTubePlaylist={(pl) => {
+              navigateToTab('youtube_playlist', { youtubeSourcePlaylistId: pl.id });
+            }}
           />
         ) : (
           /* Tracks / Favorites View */
@@ -574,22 +912,42 @@ export function App() {
                 <h2 className="text-base sm:text-lg font-bold text-[#F3F4F6]">
                   {searchQuery.trim()
                     ? `Результаты по запросу «${searchQuery}»`
+                    : activeNavTab === 'spotify_order'
+                    ? 'Любимые треки (Порядок Spotify)'
                     : activeNavTab === 'favorites'
                     ? 'Любимые треки'
                     : `${selectedTag} треки`}
                 </h2>
                 <p className="text-xs text-[#8E95A5]">
-                  {filteredTracks.length.toLocaleString()} трек
-                  {filteredTracks.length === 1 ? '' : filteredTracks.length > 4 ? 'ов' : 'а'} доступно
+                  {activeNavTab === 'spotify_order' && !searchQuery.trim()
+                    ? `${filteredTracks.length.toLocaleString()} треков в оригинальном порядке из Spotify`
+                    : `${filteredTracks.length.toLocaleString()} трек${
+                        filteredTracks.length === 1 ? '' : filteredTracks.length > 4 ? 'ов' : 'а'
+                      } доступно`}
                   {visibleCount < filteredTracks.length && ` (показано ${visibleTracks.length})`}
                 </p>
               </div>
 
               <div className="flex items-center space-x-2">
+                {activeNavTab === 'spotify_order' && (
+                  <button
+                    onClick={() => setSpotifyOrderSortDesc(!spotifyOrderSortDesc)}
+                    className="flex items-center space-x-1.5 px-3 py-2 rounded-full bg-[#161822] hover:bg-[#212433] border border-[#2B2F42] hover:border-[#1ED760]/50 text-[#B2B9C8] hover:text-[#1ED760] font-semibold text-xs transition-all cursor-pointer"
+                    title={
+                      spotifyOrderSortDesc
+                        ? 'Порядок: с конца к началу (N → 1). Нажмите для переключения (1 → N)'
+                        : 'Порядок: с начала к концу (1 → N). Нажмите для переключения (N → 1)'
+                    }
+                  >
+                    <ArrowUpDown className="w-3.5 h-3.5" />
+                    <span className="font-mono">{spotifyOrderSortDesc ? 'N → 1' : '1 → N'}</span>
+                  </button>
+                )}
+
                 {queue.length > 0 && (
                   <button
                     onClick={() => setIsQueueView(!isQueueView)}
-                    className={`flex items-center space-x-1.5 px-3 py-2 rounded-full border text-xs font-semibold transition-all cursor-pointer ${
+                    className={`hidden sm:flex items-center space-x-1.5 px-3 py-2 rounded-full border text-xs font-semibold transition-all cursor-pointer ${
                       isQueueView
                         ? 'bg-[#00E5FF]/20 border-[#00E5FF]/60 text-[#00E5FF] shadow-sm shadow-[#00E5FF]/20'
                         : 'bg-[#161822] hover:bg-[#212433] border-[#2B2F42] hover:border-[#00E5FF]/40 text-[#B2B9C8] hover:text-[#00E5FF]'
@@ -651,19 +1009,26 @@ export function App() {
                 </div>
               ) : (
                 <div className="space-y-2">
-                  {visibleTracks.map((track) => {
+                  {visibleTracks.map((track, idx) => {
                     const isCurrent = currentTrack?.id === track.id;
+                    const trackNum =
+                      activeNavTab === 'spotify_order'
+                        ? track.spotifyOrder !== undefined
+                          ? track.spotifyOrder + 1
+                          : idx + 1
+                        : undefined;
+
                     return (
                       <TrackCellCard
                         key={track.id}
                         track={track}
+                        trackNumber={trackNum}
                         isCurrent={isCurrent}
                         isPlaying={isCurrent && isPlaying}
                         onPlay={handlePlayTrack}
                         onOpenPicker={handleOpenPicker}
                         onToggleFavorite={handleToggleFavorite}
                         onAddToPlaylist={(t) => setTrackForPlaylistModal(t)}
-                        onShareTrack={handleShareTrack}
                       />
                     );
                   })}
@@ -726,13 +1091,11 @@ export function App() {
         onClose={() => setIsQueueView(false)}
         onOpenPicker={(t) => setInspectingTrack(t)}
         onToggleFavorite={(id) => toggleFavoriteTrack(id)}
-        onShareTrack={handleShareTrack}
         onAddToPlaylist={(t) => setTrackForPlaylistModal(t)}
       />
 
       {/* Persistent Bottom Player Bar */}
       <BottomPlayerBar
-        onShareTrack={handleShareTrack}
         onAddToPlaylist={(t) => setTrackForPlaylistModal(t)}
         onToggleFavorite={handleToggleFavorite}
       />

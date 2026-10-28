@@ -19,8 +19,9 @@ export default defineConfig({
   clearScreen: false,
   server: {
     host: '0.0.0.0',
-    port: 5173,
+    port: 5176,
     strictPort: true,
+    allowedHosts: true,
     fs: {
       allow: ['..'],
     },
@@ -46,7 +47,7 @@ export default defineConfig({
 
           // Auth: /api/auth/verify (always valid, no tokens required)
           if (url.pathname === '/api/auth/verify') {
-            return sendJson(200, { valid: true, authRequired: false, tailscaleIp: getTailscaleIp(), port: PORT });
+            return sendJson(200, { valid: true, authRequired: false, tailscaleIp: getTailscaleIp(), port: 5176 });
           }
 
           // Network info: /api/network-info
@@ -54,7 +55,7 @@ export default defineConfig({
             return sendJson(200, {
               tailscaleIp: getTailscaleIp(),
               lanIp: getLanIp(),
-              port: PORT,
+              port: 5176,
               hostname: os.hostname(),
               authRequired: false,
             });
@@ -109,7 +110,7 @@ export default defineConfig({
               socksProxy: DEFAULT_SOCKS_PROXY,
               status: 'ready',
               tailscaleIp: getTailscaleIp(),
-              port: PORT,
+              port: 5176,
             });
           }
 

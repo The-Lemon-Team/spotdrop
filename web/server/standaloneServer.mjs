@@ -155,13 +155,13 @@ const server = http.createServer(async (req, res) => {
   if (url.pathname === '/api/profiles' && req.method === 'GET') {
     const list = [
       {
-        id: 'bandita',
-        name: 'Bandita Library',
-        avatarEmoji: '🎧',
-        description: 'Коллекция с 1,600+ треками и локальным аудио-кэшем',
+        id: 'beta',
+        name: 'SpotDrop Beta',
+        avatarEmoji: '⚡',
+        description: 'Тестовая Beta-версия плейлиста (1,600+ треков и аудио-кэш)',
         isMaster: true,
         cacheAudio: true,
-        url: '/p/bandita',
+        url: '/p/beta',
       },
     ];
 
@@ -191,7 +191,7 @@ const server = http.createServer(async (req, res) => {
     return sendJson(res, 200, { profiles: list });
   }
 
-  // 6.2. POST /api/profiles/upload - Create a new independent SpotDrop profile
+  // 6.2. POST /api/profiles/upload - Create a new independent SpotDrop profile (supports multiple Playlist files)
   if (url.pathname === '/api/profiles/upload' && req.method === 'POST') {
     let body = '';
     req.on('data', (chunk) => {
@@ -208,13 +208,38 @@ const server = http.createServer(async (req, res) => {
       try {
         const parsed = JSON.parse(body || '{}');
         const rawName = (parsed.name || '').trim();
-        const rawEmoji = (parsed.avatarEmoji || '🎵').trim();
+        const rawEmoji = (parsed.avatarEmoji || '⚡').trim();
         const libraryJson = parsed.libraryJson || null;
-        const playlistsJson = parsed.playlistsJson || null;
 
-        if (!libraryJson && !playlistsJson) {
+        // Collect all playlists provided (single string, array of strings, or array of file objects)
+        const rawPlaylistsList = [];
+        if (Array.isArray(parsed.playlistFiles)) {
+          for (const pf of parsed.playlistFiles) {
+            if (pf && typeof pf.content === 'string' && pf.content.trim()) {
+              rawPlaylistsList.push({ name: pf.name || '', content: pf.content });
+            }
+          }
+        }
+        if (Array.isArray(parsed.playlistsJsons)) {
+          for (const item of parsed.playlistsJsons) {
+            if (typeof item === 'string' && item.trim()) {
+              rawPlaylistsList.push({ name: '', content: item });
+            }
+          }
+        }
+        if (Array.isArray(parsed.playlistsJson)) {
+          for (const item of parsed.playlistsJson) {
+            if (typeof item === 'string' && item.trim()) {
+              rawPlaylistsList.push({ name: '', content: item });
+            }
+          }
+        } else if (typeof parsed.playlistsJson === 'string' && parsed.playlistsJson.trim()) {
+          rawPlaylistsList.push({ name: '', content: parsed.playlistsJson });
+        }
+
+        if (!libraryJson && rawPlaylistsList.length === 0) {
           return sendJson(res, 400, {
-            error: 'Необходимо предоставить хотя бы один файл: YourLibrary.json или Playlist1.json',
+            error: 'Необходимо предоставить хотя бы один файл: YourLibrary.json или файлы Playlist.json',
           });
         }
 
@@ -233,7 +258,8 @@ const server = http.createServer(async (req, res) => {
           isMaster: false,
           cacheAudio: false,
           hasLibrary: Boolean(libraryJson),
-          hasPlaylists: Boolean(playlistsJson),
+          hasPlaylists: rawPlaylistsList.length > 0,
+          playlistFileCount: rawPlaylistsList.length,
         };
 
         fs.writeFileSync(
@@ -245,8 +271,16 @@ const server = http.createServer(async (req, res) => {
         if (libraryJson) {
           fs.writeFileSync(path.join(profileDir, 'YourLibrary.json'), libraryJson, 'utf-8');
         }
-        if (playlistsJson) {
-          fs.writeFileSync(path.join(profileDir, 'Playlist1.json'), playlistsJson, 'utf-8');
+
+        // Save each playlist file (Playlist1.json, Playlist2.json, ...)
+        if (rawPlaylistsList.length === 1) {
+          fs.writeFileSync(path.join(profileDir, 'Playlist1.json'), rawPlaylistsList[0].content, 'utf-8');
+        } else if (rawPlaylistsList.length > 1) {
+          for (let i = 0; i < rawPlaylistsList.length; i++) {
+            const item = rawPlaylistsList[i];
+            const cleanCustomName = item.name && /^[a-z0-9_-]+\.json$/i.test(item.name) ? item.name : `Playlist${i + 1}.json`;
+            fs.writeFileSync(path.join(profileDir, cleanCustomName), item.content, 'utf-8');
+          }
         }
 
         return sendJson(res, 201, {
@@ -268,15 +302,15 @@ const server = http.createServer(async (req, res) => {
     const pId = decodeURIComponent(profileMatch[1]).toLowerCase();
     const subResource = profileMatch[2]; // 'library' | 'playlists' | undefined
 
-    const isMaster = pId === 'bandita' || pId === 'default' || pId === 'profile_default';
+    const isMaster = pId === 'beta' || pId === 'bandita' || pId === 'default' || pId === 'profile_default';
 
     if (isMaster) {
       if (!subResource) {
         return sendJson(res, 200, {
-          id: 'bandita',
-          name: 'Bandita Library',
-          avatarEmoji: '🎧',
-          description: 'Коллекция с 1,600+ треками и локальным аудио-кэшем',
+          id: 'beta',
+          name: 'SpotDrop Beta',
+          avatarEmoji: '⚡',
+          description: 'Тестовая Beta-версия плейлиста (1,600+ треков и аудио-кэш)',
           isMaster: true,
           cacheAudio: true,
           hasLibrary: true,
@@ -292,6 +326,28 @@ const server = http.createServer(async (req, res) => {
         return sendJson(res, 404, { error: 'Master library not found' });
       }
       if (subResource === 'playlists') {
+        const defaultDir = path.resolve(DEFAULTS_DIR, 'default');
+        const files = fs.existsSync(defaultDir)
+          ? fs.readdirSync(defaultDir).filter((f) => /^playlist\d*\.json$/i.test(f)).sort()
+          : [];
+
+        if (files.length > 1) {
+          const mergedPlaylists = [];
+          for (const file of files) {
+            try {
+              const content = JSON.parse(fs.readFileSync(path.join(defaultDir, file), 'utf-8'));
+              if (Array.isArray(content.playlists)) {
+                mergedPlaylists.push(...content.playlists);
+              } else if (Array.isArray(content)) {
+                mergedPlaylists.push(...content);
+              }
+            } catch (e) {
+              console.warn(`[Profiles] Error reading master playlist file ${file}:`, e);
+            }
+          }
+          return sendJson(res, 200, { playlists: mergedPlaylists });
+        }
+
         const fPath = path.resolve(DEFAULTS_DIR, 'default/Playlist1.json');
         if (fs.existsSync(fPath)) {
           res.writeHead(200, { 'Content-Type': 'application/json' });
@@ -324,12 +380,31 @@ const server = http.createServer(async (req, res) => {
       }
 
       if (subResource === 'playlists') {
-        const fPath = path.join(pDir, 'Playlist1.json');
-        if (fs.existsSync(fPath)) {
+        const files = fs.readdirSync(pDir).filter((f) => /^playlist\d*\.json$/i.test(f)).sort();
+        if (files.length === 0) {
+          return sendJson(res, 404, { error: 'Playlists not uploaded for this profile' });
+        }
+        if (files.length === 1) {
+          const fPath = path.join(pDir, files[0]);
           res.writeHead(200, { 'Content-Type': 'application/json' });
           return fs.createReadStream(fPath).pipe(res);
         }
-        return sendJson(res, 404, { error: 'Playlists not uploaded for this profile' });
+
+        // Multiple playlist files: merge their "playlists" arrays
+        const mergedPlaylists = [];
+        for (const file of files) {
+          try {
+            const content = JSON.parse(fs.readFileSync(path.join(pDir, file), 'utf-8'));
+            if (Array.isArray(content.playlists)) {
+              mergedPlaylists.push(...content.playlists);
+            } else if (Array.isArray(content)) {
+              mergedPlaylists.push(...content);
+            }
+          } catch (e) {
+            console.warn(`[Profiles] Error reading playlist file ${file}:`, e);
+          }
+        }
+        return sendJson(res, 200, { playlists: mergedPlaylists });
       }
     }
   }
@@ -337,7 +412,7 @@ const server = http.createServer(async (req, res) => {
   // Save updated playlists to disk
   if (profileMatch && (req.method === 'POST' || req.method === 'PUT') && profileMatch[2] === 'playlists') {
     const pId = decodeURIComponent(profileMatch[1]).toLowerCase();
-    const isMaster = pId === 'bandita' || pId === 'default' || pId === 'profile_default';
+    const isMaster = pId === 'beta' || pId === 'bandita' || pId === 'default' || pId === 'profile_default';
     const targetFile = isMaster
       ? path.resolve(DEFAULTS_DIR, 'default/Playlist1.json')
       : path.join(PROFILES_DIR, pId, 'Playlist1.json');
@@ -447,6 +522,18 @@ const server = http.createServer(async (req, res) => {
   sendJson(res, 404, { error: 'Not found' });
 });
 
+server.on('error', (err) => {
+  console.error('[server error]', err.message);
+});
+
+process.on('uncaughtException', (err) => {
+  console.warn('[uncaughtException]', err.message);
+});
+
+process.on('unhandledRejection', (reason) => {
+  console.warn('[unhandledRejection]', reason instanceof Error ? reason.message : reason);
+});
+
 server.listen(PORT, HOST, () => {
   const tsIp = getTailscaleIp();
   const lanIp = getLanIp();
@@ -457,7 +544,7 @@ server.listen(PORT, HOST, () => {
   console.log(`${sep}`);
   console.log(`\n📱 Ссылки для доступа:`);
   console.log(`   • 🌐 Публичный HTTPS (Funnel): https://${FUNNEL_HOST}`);
-  console.log(`   • 🎧 Master библиотека (Bandita): https://${FUNNEL_HOST}/p/bandita`);
+  console.log(`   • ⚡ Beta библиотека (SpotDrop Beta): https://${FUNNEL_HOST}/p/beta`);
   if (tsIp) {
     console.log(`   • Tailscale IP (VPN):        http://${tsIp}:${PORT}`);
     console.log(`   • Tailnet Host:              http://${os.hostname()}:${PORT}`);

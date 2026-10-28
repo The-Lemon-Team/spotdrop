@@ -6,7 +6,6 @@ import {
   Shuffle,
   Plus,
   Search,
-  Share2,
   Trash2,
   Sparkles,
   Clock,
@@ -14,13 +13,15 @@ import {
 } from 'lucide-react';
 import { db, createPlaylist, deletePlaylist } from '../db/banditaDb';
 import type { Playlist, TrackCell } from '../types';
+import { YouTubeIcon } from './YouTubeIcon';
 
 interface PlaylistsViewProps {
   profileId: string;
   onSelectPlaylist: (playlistId: string) => void;
   onPlayPlaylist: (playlist: Playlist, shuffle?: boolean) => void;
-  onSharePlaylist: (playlist: Playlist) => void;
+  onSharePlaylist?: (playlist: Playlist) => void;
   onToast: (msg: string, type?: 'success' | 'info' | 'error') => void;
+  onOpenAsYouTubePlaylist?: (playlist: Playlist) => void;
 }
 
 const GRADIENT_PALETTES = [
@@ -38,6 +39,7 @@ export const PlaylistsView: React.FC<PlaylistsViewProps> = ({
   onPlayPlaylist,
   onSharePlaylist,
   onToast,
+  onOpenAsYouTubePlaylist,
 }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [showCreateModal, setShowCreateModal] = useState(false);
@@ -156,16 +158,18 @@ export const PlaylistsView: React.FC<PlaylistsViewProps> = ({
                     </div>
 
                     <div className="flex items-center space-x-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          onSharePlaylist(pl);
-                        }}
-                        className="p-1.5 rounded-lg bg-[#212433] hover:bg-[#2B2F42] text-[#B2B9C8] hover:text-[#00E5FF] transition-colors"
-                        title="Поделиться плейлистом"
-                      >
-                        <Share2 className="w-3.5 h-3.5" />
-                      </button>
+                      {onOpenAsYouTubePlaylist && (
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            onOpenAsYouTubePlaylist(pl);
+                          }}
+                          className="p-1.5 rounded-lg bg-[#212433] hover:bg-red-950/60 text-[#8E95A5] hover:text-red-400 transition-colors"
+                          title="Открыть как YouTube-плейлист"
+                        >
+                          <YouTubeIcon className="w-3.5 h-3.5" />
+                        </button>
+                      )}
 
                       {pl.id.startsWith('pl_') && !pl.id.includes('summer') && !pl.id.includes('feb') && (
                         <button

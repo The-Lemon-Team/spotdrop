@@ -1,9 +1,10 @@
 import React, { memo } from 'react';
-import { Play, Pause, Heart, Sliders, Pin, Share2, FolderPlus } from 'lucide-react';
+import { Play, Pause, Heart, Sliders, Pin, FolderPlus } from 'lucide-react';
 import type { TrackCell } from '../types';
 
 interface TrackCellCardProps {
   track: TrackCell;
+  trackNumber?: number;
   isCurrent: boolean;
   isPlaying: boolean;
   onPlay: (track: TrackCell) => void;
@@ -15,13 +16,13 @@ interface TrackCellCardProps {
 
 export const TrackCellCard = memo<TrackCellCardProps>(function TrackCellCard({
   track,
+  trackNumber,
   isCurrent,
   isPlaying,
   onPlay,
   onOpenPicker,
   onToggleFavorite,
   onAddToPlaylist,
-  onShareTrack,
 }) {
   const handlePlay = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -38,6 +39,17 @@ export const TrackCellCard = memo<TrackCellCardProps>(function TrackCellCard({
       }`}
     >
       <div className="flex items-center space-x-3.5 min-w-0 flex-1">
+        {/* Track Number if provided */}
+        {trackNumber !== undefined && (
+          <span
+            className={`text-xs font-mono font-semibold w-7 shrink-0 text-center ${
+              isCurrent ? 'text-[#1ED760]' : 'text-[#8E95A5]'
+            }`}
+          >
+            {trackNumber}
+          </span>
+        )}
+
         {/* Play/Pause Button */}
         <button
           onClick={handlePlay}
@@ -103,19 +115,6 @@ export const TrackCellCard = memo<TrackCellCardProps>(function TrackCellCard({
 
       {/* Action Buttons */}
       <div className="flex items-center space-x-1 sm:space-x-1.5 ml-2 shrink-0">
-        {onShareTrack && (
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              onShareTrack(track);
-            }}
-            className="p-1.5 sm:p-2 rounded-lg text-[#8E95A5] hover:text-[#00E5FF] hover:bg-[#212433] transition-colors cursor-pointer"
-            title="Поделиться треком"
-          >
-            <Share2 className="w-4 h-4" />
-          </button>
-        )}
-
         {onAddToPlaylist && (
           <button
             onClick={(e) => {

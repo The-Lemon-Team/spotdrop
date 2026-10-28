@@ -13,6 +13,7 @@ export interface TrackCell {
   pinnedThumbnail?: string;
   playCount: number;
   addedAt: number;
+  spotifyOrder?: number;
 }
 
 export interface MusicProfile {

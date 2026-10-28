@@ -24,7 +24,7 @@ export interface PlayerContextType {
   toggleQueueView: () => void;
   volume: number;
   setVolume: (vol: number) => void;
-  playTrack: (track: TrackCell, newQueue?: TrackCell[]) => void;
+  playTrack: (track: TrackCell, newQueue?: TrackCell[], startIndex?: number) => void;
   shuffleAndPlay: (tracks: TrackCell[]) => void;
   playFromQueue: (index: number) => void;
   playCandidateForTrack: (track: TrackCell, candidate: YouTubeCandidate) => void;
@@ -415,7 +415,7 @@ export function PlayerProvider({ children }: { children: React.ReactNode }) {
   }, [playTrackInternal]);
 
   const playTrack = useCallback(
-    (track: TrackCell, newQueue?: TrackCell[]) => {
+    (track: TrackCell, newQueue?: TrackCell[], startIndex?: number) => {
       if (newQueue) {
         originalQueueRef.current = newQueue;
         if (isShuffle) {
@@ -429,8 +429,18 @@ export function PlayerProvider({ children }: { children: React.ReactNode }) {
         } else {
           setQueue(newQueue);
           queueRef.current = newQueue;
-          const idx = newQueue.findIndex((t) => t.id === track.id);
-          const resolvedIdx = idx >= 0 ? idx : 0;
+          let resolvedIdx = 0;
+          if (
+            typeof startIndex === 'number' &&
+            startIndex >= 0 &&
+            startIndex < newQueue.length &&
+            newQueue[startIndex].id === track.id
+          ) {
+            resolvedIdx = startIndex;
+          } else {
+            const idx = newQueue.findIndex((t) => t.id === track.id);
+            resolvedIdx = idx >= 0 ? idx : 0;
+          }
           setQueueIndex(resolvedIdx);
           queueIndexRef.current = resolvedIdx;
         }

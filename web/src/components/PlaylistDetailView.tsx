@@ -4,7 +4,6 @@ import {
   Play,
   Pause,
   Shuffle,
-  Share2,
   Search,
   ListMusic,
   Clock,
@@ -14,8 +13,10 @@ import {
   Plus,
   Trash2,
   FolderPlus,
+  Share2,
 } from 'lucide-react';
 import type { Playlist, TrackCell } from '../types';
+import { YouTubeIcon } from './YouTubeIcon';
 
 interface PlaylistDetailViewProps {
   playlist: Playlist;
@@ -23,14 +24,15 @@ interface PlaylistDetailViewProps {
   currentTrack: TrackCell | null;
   isPlaying: boolean;
   onBack: () => void;
-  onPlayTrack: (track: TrackCell) => void;
+  onPlayTrack: (track: TrackCell, playlistTracks: TrackCell[], startIndex?: number) => void;
   onPlayAll: (shuffle?: boolean) => void;
   onOpenPicker: (track: TrackCell) => void;
   onToggleFavorite: (trackId: string) => void;
   onAddToPlaylist: (track: TrackCell) => void;
-  onShareTrack: (track: TrackCell) => void;
-  onSharePlaylist: (playlist: Playlist) => void;
+  onShareTrack?: (track: TrackCell) => void;
+  onSharePlaylist?: (playlist: Playlist) => void;
   onRemoveFromPlaylist: (trackId: string) => void;
+  onOpenAsYouTubePlaylist?: (playlist: Playlist) => void;
 }
 
 export const PlaylistDetailView: React.FC<PlaylistDetailViewProps> = ({
@@ -47,6 +49,7 @@ export const PlaylistDetailView: React.FC<PlaylistDetailViewProps> = ({
   onShareTrack,
   onSharePlaylist,
   onRemoveFromPlaylist,
+  onOpenAsYouTubePlaylist,
 }) => {
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -64,7 +67,7 @@ export const PlaylistDetailView: React.FC<PlaylistDetailViewProps> = ({
     const ids = Array.isArray(playlist.trackIds) ? playlist.trackIds : [];
 
     for (const id of ids) {
-      const match = trackMap.get(id);
+      const match = trackMap.get(id) || trackMap.get(id.toLowerCase().trim());
       if (match) {
         list.push(match);
       }
@@ -72,6 +75,16 @@ export const PlaylistDetailView: React.FC<PlaylistDetailViewProps> = ({
 
     return list;
   }, [playlist.trackIds, tracks]);
+
+  const handleTrackClick = (track: TrackCell, indexInFiltered?: number) => {
+    const queueToPlay = orderedTracks.length > 0 ? orderedTracks : [track];
+    const resolvedIndex = orderedTracks.indexOf(track);
+    onPlayTrack(
+      track,
+      queueToPlay,
+      resolvedIndex >= 0 ? resolvedIndex : indexInFiltered
+    );
+  };
 
   const filteredTracks = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
@@ -145,14 +158,27 @@ export const PlaylistDetailView: React.FC<PlaylistDetailViewProps> = ({
               <span>Перемешать</span>
             </button>
 
-            <button
-              onClick={() => onSharePlaylist(playlist)}
-              className="flex items-center space-x-1.5 px-3.5 py-2 rounded-xl bg-[#212433] hover:bg-[#2B2F42] text-[#B2B9C8] hover:text-[#00E5FF] text-xs font-semibold border border-[#2B2F42] transition-colors cursor-pointer"
-              title="Поделиться ссылкой на плейлист"
-            >
-              <Share2 className="w-3.5 h-3.5" />
-              <span>Поделиться</span>
-            </button>
+            {onOpenAsYouTubePlaylist && (
+              <button
+                onClick={() => onOpenAsYouTubePlaylist(playlist)}
+                className="flex items-center space-x-1.5 px-3.5 py-2 rounded-xl bg-red-600/15 hover:bg-red-600/25 text-red-400 hover:text-red-300 text-xs font-semibold border border-red-500/30 transition-all cursor-pointer"
+                title="Собрать и открыть как YouTube-плейлист"
+              >
+                <YouTubeIcon className="w-3.5 h-3.5" />
+                <span>YouTube плейлист</span>
+              </button>
+            )}
+
+            {onSharePlaylist && (
+              <button
+                onClick={() => onSharePlaylist(playlist)}
+                className="flex items-center space-x-1.5 px-3.5 py-2 rounded-xl bg-[#212433] hover:bg-[#2B2F42] text-[#F3F4F6] text-xs font-semibold border border-[#2B2F42] transition-colors cursor-pointer"
+                title="Поделиться внешней ссылкой на плейлист"
+              >
+                <Share2 className="w-3.5 h-3.5 text-[#00E5FF]" />
+                <span>Поделиться ссылкой</span>
+              </button>
+            )}
           </div>
         </div>
       </div>
@@ -185,7 +211,7 @@ export const PlaylistDetailView: React.FC<PlaylistDetailViewProps> = ({
             return (
               <div
                 key={track.id + '_' + idx}
-                onClick={() => onPlayTrack(track)}
+                onClick={() => handleTrackClick(track, idx)}
                 className={`group flex items-center justify-between p-3 rounded-xl border transition-all cursor-pointer ${
                   isCurrent
                     ? 'bg-[#1D2130] border-[#00E5FF]/60 shadow-lg shadow-[#00E5FF]/5'
@@ -201,7 +227,7 @@ export const PlaylistDetailView: React.FC<PlaylistDetailViewProps> = ({
                     <button
                       onClick={(e) => {
                         e.stopPropagation();
-                        onPlayTrack(track);
+                        handleTrackClick(track, idx);
                       }}
                       className={`w-7 h-7 rounded-full hidden group-hover:flex items-center justify-center transition-transform active:scale-95 cursor-pointer ${
                         isTrackPlaying
@@ -248,16 +274,18 @@ export const PlaylistDetailView: React.FC<PlaylistDetailViewProps> = ({
                 {/* Actions */}
                 <div className="flex items-center space-x-1.5 ml-2 shrink-0">
                   {/* Share Track */}
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      onShareTrack(track);
-                    }}
-                    className="p-1.5 rounded-lg text-[#8E95A5] hover:text-[#00E5FF] hover:bg-[#212433] transition-colors cursor-pointer"
-                    title="Поделиться треком"
-                  >
-                    <Share2 className="w-4 h-4" />
-                  </button>
+                  {onShareTrack && (
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onShareTrack(track);
+                      }}
+                      className="p-1.5 rounded-lg text-[#8E95A5] hover:text-[#00E5FF] hover:bg-[#212433] transition-colors cursor-pointer"
+                      title="Поделиться треком"
+                    >
+                      <Share2 className="w-4 h-4" />
+                    </button>
+                  )}
 
                   {/* Add to Playlist */}
                   <button

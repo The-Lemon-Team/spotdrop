@@ -18,6 +18,10 @@ export class BanditaDatabase extends Dexie {
     this.version(2).stores({
       playlists: 'id, profileId, name, trackCount, lastModifiedDate',
     });
+
+    this.version(3).stores({
+      tracks: 'id, profileId, artist, album, title, isFavorite, playCount, addedAt, spotifyOrder, *tags',
+    });
   }
 }
 
