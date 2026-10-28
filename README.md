@@ -25,7 +25,7 @@
 
 When you download your personal data from Spotify (via GDPR / Privacy settings), you receive a `.zip` archive containing:
 - `YourLibrary.json` — all your liked tracks and albums.
-- `Playlist1.json` — all your carefully curated playlists.
+- `Playlist1.json`, `Playlist2.json`... — all your carefully curated playlists.
 
 **The catch?** You can't play them. They are just static text files. If your subscription ended, your region got restricted, or you simply want to own your music library, those files are usually left useless on your drive.
 
@@ -33,7 +33,7 @@ When you download your personal data from Spotify (via GDPR / Privacy settings),
 
 **SpotDrop turns static Spotify JSON files into a rich, interactive, cloud-free streaming player.**
 
-Simply drag and drop your `YourLibrary.json` or `Playlist1.json` onto SpotDrop. It autonomously matches every track against high-quality audio streams in real-time — **no Spotify Premium, no Spotify API credentials, and no Google API keys required.**
+Simply drag and drop your `YourLibrary.json` and any number of `Playlist*.json` files onto SpotDrop. It autonomously matches every track against high-quality audio streams in real-time — **no Spotify Premium, no Spotify API credentials, and no Google API keys required.**
 
 ```text
 [ Spotify JSON Export ] ──( Drag & Drop )──► [ SpotDrop ] ──► [ Instant Free Music Player ]
@@ -103,11 +103,12 @@ npm start
 
 ## 🗺️ Roadmap
 
-- [x] Spotify JSON Export Parser (`YourLibrary.json` & `Playlist1.json`)
+- [x] Spotify JSON Export Parser (`YourLibrary.json` & multiple `Playlist*.json` files)
 - [x] Client-Side YouTube Audio Stream Matching
 - [x] Unique Shareable Profile URLs (`/p/:id`)
 - [x] Version Picker & Pinning
-- [ ] Direct export to portable YouTube playlist format (without Google API key)
+- [x] SpotDrop Beta Showcase Playlist (`/p/beta`)
+- [x] Direct export to portable YouTube playlist format (without Google API key)
 - [ ] PWA offline support for mobile browsers
 
 ---
